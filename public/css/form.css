@@ -1,0 +1,9 @@
+.main-contents{
+  width: 65%;
+  margin: 6rem auto 10rem;
+}
+.form{
+  width: calc(100% - 20px);
+  padding: 10px;
+  box-shadow: -2px 4px 9px 0 #e9e9e9;
+}

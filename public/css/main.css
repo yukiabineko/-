@@ -171,4 +171,27 @@ small{
   display: block;
   text-align: center;
 }
+/*********************************************
+/**
+全ページ共通タイトル
+**/
+.page-title{
+  display: block;
+  text-align: center;
+  margin: 4rem 0 6rem;
+}
+.page-title h2{
+  display: inline-block;
+  font-size: 32px;
+  letter-spacing: 0.1em;
+  color: darkblue;
+}
+.page-title h2::before, .page-title h2::after{
+  display: block;
+  content: "";
+  width: 100%;
+  border-top: double 2px darkblue;
+  border-bottom: 2px double darkblue;
+  padding: 1px 0;
+}
 
