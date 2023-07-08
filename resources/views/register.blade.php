@@ -18,6 +18,8 @@
         <div class="form-group">
            <div class="form-title">プロフィール写真</div>
            <div class="files">
+            <span class="file-text"></span>
+            <label for="file" class="file-label">ファイル選択</label>
             <input type="file" name="file" id="file">
            </div>
         </div>
@@ -25,7 +27,7 @@
          <!-- 名前 -->
          <div class="form-group">
             <div class="form-title">お客様名<span class="form-attention">(*必須です。)</span></div>
-            <input type="name" name="name" class="form-control" value="{{old('name')}}">
+            <input type="text" name="name" class="form-control" value="{{old('name')}}">
          </div>
 
          <!-- メールアドレス -->
@@ -48,7 +50,8 @@
 
           <!-- パスワード -->
           <div class="form-button">
-            <input type="submit" value="登録">
+            <input type="submit" value="登録" class="btn submit">
+            <a href="{{ route('login')}}" class="btn link">ログインへ</a>
          </div>
 
 
