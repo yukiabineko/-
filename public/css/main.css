@@ -109,4 +109,66 @@ nav{
   font-size: 12px;
   line-height: 1.5;
 }
+/****************************************************************
+/**
+フッター
+**/
+footer{
+  width: 100%;
+  background-color: darkblue;
+
+}
+.footer-icon{
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+.footer-icon img{
+  width: 10%;
+}
+.footer-tel{
+  width: 100%;
+  text-align: center;
+  margin: 4rem 0;
+}
+.footer-tel-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-style: italic;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 0.12em;
+}
+.footer-tel-link img{
+  width: 1.2%;
+}
+.footer-lists{
+  display: flex;
+  align-items: center;
+  width: 100% !important;
+  list-style: none;
+  margin: 2rem 0 4rem;
+}
+.footer-list{
+  width: calc(100% / 5);
+  text-align: center;
+}
+.footer-list-link{
+  text-decoration: none;
+  color: white;
+}
+.footer-list-link:hover{
+  opacity: 0.6;
+}
+.footer-title{
+  font-size: 16px;
+}
+small{
+  background-color: #c0c0c0;
+  display: block;
+  text-align: center;
+}
 

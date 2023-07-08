@@ -14,7 +14,7 @@
        @if (!Auth::check())
           <div class="auth-btns">
             <a href="{{ route('register')}}" class="btn auth-btn">新規会員登録</a>
-            <a href="{{ route('register')}}" class="btn auth-btn">ログイン</a>
+            <a href="{{ route('login')}}" class="btn auth-btn">ログイン</a>
           </div>
          
        @else
