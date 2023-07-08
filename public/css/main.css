@@ -103,6 +103,7 @@ nav{
 }
 .nav-list-link .main-title{
   font-size: 18px;
+  letter-spacing: 0.15em;
 }
 .nav-list-link .sub-title{
   font-size: 12px;

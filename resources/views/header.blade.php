@@ -38,7 +38,7 @@
       <li class="nav-list">
         <a href="#" class="nav-list-link">
           <div class="main-title">ARRIVALS</div>
-          <div class="sub-title">明日入荷予定</div>
+          <div class="sub-title">生鮮入荷予定</div>
         </a>
       </li>
       <li class="nav-list">
