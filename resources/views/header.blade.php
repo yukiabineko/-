@@ -24,11 +24,17 @@
               <div class="user-name">{{ Auth::user()->name }}さん</div>
             </label>
             <input type="checkbox"  id="check">
-            <ul class="menus">
-              <li class="menu-li"><a href="#">{{ Auth::user()->name}}さん情報</a></li>
-              <li class="menu-li"><a href="#">{{ Auth::user()->name}}さん編集</a></li>
+            <ul class="menus-lists">
+              <li class="menu-li"><a href="#" class="menu-li-link">{{ Auth::user()->name}}さん情報</a></li>
+              <li class="menu-li"><a href="#" class="menu-li-link">{{ Auth::user()->name}}さん編集</a></li>
+              <li class="menu-li"><a href="#" class="menu-li-link">お買い物状況</a></li>
               <li class="menu-li">ログアウト</li>
             </ul>
+            <!-- ショッピングカート -->
+            <div class="cart">
+              <img src="{{ asset('image/cart1.png')}}" alt="カート" class="cart-img">
+              <span class="cart-count">0</span>
+            </div>
           </div>
        @endif
     </div>
