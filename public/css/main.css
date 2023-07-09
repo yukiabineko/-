@@ -194,4 +194,19 @@ small{
   border-bottom: 2px double darkblue;
   padding: 1px 0;
 }
+/************エラー処理***************************************/
+.errors{
+  width: 95%;
+  margin: 1rem auto 3rem;
+  background-color: red;
+  list-style: none;
+  
+}
+.error{
+  color: white;
+  padding: 1rem 0;
+}
+
+
+
 
