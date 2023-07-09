@@ -98,6 +98,9 @@ nav{
   text-decoration: none;
   
 }
+.active{
+  background-color: rgb(93, 93, 194);
+}
 .nav-list-link:hover{
   opacity: 0.6;
 }
@@ -113,6 +116,30 @@ nav{
 /**
 ログイン時の表示
 **/
+.user-menu{
+  width: 100%;
+  background-color: black;
+  padding: .3rem 0;
+}
+.user{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.user:hover{
+  opacity: 0.6;
+}
+.user-img{
+  width: 15%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+.user-name{
+  color: white;
+  font-style: italic;
+  letter-spacing: 0.09em;
+}
 /****************************************************************
 /**
 フッター
@@ -182,7 +209,7 @@ small{
 .page-title{
   display: block;
   text-align: center;
-  margin: 4rem 0 6rem;
+  margin: 4rem 0 4rem;
 }
 .page-title h2{
   display: inline-block;

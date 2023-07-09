@@ -1,6 +1,6 @@
 .main-contents{
   width: 65%;
-  margin: 4rem auto 10rem;
+  margin: 1rem auto 10rem;
 }
 .form{
   width: calc(100% - 20px);
@@ -9,7 +9,7 @@
 }
 .form-group{
   width: 90%;
-  margin: 3rem auto;
+  margin: 2rem auto;
   background-color: #f9f9f9;
   border-radius: 4px;
   border: 1px solid #f6f6f6;

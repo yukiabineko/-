@@ -1,7 +1,6 @@
 <header>
   <!-- アイコン -->
   <div class="icons">
-    
     <a href="#" class="icon">
       <img src="{{ asset('image/icon.png')}}" alt="icon">
     </a>
@@ -11,17 +10,26 @@
         <img src="{{ asset('image/tel.svg')}}" alt="電話番号">
         電話番号090-0000-0000
       </a>
+<!-------------------------- 未ログイン時の表示　-------------------------------------------------------------------------->
        @if (!Auth::check())
           <div class="auth-btns">
             <a href="{{ route('register')}}" class="btn auth-btn">新規会員登録</a>
             <a href="{{ route('login')}}" class="btn auth-btn">ログイン</a>
           </div>
-         
+<!-------------------------- ログイン時の表示　-------------------------------------------------------------------------->
        @else
-           <form action="{{ route('logout')}}" method="post">
-            @csrf
-            <button class="btn auth-button">ログアウト</button>
-          </form>
+          <div class="user-menu">
+            <label class="user" for="check">
+              <img src="{{asset('storage/users'.Auth::id().'/'. Auth::user()->path)}}" alt="ユーザー" class="user-img">
+              <div class="user-name">{{ Auth::user()->name }}さん</div>
+            </label>
+            <input type="checkbox"  id="check">
+            <ul class="menus">
+              <li class="menu-li"><a href="#">{{ Auth::user()->name}}さん情報</a></li>
+              <li class="menu-li"><a href="#">{{ Auth::user()->name}}さん編集</a></li>
+              <li class="menu-li">ログアウト</li>
+            </ul>
+          </div>
        @endif
     </div>
   </div>
@@ -29,7 +37,7 @@
   <!-- グローバルナビ　-->
   <nav>
     <ul class="nav-lists">
-      <li class="nav-list">
+      <li class="nav-list {{ request()->path() == '/'? 'active': ''}}">
         <a href="#" class="nav-list-link">
           <div class="main-title">TOP</div>
           <div class="sub-title">トップページ</div>
