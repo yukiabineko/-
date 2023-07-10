@@ -135,3 +135,34 @@ right
 .sns-link-list img{
   width: 15%;
 }
+/***************/
+/**
+問合せフォーム
+**/
+.right-contact{
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #c0c0c0;
+  margin: 2em 0;
+
+}
+.right-contact h3{
+  border-radius: 3px 3px 0 0;
+}
+.right-contact a{
+  width: 95%;
+  background-color: #f0f0f0;
+  display: flex;
+  font-size: 16px;
+
+  font-weight: bold;
+  align-items: center;
+  line-height: 2;
+  justify-content: center;
+  text-decoration: none;
+  color: rgb(20, 15, 15);
+  margin: 1.2em auto;
+}
+.right-contact a img{
+  width: 10%;
+}

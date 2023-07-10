@@ -31,7 +31,27 @@
 
     <!-- 中央メイン -->
     <article class="top-main">
-      
+
+      <!-- 店舗案内 -->
+      <section class="shop-info">
+        <h2>海鮮について</h2>
+        <div class="info-images">
+          <img src="{{ asset('image/home/top-item1.jpg')}}" alt="画像1">
+          <img src="{{ asset('image/home/top-item2.jpg')}}" alt="画像2">
+          <img src="{{ asset('image/home/top-item3.jpg')}}" alt="画像3">
+        </div>
+        <p class="info-text">
+          海鮮は山梨県で日々新鮮な魚介類をお届けするお魚屋さんです。長年様々なお魚を見てきた確かな目利きで、毎朝市場に足を運び納得がいく鮮度の抜群の商品のみを仕入れてお客様に納得していただける商品を販売することを心掛けているお魚屋さんです。
+        </p>
+      </section>
+
+      <!-- 店舗サービス -->
+      <section class="shop-service">
+        
+      </section>
+
+
+
     </article>
 
      <!-- 右サイド -->

@@ -20,12 +20,42 @@
 コンテンツ
 **/
 .top-contents{
+  background-color: white;
   width: 90%;
   margin: 4rem auto;
   display: flex;
   align-items: flex-start;
   gap: 4%;
 }
-article{
+.top-main{
   width: 65%;
+}
+.shop-info{
+  width: 100%;
+
+}
+.shop-info h2{
+  font-size: 24px;
+  font-style: italic;
+  width: 100%;
+  margin: 0 auto;
+  background-color: darkblue;
+  color: white;
+  line-height: 2.5;
+  border-left: 6px solid #6699FF;
+}
+.info-images{
+  width: 100%;
+  margin: 2.5em auto 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info-images img{
+  width: 30%;
+  aspect-ratio: 3 / 2;
+}
+.shop-info .info-text{
+  letter-spacing: 0.12em;
+  background-color: #92b4f7;
 }
