@@ -3,6 +3,7 @@
   aspect-ratio: 96 / 25;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 .main-visual-wrapper{
   width: 100%;
@@ -24,4 +25,7 @@
   display: flex;
   align-items: flex-start;
   gap: 4%;
+}
+article{
+  width: 65%;
 }
