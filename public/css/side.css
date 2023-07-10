@@ -1,0 +1,27 @@
+/********************************
+/**
+左サイド
+**/
+.left{
+  width: 20%;
+  
+}
+.left-search-box{
+  width: 100%;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #c0c0c0;
+  padding-bottom: 2em;
+}
+.left-search-box h3{
+  background-color: #6699FF;
+  border-left: 4px solid darkblue;
+  line-height: 2;
+  color: white;
+}
+.search-form{
+   width: 95%;
+   display: flex;
+   align-items: center;
+   margin-top: 1em;
+}

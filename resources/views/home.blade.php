@@ -24,4 +24,12 @@
       <img src="{{ asset('image/home/main-visual3.png')}}" alt="メインビジュアル1" class="mv-img">
     </div>
   </section>
+  <!-- コンテンツ -->
+  <section class="top-contents">
+    <!-- 左サイド -->
+    @include('left')
+    
+    <!-- 中央メイン -->
+    <!-- 右サイド -->
+  </section>
 @endsection

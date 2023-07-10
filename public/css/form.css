@@ -1,11 +1,13 @@
 .main-contents{
   width: 65%;
   margin: 1rem auto 10rem;
+  background-color: white;
 }
 .form{
   width: calc(100% - 20px);
   padding: 10px;
-  box-shadow: -2px 4px 9px 0 #e9e9e9;
+  box-shadow: -2px 4px 9px 0 #d5cbcb;
+  background-color: white;
 }
 .form-group{
   width: 90%;

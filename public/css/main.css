@@ -10,6 +10,7 @@ html,body{
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: rgb(242, 233, 233);
 }
 body{
   display: flex;
