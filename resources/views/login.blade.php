@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/form.css')}}">
 @endsection
 
-@section('context')
+@section('contents')
    <div class="page-title">
      <h2>ログイン</h2>
    </div>

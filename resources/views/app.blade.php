@@ -16,7 +16,7 @@
 
   <!-- メインコンテンツ -->
   <main>
-    @yield('context')
+    @yield('contents')
   </main>
 
   <!-- フッター -->

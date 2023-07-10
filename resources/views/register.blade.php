@@ -10,7 +10,7 @@
     <script src="{{ asset('js/register.js')}}"></script>
 @endsection
 
-@section('context')
+@section('contents')
    <div class="page-title">
      <h2>新規会員登録</h2>
    </div>
