@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\admin\ProductController as AdminProductController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[HomeController::class, 'home'])->name('home');
+Route::get('/admin/products/create',[AdminProductController::class, 'create'])->name('admin.create');
+Route::get('/products/create',[ControllersProductController::class, 'create'])->name('products.create');
 Route::group(['middleware' =>['auth']], function(){
    
 });

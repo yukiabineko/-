@@ -25,9 +25,13 @@
             </label>
             <input type="checkbox"  id="check">
             <ul class="menus-lists">
-              <li class="menu-li"><a href="#" class="menu-li-link">{{ Auth::user()->name}}さん情報</a></li>
-              <li class="menu-li"><a href="#" class="menu-li-link">{{ Auth::user()->name}}さん編集</a></li>
-              <li class="menu-li"><a href="#" class="menu-li-link">お買い物状況</a></li>
+              @if (Auth::user()->admin == 0)
+                <li class="menu-li"><a href="#" class="menu-li-link">{{ Auth::user()->name}}さん情報</a></li>
+                <li class="menu-li"><a href="#" class="menu-li-link">{{ Auth::user()->name}}さん編集</a></li>
+                <li class="menu-li"><a href="#" class="menu-li-link">お買い物状況</a></li>
+              @else
+                <li class="menu-li"><a href="{{ route('admin.create')}}" class="menu-li-link">商品管理</a></li>  
+              @endif
               <li class="menu-li">ログアウト</li>
             </ul>
             <!-- ショッピングカート -->
