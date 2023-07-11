@@ -29,6 +29,7 @@
 }
 .top-main{
   width: 65%;
+  margin-top: 1%;
 }
 .shop-info{
   width: 100%;
@@ -45,7 +46,7 @@
   border-left: 6px solid #6699FF;
 }
 .info-images{
-  width: 100%;
+  width: calc(100% + 6px);
   margin: 2.5em auto 1.5em;
   display: flex;
   align-items: center;
@@ -56,6 +57,42 @@
   aspect-ratio: 3 / 2;
 }
 .shop-info .info-text{
+  width: calc(100% + 6px);
   letter-spacing: 0.12em;
   background-color: #92b4f7;
+}
+/**
+見出し2
+**/
+.shop-service,.online-service{
+  margin: 4rem auto;
+  width: 100%;
+}
+.shop-service h2,
+.online-service h2{
+  font-size: 24px;
+  font-style: italic;
+  width: 100%;
+  margin: 0 auto;
+  background-color: darkblue;
+  color: white;
+  line-height: 2.5;
+  border-left: 6px solid #6699FF;
+}
+.shop-service figure,
+.online-service figure{
+  width: calc(100% + 6px);
+  margin-top: 2.5em;
+}
+.shop-service figure img,
+.online-service figure img
+{
+  width: 100%;
+}
+.shop-service figure figcaption,
+.online-service figure figcaption{
+  width: 100%;
+  letter-spacing: 0.12em;
+  background-color: #92b4f7;
+  margin-top: 1em;
 }
