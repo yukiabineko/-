@@ -15,7 +15,7 @@
 
    <!-- メインコンテンツ -->
    <article class="page-contents">
-     <form action="#" class="product-form" enctype="multipart/form-data" method="POST">
+     <form action="{{ route('admin.products_store')}}" class="product-form" enctype="multipart/form-data" method="POST">
         @csrf
         <div class="form-wrapper">
 <!--------------------------------------------------------------------------->
@@ -32,9 +32,11 @@
                 <!-- ファイル -->
                 <div class="files"> 
                     <div class="file-box" id="box1">
-                        <input type="file" name="file[]" class="file" id="file1">
-                        <span class="file-text" id="text1"></span>
-                        <label for="file1" class="file-label">写真選択</label>
+                        <input type="file" name="file[]" class="file" id="file1" onchange="setImage(event)">
+                        <div class="file-wrapper">
+                            <span class="file-text" id="text1"></span>
+                            <label for="file1" class="file-label">写真選択</label>
+                        </div>
                     </div>
                 </div>
             </section>

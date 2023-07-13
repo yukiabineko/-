@@ -63,20 +63,25 @@
 }
 .minus{
   background-color: red;
+  display: none;
 }
 .files{
   width: 95%;
   margin: .5em auto 0;
 }
 .file-box{
+  margin-top: 1em;
+  width: 100%;
+}
+.file{
+  display: none;
+}
+.file-wrapper{
   display: flex;
   align-items: center;
   width: 100%;
   aspect-ratio: 12 /1;
-  margin-top: 1em;
-}
-.file{
-  display: none;
+
 }
 .file-text{
   width: 80%;
