@@ -30,7 +30,7 @@
                 <li class="menu-li"><a href="#" class="menu-li-link">{{ Auth::user()->name}}さん編集</a></li>
                 <li class="menu-li"><a href="#" class="menu-li-link">お買い物状況</a></li>
               @else
-                <li class="menu-li"><a href="{{ route('admin.create')}}" class="menu-li-link">商品管理</a></li>  
+                <li class="menu-li"><a href="{{ route('admin.products_create')}}" class="menu-li-link">商品管理</a></li>  
               @endif
               <li class="menu-li">ログアウト</li>
             </ul>

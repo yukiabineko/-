@@ -20,8 +20,12 @@
     <!-- スライダーメニュー -->
     <div class="header-slider">
       <ul>
-        <li>a</li>
-        <li>b</li>
+        <li>
+          <a href="{{ route('admin.products')}}">商品一覧</a>
+        </li>
+        <li>
+          <a href="{{ route('admin.products_create')}}">商品新規登録</a>
+        </li>
         <li>c</li>
         <li>d</li>
       </ul>
