@@ -25,16 +25,16 @@
 
                 <!-- 追加、削除ボタン -->
                 <div class="btns">
-                    <button type="button" class="plus">+</button>
-                    <button type="button" class="minus">-</button>
+                    <button type="button" class="plus" onclick="addInput()">+</button>
+                    <button type="button" class="minus" onclick="delInput()">-</button>
                 </div>
 
                 <!-- ファイル -->
-                <div class="files">
-                    <div class="file-box">
-                        <input type="file" name="file[]" class="file" id="file">
-                        <span class="file-text"></span>
-                        <label for="file" class="file-label">写真選択</label>
+                <div class="files"> 
+                    <div class="file-box" id="box1">
+                        <input type="file" name="file[]" class="file" id="file1">
+                        <span class="file-text" id="text1"></span>
+                        <label for="file1" class="file-label">写真選択</label>
                     </div>
                 </div>
             </section>

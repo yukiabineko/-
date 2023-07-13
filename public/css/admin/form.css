@@ -73,6 +73,7 @@
   align-items: center;
   width: 100%;
   aspect-ratio: 12 /1;
+  margin-top: 1em;
 }
 .file{
   display: none;
