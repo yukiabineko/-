@@ -1,0 +1,162 @@
+.page-title{
+  background-color: #6699FF;
+  border-bottom: 5px solid #2b61cc;
+  color: white;
+  font-size: 32px;
+  margin: 3rem auto;
+  line-height: 2.5;
+  width: calc(90% + 4px);
+  
+}
+.page-contents{
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+.product-form{
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 2px 3px 4px 2px #e1dddd;
+  width: 100%;
+}
+.form-wrapper{
+  display: flex;
+  align-items: flex-start;
+  padding: 1.5em 0;
+  gap: 2%;
+  width: 95%;
+  margin: 0 auto;
+}
+/********************/
+/**
+左側エリア
+**/
+.image-forms{
+  width: 28%;
+  border: 1px solid #f0f0f0;
+  padding-bottom: 3%;
+
+}
+.image-forms h4{
+  width: calc(100% + 1px);
+  background-color: #2658bc;
+  color: white;
+  font-size: 14px;
+  line-height: 2.5;
+}
+.image-forms .btns{
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  width: 95%;
+  margin: 2em auto 0;
+}
+.plus, .minus{
+  aspect-ratio: 1;
+  border-radius: 50%;
+  color: white;
+  font-size: 1em;
+  width: 2em;
+}
+.plus{
+  background-color: #6699FF;
+}
+.minus{
+  background-color: red;
+}
+.files{
+  width: 95%;
+  margin: .5em auto 0;
+}
+.file-box{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 12 /1;
+}
+.file{
+  display: none;
+}
+.file-text{
+  width: 80%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid #c0c0c0;
+  border-right: none;
+}
+.file-label{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: .7em;
+  width: 20%;
+  height: 100%;
+  background-color: #6699FF;
+  border: 1px solid #6699FF;
+}
+/***********************************************/
+/**
+右側のエリア
+**/
+.product-forms{
+  width: 70%;
+  border: 1px solid #f0f0f0;
+  padding-bottom: 2rem;
+}
+.product-forms h4{
+  width: calc(100% + 1px);
+  background-color: #2658bc;
+  color: white;
+  font-size: 14px;
+  line-height: 2.5;
+}
+.form-group{
+  width: 95%;
+  margin: 4% auto 0;
+}
+.form-title{
+  color: darkblue;
+  letter-spacing: 0.12em;
+}
+.status{
+  background-color: orange;
+  border-radius: 4px;
+  color: white;
+  font-style: italic;
+  font-size: 0.8em;
+  padding: 0.2em;
+  margin-left: 1%;
+}
+.form-control{
+  display: block;
+  width: 100%;
+  border: 1px solid #c0c0c0;
+  margin-top: .5rem;
+}
+.form-control:not(.textarea){
+  aspect-ratio: 28 / 1;
+}
+/******************************
+/**
+ボタン類
+**/
+.form-btns{
+  width: 100%;
+  text-align: center;
+  padding-bottom: 3rem;
+  margin-top: 2rem;
+}
+.form-btns button{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(117, 160, 44);
+  color: white;
+  margin: 0 auto;
+  line-height: 3;
+}
+.form-btns button:hover{
+  opacity: 0.7;
+}

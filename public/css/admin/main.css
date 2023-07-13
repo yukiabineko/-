@@ -10,6 +10,7 @@ html,body{
 }
 body{
   overflow-x: hidden;
+  background-color: #F0F0F0;
 }
 /**
 ヘッダー
@@ -36,8 +37,8 @@ header{
 .header-menu-wrapper{
   width: 100%;
   display: block;
-  background-color: black;
-  border: 1px solid white;
+  background-color: rgb(2, 2, 55);
+  border: 1px solid rgb(120, 120, 249);
   border-radius: 4px;
   padding: .5em 0;
 }
