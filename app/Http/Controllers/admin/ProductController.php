@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductRequest;
+use App\Models\Image;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -34,6 +35,11 @@ class ProductController extends Controller
         foreach($files as $file){
             $fileName = $file->getClientOriginalName();
             $file->storeAs('products'.$product->id, $fileName, 'public');
+            $image = new Image();
+            $image->create([
+               'path' => $fileName,
+               'product_id' =>$product->id
+            ]);
         }
         return redirect('/')->with('flash', '商品を登録しました。');
     }
@@ -41,6 +47,9 @@ class ProductController extends Controller
      * 商品一覧ページ
      */
     public function index(){
-        return view('admin.product.index');
+        $products = Product::orderBy('created_at', 'asc')->get();
+        return view('admin.product.index',[
+            'products' => $products
+        ]);
     }
 }
