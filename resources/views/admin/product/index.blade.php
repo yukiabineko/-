@@ -18,8 +18,11 @@
 <!------------------------------------------------------------------------------------------------------------------------->
       <!-- 左検索エリア　-->
       <section class="search-area">
-        <h3>商品検索</h3>
-        <p>条件を入力して検索してください</p>
+        <div class="search-title">
+          <h3>商品検索</h3>
+        </div>
+       
+        <p>*条件を入力して検索してください</p>
         <form action="{{ route('admin.products')}}" method="get" class="search-form">
           <!-- 商品名 -->
           <div class="form-group">
