@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+   const STATAS = [
+      '日替わり商品',
+      '干物',
+      'うなぎ'
+   ];
     use HasFactory;
     protected $fillable = ["name", "price", "stock", "category", "info"];
 
@@ -22,5 +27,11 @@ class Product extends Model
     public function thumbnail(){
        $first_image = $this->images()->get()[0]->path;
        return $first_image;
+    }
+    /**
+     * カテゴリー名取得
+     */
+    public function getCategory(){
+      return self::STATAS[ (int) $this->category ];
     }
 }

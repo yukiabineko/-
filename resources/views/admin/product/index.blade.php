@@ -72,34 +72,27 @@
 
         <!-- 商品一覧 -->
         @if ( count($products) > 0)
-           <table class="table-products">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>商品名</th>
-                  <th>価格</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                @foreach ($products as $product)
-                    <tr>
-                      <td>
-
-                      </td>
-                      <td>
-
-                      </td>
-                      <td>
-
-                      </td>
-                      <td>
-
-                      </td>
-                    </tr>
-                @endforeach
-              </tbody>
-           </table>
+          <ul class="product-lists">
+            @foreach ($products as $product)
+              <li class="product-list">
+                <!-- 商品情報ボックス(左エリア) -->
+                <div class="product-datas">
+                  <img 
+                   src="{{ asset('storage/products/products'.$product->id.'/'.$product->thumbnail() )}}" 
+                   alt="商品画像" class="product-img">
+                  <div class="info">
+                    <div class="name">{{ $product->name }}</div>
+                    <div class="category">{{ $product->getCategory() }}</div>
+                    <div class="price">{{ $product->price }}円</div>
+                  </div>
+                </div>
+              <!-- 右側エリア -->
+                <div class="product-list-btn">
+                  <a href="#" class="btn">商品詳細</a>
+                </div>
+              </li>    
+            @endforeach
+          </ul> 
         <!-- *****未登録********* -->
         @else
             <div class="empty">商品が登録されていません。</div> 

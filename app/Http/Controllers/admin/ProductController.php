@@ -34,7 +34,7 @@ class ProductController extends Controller
         ]);
         foreach($files as $file){
             $fileName = $file->getClientOriginalName();
-            $file->storeAs('products'.$product->id, $fileName, 'public');
+            $file->storeAs('/products/products'.$product->id, $fileName, 'public');
             $image = new Image();
             $image->create([
                'path' => $fileName,

@@ -122,11 +122,15 @@ select{
   margin-top: 2rem;
 }
 /**
-テーブル関連
+リスト関連
 **/
-.table-products{
-  background-color: white;
-  margin-top: 1.2rem;
+.product-lists{
   width: 100%;
+  list-style: none;
 }
-
+.product-list{
+  align-items: center;
+  background-color: white;
+  display: flex;
+  margin: 2rem 0 0;
+}
