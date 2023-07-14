@@ -1,13 +1,4 @@
-.page-title{
-  background-color: #6699FF;
-  border-bottom: 5px solid #2b61cc;
-  color: white;
-  font-size: 32px;
-  margin: 3rem auto;
-  line-height: 2.5;
-  width: calc(90% + 4px);
-  
-}
+
 .page-contents{
   width: 90%;
   margin: 0 auto;

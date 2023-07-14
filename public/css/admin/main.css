@@ -105,4 +105,28 @@ checkbox反応
 #check:checked ~ .header-slider{
   left: -90vw;
 }
+/**
+ページタイトル
+**/
+.page-title{
+  background-color: #6699FF;
+  color: white;
+  font-size: 32px;
+  margin: 0 auto 5rem;
+  padding: .2rem 0 .8rem .5rem;
+  width: 100%;
+  
+}
+.page-title h3{
+  display: inline-block;
+}
+.page-title h3::after{
+  border-bottom: 3px solid white;
+  content: "";
+  display: block;
+  width: 100%;
+  margin-top: .2.5rem;
+ 
+  
+}
 

@@ -10,7 +10,7 @@
 
 @section('contents')
    <div class="page-title">
-      <h2>商品登録</h2>
+      <h3>商品登録</h3>
    </div>
 
    <!-- メインコンテンツ -->

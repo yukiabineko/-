@@ -1,20 +1,4 @@
-/**
-タイトル
-**/
-.page-title{
-  text-align: left;
-  width: 100%;
-  margin: 0 auto 8rem;
-  background-color: #477ce7;
-  border-bottom: 4px solid darkblue;
-}
-.page-title h2{
-  color: white;
-  display: inline-block;
-  font-size: 24px;
-  font-style: italic;
-  line-height: 2.1;
-}
+
 /**
 メイン
 **/
@@ -22,17 +6,22 @@
   display: flex;
   align-items: flex-start;
   width: 95%;
-  margin: 0 auto;
-  gap: 1%;
+  margin: 5rem auto;
+  gap: 3%;
 }
 /********************************************************************/
 /**
 左側エリア
 **/
 .search-area{
-  background-color: white;
-  border: 1px solid #c0c0c0;
-  width: 25%;
+ 
+  border-right: 1px solid #c0c0c0;
+  width: 20%;
+}
+.search-area p{
+  font-size: 12px;
+  color: darkblue;
+  padding-bottom: .5rem;
 }
 .search-area h3{
   background-color: darkblue;
@@ -40,18 +29,83 @@
   line-height: 2;
   width: 100%;
   text-align: center;
+  margin-bottom: 1rem;
 }
 .search-form, .search-area p{
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
+}
+.from-group{
+  margin-top: 1rem;
+}
+.form-title{
+  color: darkblue;
+  font-style: italic;
+  margin-bottom: .3rem;
+}
+.form-controls{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-controls .form-control{
+  width: 45%;
+}
+.form-control{
+  border: 1px solid #c0c0c0;
+  display: block;
+  width: 100%;
+  line-height: 2.5;
+  margin-bottom: .5rem;
+}
+select{
+  padding: .5rem 0;
+}
+.form-control:focus{
+  outline: 1px solid darkblue;
+  border-radius: 0;
+  
+}
+.form-btns{
+  width: 100%;
+  margin: .5rem 0;
+}
+.form-btns button{
+  display: block;
+  width: 100%;
+  background-color: #6699FF;
+  color: white;
+  line-height: 2;
+  margin-top: 1.5rem;
+}
+.form-btns button:hover{
+  opacity: 0.5;
 }
 /********************************************************************/
 /**
 右エリア
 **/
 .products-contents{
+  width: 75%;
+  margin-top: .4rem;
+}
+.product-btns .btn{
+  background-color: #6699FF;
+  border-radius: 4px;
+  color: white;
+  padding: .6rem 3rem;
+  text-decoration: none;
+}
+.product-btns .btn:hover{
+   opacity: 0.5;
+}
+.empty{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: white;
-  border: 1px solid #c0c0c0;
-  width: 72%;
+  line-height: 5;
+  width: 100%;
+  margin-top: 2rem;
 }
 
