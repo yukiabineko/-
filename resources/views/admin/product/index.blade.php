@@ -1,7 +1,7 @@
 @extends('admin.app')
 
 @section('css')
-   
+   <link rel="stylesheet" href="{{ asset('css/admin/products/index.css')}}">
 @endsection
 
 @section('js')
@@ -20,7 +20,7 @@
       <section class="search-area">
         <h3>商品検索</h3>
         <p>条件を入力して検索してください</p>
-        <form action="{{ route('admin.products')}}" method="get">
+        <form action="{{ route('admin.products')}}" method="get" class="search-form">
           <!-- 商品名 -->
           <div class="form-group">
             <div class="form-title">商品名</div>
@@ -61,7 +61,7 @@
       </section>
 <!------------------------------------------------------------------------------------------------------------------------------------>
       <!-- 右検商品エリア　-->
-      <section class="products-area">
+      <section class="products-contents">
         <!-- 新規ボタン等配置 -->
         <div class="product-btns">
           <a href="{{ route('admin.products_create')}}" class="btn">新規商品登録</a>

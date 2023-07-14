@@ -1,0 +1,57 @@
+/**
+タイトル
+**/
+.page-title{
+  text-align: left;
+  width: 100%;
+  margin: 0 auto 8rem;
+  background-color: #477ce7;
+  border-bottom: 4px solid darkblue;
+}
+.page-title h2{
+  color: white;
+  display: inline-block;
+  font-size: 24px;
+  font-style: italic;
+  line-height: 2.1;
+}
+/**
+メイン
+**/
+.main-contents{
+  display: flex;
+  align-items: flex-start;
+  width: 95%;
+  margin: 0 auto;
+  gap: 1%;
+}
+/********************************************************************/
+/**
+左側エリア
+**/
+.search-area{
+  background-color: white;
+  border: 1px solid #c0c0c0;
+  width: 25%;
+}
+.search-area h3{
+  background-color: darkblue;
+  color: white;
+  line-height: 2;
+  width: 100%;
+  text-align: center;
+}
+.search-form, .search-area p{
+  width: 95%;
+  margin: 0 auto;
+}
+/********************************************************************/
+/**
+右エリア
+**/
+.products-contents{
+  background-color: white;
+  border: 1px solid #c0c0c0;
+  width: 72%;
+}
+
