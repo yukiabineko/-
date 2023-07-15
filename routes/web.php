@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[HomeController::class, 'home'])->name('home');
-Route::get('/products/create',[ProductController::class, 'create'])->name('products.create');
+Route::resource('/products',ProductController::class);
 Route::group(['middleware' =>['auth']], function(){
   Route::get('/admin/products/create', [AdminProductController::class, 'create'])->name('admin.products_create');
   Route::get('/admin/products', [AdminProductController::class, 'index'])->name('admin.products');

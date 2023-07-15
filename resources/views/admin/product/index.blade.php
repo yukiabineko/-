@@ -94,7 +94,7 @@
                     </div>
                     <!-- 右側エリア -->
                     <div class="product-list-btn">
-                      <a href="#" class="show-btn">商品詳細</a>
+                      <a href="{{ route('products.show', $product)}}" class="show-btn">商品詳細</a>
                     </div>
                 </div>
               </li>    
