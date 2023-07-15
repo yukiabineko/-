@@ -32,14 +32,16 @@ class ProductController extends Controller
             'category' => $request->category,
             'info' => $request->info
         ]);
-        foreach($files as $file){
-            $fileName = $file->getClientOriginalName();
-            $file->storeAs('/products/products'.$product->id, $fileName, 'public');
-            $image = new Image();
-            $image->create([
-               'path' => $fileName,
-               'product_id' =>$product->id
-            ]);
+        if(!empty( $files)){
+            foreach($files as $file){
+                $fileName = $file->getClientOriginalName();
+                $file->storeAs('/products/products'.$product->id, $fileName, 'public');
+                $image = new Image();
+                $image->create([
+                    'path' => $fileName,
+                    'product_id' =>$product->id
+                ]);
+            }
         }
         return redirect('/')->with('flash', '商品を登録しました。');
     }

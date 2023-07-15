@@ -15,6 +15,8 @@
 **/
 .search-area{
   border-right: 1px solid #c0c0c0;
+  top: 0;
+  position: sticky;
   width: 20%;
 }
 .search-area p{
@@ -127,10 +129,85 @@ select{
 .product-lists{
   width: 100%;
   list-style: none;
+  margin-bottom: 4rem;
 }
 .product-list{
-  align-items: center;
   background-color: white;
+  border-radius: 4px;
+  box-shadow: 2px 3px 3px 3px #d9d9d9;
+  margin: 1rem 0 0;
+  padding: 1rem 0;
+  width: 100%;
+}
+.product-list:not(:first-child){
+  margin-top: 2rem;
+}
+/**
+リストのデータ
+**/
+.product-wrepper{
+  align-items: center;
   display: flex;
-  margin: 2rem 0 0;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 95%;
+ 
+}
+.product-datas{
+  display: flex;
+  align-items: center;
+  width: 90%;
+  gap: 2%;
+}
+.product-img{
+  border-radius: 50%;
+  border: 1px solid #c0c0c0c0;
+  width: 11%;
+  aspect-ratio: 1;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.info *:not(:last-child){
+  padding-bottom: .3rem;
+}
+.name{
+  font-size: 24px;
+  color: darkblue;
+}
+.category{
+  font-size: 0.75rem;
+  color: #c0c0c0;
+}
+.category img{
+  width: 0.75rem;
+}
+.price{
+  color: darkblue;
+}
+.price span{
+  color: red;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+.product-list-btn{
+  width: 10%;
+}
+.show-btn{
+  background-color: rgb(72, 191, 72);
+  color: whitesmoke;
+  display: block;
+  line-height: 3;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+  width: 100%;
+}
+.show-btn:hover{
+  opacity: 0.6;
 }

@@ -75,20 +75,27 @@
           <ul class="product-lists">
             @foreach ($products as $product)
               <li class="product-list">
-                <!-- 商品情報ボックス(左エリア) -->
-                <div class="product-datas">
-                  <img 
-                   src="{{ asset('storage/products/products'.$product->id.'/'.$product->thumbnail() )}}" 
-                   alt="商品画像" class="product-img">
-                  <div class="info">
-                    <div class="name">{{ $product->name }}</div>
-                    <div class="category">{{ $product->getCategory() }}</div>
-                    <div class="price">{{ $product->price }}円</div>
-                  </div>
-                </div>
-              <!-- 右側エリア -->
-                <div class="product-list-btn">
-                  <a href="#" class="btn">商品詳細</a>
+                <div class="product-wrepper">
+                    <!-- 商品情報ボックス(左エリア) -->
+                    <div class="product-datas">
+                      <img 
+                      src="{{ $product->thumbnail()? asset('storage/products/products'.$product->id.'/'.$product->thumbnail())
+                      : asset('image/noimage.png')
+                      }}" 
+                      alt="商品画像" class="product-img">
+                      <div class="info">
+                        <strong class="name">{{ $product->name }}</strong>
+                        <small class="category">
+                          <img src="{{asset('image/tag.png')}}" alt="タグ">
+                          {{ $product->getCategory() }}
+                        </small>
+                        <div class="price"><span>{{ $product->price }}</span>円</div>
+                      </div>
+                    </div>
+                    <!-- 右側エリア -->
+                    <div class="product-list-btn">
+                      <a href="#" class="show-btn">商品詳細</a>
+                    </div>
                 </div>
               </li>    
             @endforeach

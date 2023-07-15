@@ -25,8 +25,9 @@ class Product extends Model
      * 関連画像の最初の画像取得(サムネイル化)
      */
     public function thumbnail(){
-       $first_image = $this->images()->get()[0]->path;
-       return $first_image;
+       $first_image = $this->images()->get();
+      return count( $first_image ) >0 ? $first_image[0]->path : null;
+       
     }
     /**
      * カテゴリー名取得
@@ -34,4 +35,5 @@ class Product extends Model
     public function getCategory(){
       return self::STATAS[ (int) $this->category ];
     }
+   
 }
