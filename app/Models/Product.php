@@ -9,6 +9,7 @@ class Product extends Model
 {
    const STATAS = [
       '日替わり商品',
+      '塩鮭',
       '干物',
       'うなぎ'
    ];
