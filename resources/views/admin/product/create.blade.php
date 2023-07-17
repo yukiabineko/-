@@ -69,7 +69,8 @@
                         <option value="0" {{ old('title',$product->category) == 0 ? 'selected' : ''}}>日替わり商品</option>
                         <option value="1" {{ old('title',$product->category) == 1 ? 'selected' : ''}}>塩鮭</option>
                         <option value="2" {{ old('title',$product->category) == 2 ? 'selected' : ''}}>干物</option>
-                        <option value="3" {{ old('title',$product->category) == 3 ? 'selected' : ''}}>うなぎ</option>
+                        <option value="3" {{ old('title',$product->category) == 2 ? 'selected' : ''}}>魚卵</option>
+                        <option value="4" {{ old('title',$product->category) == 3 ? 'selected' : ''}}>うなぎ</option>
                     </select>
                 </div>
 

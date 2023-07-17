@@ -87,8 +87,8 @@
       </section>
 <!--------------------------画面下部---------------------------------------------------------------------------->
       <section class="images">
+         <span class="arrow arrow-left"><<</span>
          <div class="img-wrapper">
-          <span class="arrow arrow-left" onclick="leftMove()"><<</span>
           @foreach ($product->images()->get() as $i=>$img)
             @if ($i != 0)
               <img 
@@ -96,8 +96,8 @@
                 alt="画像" class="sub-img" id="img-{{$img->id}}"> 
             @endif
           @endforeach
-          <span class="arrow arrow-right" onclick="rightMove()">>></span>
-         </div>
+        </div>
+        <span class="arrow arrow-right">>></span>
       </section>
     </article>
 @endsection

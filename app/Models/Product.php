@@ -11,6 +11,7 @@ class Product extends Model
       '日替わり商品',
       '塩鮭',
       '干物',
+      '魚卵',
       'うなぎ'
    ];
     use HasFactory;

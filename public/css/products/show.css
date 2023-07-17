@@ -132,6 +132,8 @@
   border:6px solid darkblue;
   height: calc(100vw * 0.95 / 4);
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
   width: 95%;
 }
 .arrow{
@@ -154,11 +156,13 @@
   gap: 3.125%;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  transition: .5s;
   position: relative;
 }
-.img-wrapper img{
+.sub-img{
+  flex-shrink: 0;
   width: calc(100% * 0.3125);
+  height:100% ;
 }
 .arrow-left{
   left: 0;
