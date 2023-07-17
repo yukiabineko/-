@@ -21,5 +21,7 @@ Route::resource('/products',ProductController::class);
 Route::group(['middleware' =>['auth']], function(){
   Route::get('/admin/products/create', [AdminProductController::class, 'create'])->name('admin.products_create');
   Route::get('/admin/products', [AdminProductController::class, 'index'])->name('admin.products');
+  Route::get('/admin/products/{product}/edit', [AdminProductController::class, 'edit'])->name('admin.products_edit');
   Route::post('/admin/products', [AdminProductController::class, 'store'])->name('admin.products_store');
+  Route::patch('/admin/products/{product}', [AdminProductController::class, 'update'])->name('admin.products_update');
 });

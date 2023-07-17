@@ -63,4 +63,14 @@ window.addEventListener('load', ()=>{
     }
     console.log(count);
   });
+  /**
+   * サブ画像をクリックした場合
+   */
+  subImages.forEach((imgElement, index) => {
+    imgElement.addEventListener('click', event=>{
+      const mainSrc = mainImage.src;
+       mainImage.setAttribute('src', imgElement.src);
+       imgElement.src = mainSrc;
+    });
+  });
 });

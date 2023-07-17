@@ -10,8 +10,9 @@
 
 @section('contents')
    <div class="page-title">
-      <h3>商品登録</h3>
+      <h3>{{ $product->name }}編集</h3>
    </div>
-   @include('admin.product.form',['edit' => false])
+   @include('admin.product.form',['edit' => true])
    
+
 @endsection

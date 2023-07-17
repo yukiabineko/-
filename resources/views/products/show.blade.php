@@ -68,7 +68,7 @@
             <!-- ボタンの分岐 -->
             @if(Auth::check() && Auth::user()->admin == 1)
                <div class="admin-btns">
-                <a href="#" class="admin-btn edit-button">商品編集</a>
+                <a href="{{ route('admin.products_edit', $product)}}" class="admin-btn edit-button">商品編集</a>
                 <form action="#" class="del-form">
                   @csrf
                   <button type="submit" class="admin-btn del-button">削除する</button>

@@ -54,4 +54,27 @@ class ProductController extends Controller
             'products' => $products
         ]);
     }
+    /**
+     * 編集ページ
+     */
+    public function edit(Product $product){
+        return view('admin.product.edit', [
+           'product' => $product
+        ]);
+    }
+    /**
+     * アップデート処理
+     */
+    public function update(ProductRequest $request, Product $product){
+        $files = $request->file('file');
+        $file_input_indexs = array_keys($files);
+
+        $images = $product->images()->get();
+
+        foreach($file_input_indexs as $i){
+            echo $images[$i]->path;
+        }
+
+
+    }
 }
