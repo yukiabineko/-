@@ -6,11 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductRequest;
 use App\Models\Image;
 use App\Models\Product;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
+/**************************************** */
     /**
      * 商品登録ページ
      */
@@ -20,6 +20,7 @@ class ProductController extends Controller
             'product' => $product
         ]);
     }
+/**************************************** */
     /**
      * 商品登録処理
      */
@@ -46,6 +47,7 @@ class ProductController extends Controller
         }
         return redirect('/')->with('flash', '商品を登録しました。');
     }
+/**************************************** */
     /**
      * 商品一覧ページ
      */
@@ -55,6 +57,7 @@ class ProductController extends Controller
             'products' => $products
         ]);
     }
+/**************************************** */
     /**
      * 編集ページ
      */
@@ -63,6 +66,7 @@ class ProductController extends Controller
            'product' => $product
         ]);
     }
+/**************************************** */
     /**
      * アップデート処理
      */
@@ -95,6 +99,20 @@ class ProductController extends Controller
                 ]);
             }
         }
-        return redirect( route('admin.products'))->with('flash', '表品情報を更新しました。');
+        return redirect( route('admin.products'))->with('flash', '商品情報を更新しました。');
+    }
+/**************************************** */
+   /**
+    * 商品削除処理
+    */
+    public function destroy(Product $product){
+
+        $images = $product->images()->get();
+        Storage::deleteDirectory('public/products/products'.$images[0]->product_id);                                   //=>関連画像のディレクトリ削除
+        foreach($images as $image){                                                                             //=>関連するImageインスタンス、画像も削除する。
+          $image->delete();
+        }
+        $product->delete();                                                                                     //=>ターゲット商品の削除
+        return redirect( route('admin.products'))->with('flash', '商品を削除しました。');
     }
 }

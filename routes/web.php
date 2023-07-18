@@ -24,4 +24,5 @@ Route::group(['middleware' =>['auth']], function(){
   Route::get('/admin/products/{product}/edit', [AdminProductController::class, 'edit'])->name('admin.products_edit');
   Route::post('/admin/products', [AdminProductController::class, 'store'])->name('admin.products_store');
   Route::patch('/admin/products/{product}', [AdminProductController::class, 'update'])->name('admin.products_update');
+  Route::delete('/admin/products/{product}', [AdminProductController::class, 'destroy'])->name('admin.products_destroy');
 });

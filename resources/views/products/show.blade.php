@@ -69,8 +69,9 @@
             @if(Auth::check() && Auth::user()->admin == 1)
                <div class="admin-btns">
                 <a href="{{ route('admin.products_edit', $product)}}" class="admin-btn edit-button">商品編集</a>
-                <form action="#" class="del-form">
+                <form onsubmit="return confirm('削除しますか？')" action="{{ route('admin.products_destroy',$product)}}" class="del-form" method="POST">
                   @csrf
+                  @method('delete')
                   <button type="submit" class="admin-btn del-button">削除する</button>
                 </form>
                </div>
