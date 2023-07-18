@@ -13,7 +13,6 @@
 <body>
   <!-- ヘッダー -->
   @include('admin.header')
-
   <!-- メインコンテンツ -->
   <main>
     @yield('contents')

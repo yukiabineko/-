@@ -12,6 +12,7 @@
    <div class="page-title">
       <h3>商品一覧</h3>
    </div>
+   @include('share.flash')
 
    <!-- メインコンテンツ -->
    <article class="main-contents">
