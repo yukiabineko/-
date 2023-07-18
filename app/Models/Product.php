@@ -13,6 +13,7 @@ class Product extends Model
       '干物',
       '魚卵',
       '丸干し',
+      '珍味',
       'うなぎ'
    ];
     use HasFactory;

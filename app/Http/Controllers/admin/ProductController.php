@@ -103,6 +103,15 @@ class ProductController extends Controller
     }
 /**************************************** */
    /**
+    * 管理者番商品詳細
+    */
+    public function show(Product $product){
+        return view('admin.product.show',[
+          'product' => $product
+        ]);
+    }
+/**************************************** */
+   /**
     * 商品削除処理
     */
     public function destroy(Product $product){
