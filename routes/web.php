@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\ProductController as AdminProductController;
+use App\Http\Controllers\DailyController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -26,4 +27,6 @@ Route::group(['middleware' =>['auth']], function(){
   Route::post('/admin/products', [AdminProductController::class, 'store'])->name('admin.products_store');
   Route::patch('/admin/products/{product}', [AdminProductController::class, 'update'])->name('admin.products_update');
   Route::delete('/admin/products/{product}', [AdminProductController::class, 'destroy'])->name('admin.products_destroy');
+  //日替わり生鮮
+  Route::resource('daily', DailyController::class)->only(['index', 'show']);
 });

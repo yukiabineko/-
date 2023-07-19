@@ -17,7 +17,7 @@ class Product extends Model
       'うなぎ'
    ];
     use HasFactory;
-    protected $fillable = ["name", "price", "stock", "category", "info"];
+    protected $fillable = ["name", "price", "stock", "area", "category", "info"];
 
     /**
      * リレーション関連

@@ -70,6 +70,12 @@
                 <input type="number" min=0  name="stock" class="form-control" value="{{ old('stock', $product->stock)}}">
             </div>
 
+             <!-- 産地 -->
+            <div class="form-group">
+                <div class="form-title">商品産地<span class="status">任意</span></div>
+                <input type="text" name="area" class="form-control" value="{{ old('area', $product->area)}}">
+            </div>
+
             <!-- カテゴリー -->
             <div class="form-group">
                 <div class="form-title">商品カテゴリー<span class="status">必須</span></div>

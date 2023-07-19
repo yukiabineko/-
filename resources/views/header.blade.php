@@ -48,13 +48,13 @@
   <nav>
     <ul class="nav-lists">
       <li class="nav-list {{ request()->path() == '/'? 'active': ''}}">
-        <a href="#" class="nav-list-link">
+        <a href="/" class="nav-list-link">
           <div class="main-title">TOP</div>
           <div class="sub-title">トップページ</div>
         </a>
       </li>
-      <li class="nav-list">
-        <a href="#" class="nav-list-link">
+      <li class="nav-list {{ request()->path() == 'daily'? 'active': ''}}">
+        <a href="{{ route('daily.index')}}" class="nav-list-link">
           <div class="main-title">ARRIVALS</div>
           <div class="sub-title">生鮮入荷予定</div>
         </a>

@@ -31,6 +31,7 @@ class ProductController extends Controller
             'name' => $request->name,
             'price' => $request->price,
             'stock' => $request->stock,
+            'area' => $request->area,
             'category' => $request->category,
             'info' => $request->info
         ]);
@@ -79,6 +80,7 @@ class ProductController extends Controller
             'name' => $request->name,
             'price' => $request->price,
             'stock' => $request->stock,
+            'area' => $request->area,
             'category' => $request->category,
             'info' => $request->info
         ]);
