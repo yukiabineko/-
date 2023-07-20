@@ -14,7 +14,7 @@ class DailyController extends Controller
   public function index(){
     $dailies = Daily::getDaily();
     return view('dailies.index',[
-      'dailies' => $dailies
+      'products' => $dailies
     ]);
   }
 }

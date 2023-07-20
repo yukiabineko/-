@@ -86,7 +86,8 @@
                     <option value="3" {{ old('title',$product->category) == 3 ? 'selected' : ''}}>魚卵</option>
                     <option value="4" {{ old('title',$product->category) == 4 ? 'selected' : ''}}>丸干し</option>
                     <option value="5" {{ old('title',$product->category) == 5 ? 'selected' : ''}}>珍味</option>
-                    <option value="6" {{ old('title',$product->category) == 6 ? 'selected' : ''}}>うなぎ</option>
+                    <option value="6" {{ old('title',$product->category) == 6 ? 'selected' : ''}}>ちりめん</option>
+                    <option value="7" {{ old('title',$product->category) == 7 ? 'selected' : ''}}>うなぎ</option>
                 </select>
             </div>
 

@@ -50,7 +50,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 3.125%;
   list-style: none;
   margin-top: 2rem;
   width: 100%;
@@ -61,7 +61,7 @@
   border-radius: 5px;
   box-shadow: 2px 3px 3px 1px rgb(207, 207, 174);
   padding-bottom: 1.5rem;
-  width: calc(100% / 3 - 4%);
+  width: 31.25%;
   flex-shrink: 0;
   margin-bottom: 2.5rem;
   
@@ -96,7 +96,7 @@
   font-style: italic;
   font-weight: bold;
   font-size: 20px;
-  letter-spacing: 0.12rem;
+  letter-spacing: 0.1rem;
   margin-right: .2rem;
 }
 .product-link{
@@ -112,6 +112,9 @@
   text-decoration: none;
   width: 100%;
   line-height: 3;
+}
+.online-link{
+  background-color: #33cc33 !important;
 }
 .link-button:hover{
   opacity: 0.6;

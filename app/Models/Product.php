@@ -14,10 +14,11 @@ class Product extends Model
       '魚卵',
       '丸干し',
       '珍味',
+      'ちりめん',
       'うなぎ'
    ];
     use HasFactory;
-    protected $fillable = ["name", "price", "stock", "area", "category", "info"];
+    protected $fillable = ["name", "price", "stock", "area", "category", "info", "quantity"];
 
     /**
      * リレーション関連
