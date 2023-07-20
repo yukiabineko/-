@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+/****************************************************** */
     /**
      *商品詳細
      */
@@ -15,4 +16,14 @@ class ProductController extends Controller
             'product'=> $product
         ]);
     }
+/***************************************************** */
+   /**
+    * オンライン版の商品一覧
+    */
+   public function index(){
+     $products = Product::where('category', '!=', 0)->get();
+     return view('products.index',[
+        'products' => $products
+     ]);
+   }
 }

@@ -32,7 +32,12 @@
               @else
                 <li class="menu-li"><a href="{{ route('admin.products')}}" class="menu-li-link">商品管理</a></li>  
               @endif
-              <li class="menu-li">ログアウト</li>
+              <li class="menu-li">
+                <form action="{{ route('logout')}}" method="post">
+                  @csrf
+                  <button type="submit">ログアウト</button>
+                </form>
+              </li>
             </ul>
             <!-- ショッピングカート -->
             <div class="cart">
@@ -48,7 +53,7 @@
   <nav>
     <ul class="nav-lists">
       <li class="nav-list {{ request()->path() == '/'? 'active': ''}}">
-        <a href="/" class="nav-list-link">
+        <a href="{{ route('home')}}" class="nav-list-link">
           <div class="main-title">TOP</div>
           <div class="sub-title">トップページ</div>
         </a>
@@ -60,7 +65,7 @@
         </a>
       </li>
       <li class="nav-list">
-        <a href="#" class="nav-list-link">
+        <a href="{{ route('products.index') }}" class="nav-list-link">
           <div class="main-title">ONLINE</div>
           <div class="sub-title">オンラインショップ</div>
         </a>

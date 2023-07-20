@@ -46,29 +46,31 @@ header .icons a img{
 }
 .auth-wrapper{
   text-align: right;
-  width: 20%;
+  width: 30%;
 }
 .tel{
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   color: green;
   text-decoration: none;
   margin-bottom: 1rem;
 }
 .tel img{
-  width: 10% !important;
+  width: 16px !important;
 }
 .auth-btns{
   display: flex;
   width: 100%;
   align-items: center;
+  gap: 2%;
   justify-content: space-between;
 }
 .auth-btns .btn{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: calc(45% - 20px);
+  width: 46%;
   background-color: #F9F9F9;
   border-radius: 3px;
   text-decoration: none;

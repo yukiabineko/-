@@ -137,7 +137,7 @@ right
   opacity: 0.6;
 }
 .sns-link-list img{
-  width: 15%;
+  width: 16px;
 }
 /***************/
 /**
@@ -158,8 +158,6 @@ right
   background-color: #f0f0f0;
   display: flex;
   font-size: 16px;
-
-  font-weight: bold;
   align-items: center;
   line-height: 2;
   justify-content: center;
@@ -168,6 +166,6 @@ right
   margin: 1.2em auto;
 }
 .right-contact a img{
-  width: 10%;
+  width: 16px;
 }
 

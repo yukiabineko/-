@@ -19,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[HomeController::class, 'home'])->name('home');
 Route::resource('/products',ProductController::class);
+ //日替わり生鮮
+Route::resource('daily', DailyController::class)->only(['index']);
 Route::group(['middleware' =>['auth']], function(){
   Route::get('/admin/products/create', [AdminProductController::class, 'create'])->name('admin.products_create');
   Route::get('/admin/products', [AdminProductController::class, 'index'])->name('admin.products');
@@ -27,6 +29,4 @@ Route::group(['middleware' =>['auth']], function(){
   Route::post('/admin/products', [AdminProductController::class, 'store'])->name('admin.products_store');
   Route::patch('/admin/products/{product}', [AdminProductController::class, 'update'])->name('admin.products_update');
   Route::delete('/admin/products/{product}', [AdminProductController::class, 'destroy'])->name('admin.products_destroy');
-  //日替わり生鮮
-  Route::resource('daily', DailyController::class)->only(['index', 'show']);
 });

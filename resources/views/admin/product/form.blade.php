@@ -90,6 +90,18 @@
                 </select>
             </div>
 
+            <!-- カテゴリー -->
+            <div class="form-group">
+                <div class="form-title">量目<span class="status">必須</span></div>
+                <select name="quantity" class="form-control">
+                    <option value="0" {{ old('title',$product->quantity) == 0 ? 'selected' : ''}}>1パック</option>
+                    <option value="1" {{ old('title',$product->quantity) == 1 ? 'selected' : ''}}>1尾</option>
+                    <option value="2" {{ old('title',$product->quantity) == 2 ? 'selected' : ''}}>1個</option>
+                    <option value="3" {{ old('title',$product->quantity) == 3 ? 'selected' : ''}}>1切</option>
+                    <option value="4" {{ old('title',$product->quantity) == 4 ? 'selected' : ''}}>100g</option>
+                </select>
+            </div>
+
             <!-- 商品説明ー -->
             <div class="form-group">
                 <div class="form-title">商品説明<span class="status">任意</span></div>

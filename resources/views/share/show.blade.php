@@ -37,7 +37,8 @@
               <div class="price-contents">
                 <span class="price-title">価格</span>
                 <div class="price">
-                  <span class="price-number">{{ $product->price }}</span>円
+                  <span class="quantity">1パック</span>
+                  <span class="price-number">{{ $product->tax() }}</span>円(税込)
                 </div>
               </div>
 
@@ -54,14 +55,18 @@
             @else
                 <div class="stock">
                   <span class="stock-title">在庫</span>
-                  @if ((int)$product->stock != 0)
-                    <span class="stock-data"><span class="stock-number">
-                      {{ $product->stock  }}
-                    </span>個</span>
+                  @if ( $product->category == 0)
+                     <span class="stock-data">生鮮食品のため店舗へご確認ください。</span> 
                   @else
-                    <span class="sold-out">売り切れ</span>
+                    @if ((int)$product->stock != 0)
+                      <span class="stock-data"><span class="stock-number">
+                        {{ $product->stock  }}
+                      </span>個</span>
+                    @else
+                      <span class="sold-out">売り切れ</span>
+                    @endif    
                   @endif
-                   
+                  
                 </div>  
             @endif
 
@@ -94,18 +99,20 @@
         </div>
       </section>
 <!--------------------------画面下部---------------------------------------------------------------------------->
-      <section class="images">
-         <span class="arrow arrow-left"><<</span>
-         <div class="img-wrapper">
-          @foreach ($product->images()->get() as $i=>$img)
-            @if ($i != 0)
-              <img 
-                src="{{ asset('storage/products/products'.$img->product_id.'/'.$img->path)}}" 
-                alt="画像" class="sub-img" id="img-{{$img->id}}"> 
-            @endif
-          @endforeach
-        </div>
-        <span class="arrow arrow-right">>></span>
-      </section>
+      @if ( count( $product->images()->get()) > 1)
+          <section class="images">
+            <span class="arrow arrow-left"><<</span>
+            <div class="img-wrapper">
+            @foreach ($product->images()->get() as $i=>$img)
+              @if ($i != 0)
+                <img 
+                  src="{{ asset('storage/products/products'.$img->product_id.'/'.$img->path)}}" 
+                  alt="画像" class="sub-img" id="img-{{$img->id}}"> 
+              @endif
+            @endforeach
+          </div>
+          <span class="arrow arrow-right">>></span>
+        </section>  
+      @endif
     </article>
 @endsection

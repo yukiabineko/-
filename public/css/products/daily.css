@@ -4,13 +4,116 @@
 **/
 /*-----------全体---------------------*/
 .daily-index-contents{
-  display: flex;
   align-items: flex-start;
+  background-color: white;
+  display: flex;
   gap: 2%;
-  width: 95%;
+  width: 90%;
   margin: 4rem auto;
 }
 /*------------中央-----------------------*/
 .daily-main{
   width: 70%;
+  margin-top: 1%;
 }
+.daily-title{
+  display: block;
+  border-top: 3px solid darkblue;
+}
+.daily-title h3{
+  color: darkblue;
+  display: inline-block;
+  font-size: 32px;
+  font-style: italic;
+  letter-spacing: 0.12rem;
+  padding-top: .3rem;
+  position: relative;
+}
+.daily-title h3::after{
+  aspect-ratio: 38 / 1;
+  /*background-color: darkblue;*/
+ /* background-image: repeating-linear-gradient(-45deg,#f0f0f0, #f0f0f0 2px,transparent 0, transparent 4px);*/
+  border: none;
+  display: block;
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 90%;
+}
+.daily-title p{
+  color: rgb(9, 9, 96);
+  font-size: 12px;
+  margin-top: 3.5rem;
+  letter-spacing: 0.11rem;
+}
+.product-lists{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin-top: 2rem;
+  width: 100%;
+
+}
+.product-lists li{
+  background-color: beige;
+  border-radius: 5px;
+  box-shadow: 2px 3px 3px 1px rgb(207, 207, 174);
+  padding-bottom: 1.5rem;
+  width: calc(100% / 3 - 4%);
+  flex-shrink: 0;
+  margin-bottom: 2.5rem;
+  
+}
+.product-img{
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  aspect-ratio: 19 / 13 ;
+}
+.product-info{
+  width: 97%;
+  margin: 0 auto;
+}
+.product-name{
+  color: darkblue;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.product-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 1rem;
+}
+.price-quantity{
+  font-size: 12px;
+  font-weight: bold;
+}
+.price-number{
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.12rem;
+  margin-right: .2rem;
+}
+.product-link{
+  width: 75%;
+  margin: 0 auto;
+}
+.link-button{
+  background-color: #4F4FD3;
+  border-radius: 4px;
+  color: white;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  line-height: 3;
+}
+.link-button:hover{
+  opacity: 0.6;
+}
+

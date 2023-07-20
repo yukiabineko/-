@@ -39,5 +39,11 @@ class Product extends Model
     public function getCategory(){
       return self::STATAS[ (int) $this->category ];
     }
+    /**
+     * 消費税の計算
+     */
+    public function tax(){
+      return floor( (int)$this->price * 1.1 );
+    }
    
 }

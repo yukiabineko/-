@@ -53,6 +53,7 @@
 .stock-data
 {
   color: darkblue;
+  font-size: 12px;
 }
 .price-number,
 .stock-number
@@ -64,8 +65,14 @@
   letter-spacing: 0.12rem;
   padding-right: 5px;
 }
-.stock-number{
+.quantity{
+  font-size: 12px;
+  font-weight: bold;
+}
+.stock-number,
+.stock-data{
   color: darkblue !important;
+  font-size: 16px !important;
 }
 .description-title{
   background-color: darkblue;
