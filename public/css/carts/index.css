@@ -1,0 +1,69 @@
+.cart-contents{
+  width: 90%;
+  margin: 4rem auto 0;
+}
+.cart-title{
+  border-bottom: 4px solid darkblue;
+  text-align: left;
+  width: 100%;
+
+}
+.cart-title h3{
+  color: darkblue;
+  display: inline-block;
+  font-size: 32px;
+  font-style: italic;
+  padding-bottom: .5rem;
+
+}
+.info-title{
+  color: #ff0000;
+  margin-top: 1.5rem;
+}
+.carts{
+  width: 100%;
+  margin-bottom: 4rem;
+}
+.cart-form{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  width: 100%;
+}
+/******************************************************/
+/**
+商品リスト(左側)
+**/
+.cart-table{
+  border-collapse: collapse;
+  border: 1px solid #c0c0c0;
+  width: 70%;
+}
+thead{
+  background-color: #c0c0c0;
+  border-bottom: 2px solid darkblue;
+  color: darkblue;
+  line-height: 3;
+  text-align: left;
+}
+td{
+  padding: .3rem;
+  background-color: white;
+  border-bottom: 1px dotted #c0c0c0;
+}
+.img-td{
+  width: 20%;
+}
+.img-td img{
+  width: 80%;
+}
+
+/******************************************************/
+/**
+会計決定エリア(右側)
+**/
+.accounting{
+  width: 20%;
+}
+
+

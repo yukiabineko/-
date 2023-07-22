@@ -1,5 +1,9 @@
 @extends($layout)
 
+@section('title')
+  {{ $product->name }}詳細 
+@endsection
+
 @section('css')
   <link rel="stylesheet" href="{{ asset('css/products/show.css')}}">
 @endsection
@@ -42,55 +46,61 @@
                 </div>
               </div>
 
-            <!--注文数/在庫 -->
-            @if (Auth::check() && Auth::user()->admin == 0 && (int)$product->stock > 0)
-              <div class="order-contens">
-                <span class="oder-title">注文数</span>
-                <select  id="select">
-                    @for ($i = 0; $i < (int)$product->stock; $i++)
-                        <option value="{{ $i}}">{{ $i}}</option>
-                    @endfor
-                </select>
-              </div>
-            @else
-                <div class="stock">
-                  <span class="stock-title">在庫</span>
-                  @if ( $product->category == 0)
-                     <span class="stock-data">生鮮食品のため店舗へご確認ください。</span> 
+              <!-- 在庫 -->
+              <div class="stock">
+                <span class="stock-title">在庫</span>
+                @if ( $product->category == 0)
+                   <span class="stock-data">生鮮食品のため店舗へご確認ください。</span> 
+                @else
+                  @if ((int)$product->stock != 0)
+                    <span class="stock-data"><span class="stock-number">
+                      {{ $product->stock  }}
+                    </span>個</span>
                   @else
-                    @if ((int)$product->stock != 0)
-                      <span class="stock-data"><span class="stock-number">
-                        {{ $product->stock  }}
-                      </span>個</span>
-                    @else
-                      <span class="sold-out">売り切れ</span>
-                    @endif    
-                  @endif
-                  
-                </div>  
-            @endif
+                    <span class="sold-out">売り切れ</span>
+                  @endif    
+                @endif
+              </div>  
 
-            <!-- 商品説明 -->
-            <div class="description-contents">
-              <div class="description-title">商品説明</div>
-              <div class="description-text">{!! nl2br(e($product->info)) !!}</div>
-            </div>
-            
 
-            <!-- ボタンの分岐 -->
+              <!-- 商品説明 -->
+              <div class="description-contents">
+                <div class="description-title">商品説明</div>
+                <div class="description-text">{!! nl2br(e($product->info)) !!}</div>
+              </div>
+
+            <!-- 注文数、ボタンの分岐 -->
             @if(Auth::check() && Auth::user()->admin == 1)
-               <div class="admin-btns">
+                <div class="admin-btns">
                 <a href="{{ route('admin.products_edit', $product)}}" class="admin-btn edit-button">商品編集</a>
                 <form onsubmit="return confirm('削除しますか？')" action="{{ route('admin.products_destroy',$product)}}" class="del-form" method="POST">
                   @csrf
                   @method('delete')
                   <button type="submit" class="admin-btn del-button">削除する</button>
                 </form>
-               </div>
+                </div>
             @elseif( Auth::check() && Auth::user()-> admin == 0)
-               <div class="btns">
-                 <button class="btn">買い物かごに入れる</button>
-               </div>
+                <form action="{{ route('cart.store')}}" method="post" class="cart-form">
+                  @csrf
+                  <div class="order-contents">
+                    <span class="order-title">注文数</span>
+                    <select name="count"  id="select">
+                        @for ($i = 0; $i < (int)$product->stock + 1; $i++)
+                            <option value="{{ $i}}">{{ $i}}</option>
+                        @endfor
+                    </select>
+                  </div>
+        
+                  <input type="hidden" name="path" value="{{ $product->thumbnailFullPath() }}">
+                  <input type="hidden" name="name" value="{{ $product->name }}">
+                  <input type="hidden" name="price" value="{{ $product->price }}">
+                  <input type="hidden" name="max" value="{{ $product->stock }}">
+                  <input type="hidden" name="product_id" value="{{ $product->id }}">
+
+                  <div class="submit">
+                    <button type="submit" class="btn cart-button">買い物かごに入れる</button>
+                  </div>
+                </form>
             @else
               <div class="btns">
                 <a href="{{ route('login')}}" class="btns-button">ログインしてください</a>

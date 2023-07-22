@@ -55,8 +55,7 @@
   color: darkblue;
   font-size: 12px;
 }
-.price-number,
-.stock-number
+.price-number
 {
   color: red;
   font-style: italic;
@@ -69,10 +68,13 @@
   font-size: 12px;
   font-weight: bold;
 }
-.stock-number,
 .stock-data{
   color: darkblue !important;
   font-size: 16px !important;
+}
+.stock-number{
+  font-style: italic;
+  font-weight: bold;
 }
 .description-title{
   background-color: darkblue;
@@ -102,6 +104,52 @@
 }
 .btns-button:hover{
   opacity: 0.6;
+}
+.cart-form{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  
+}
+.order-contents{
+  align-items: center;
+  display: flex;
+  width: 40%;
+}
+.order-title{
+  background-color: #33cc33;
+  border: none;
+  color: white;
+  padding: .5rem;
+  text-align: center;
+  width: 30%;
+ 
+}
+#select{
+  border: 1px solid #c0c0c0;
+  display: block;
+  padding: calc(.5rem + 1.5px) 0;
+  outline: none;
+  width: 70%;
+ 
+}
+.submit{
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+ 
+}
+.cart-button{
+  background-color: #226922;
+  border-radius: 4px;
+  color: white;
+  display: block;
+  line-height: 2.5;
+  width: 50%;
+}
+.cart-button:hover{
+  opacity: 0.5;
 }
 .admin-btns{
   display: flex;

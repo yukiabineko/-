@@ -156,6 +156,7 @@ nav{
 }
 .cart-count{
   width: 50%;
+  aspect-ratio: 1;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -167,6 +168,10 @@ nav{
   bottom: 0;
   font-size: 12px;
   font-weight: bold;
+}
+.cart-exists{
+  background-color: red;
+  color: white;
 }
 .menus-lists{
   width: 100%;

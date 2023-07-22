@@ -40,10 +40,12 @@
               </li>
             </ul>
             <!-- ショッピングカート -->
-            <div class="cart">
+            <a href="{{route('cart.index')}}" class="cart">
               <img src="{{ asset('image/cart1.png')}}" alt="カート" class="cart-img">
-              <span class="cart-count">0</span>
-            </div>
+              <span class="cart-count {{ !empty( session('cart'))? 'cart-exists' : ''}}">
+                {{ !empty( session('cart'))? count( session('cart') ) :  0}}
+              </span>
+            </a>
           </div>
        @endif
     </div>
@@ -64,7 +66,7 @@
           <div class="sub-title">生鮮入荷予定</div>
         </a>
       </li>
-      <li class="nav-list">
+      <li class="nav-list {{ request()->path() == 'products'? 'active': ''}}">
         <a href="{{ route('products.index') }}" class="nav-list-link">
           <div class="main-title">ONLINE</div>
           <div class="sub-title">オンラインショップ</div>
@@ -84,6 +86,5 @@
       </li>
     </ul>
   </nav>
-
 
 </header>
