@@ -57,6 +57,19 @@ td{
 .img-td img{
   width: 80%;
 }
+select{
+  border: 1px solid #c0c0c0;
+  line-height: 2;
+  outline: none;
+}
+.delete-btns{
+  background-color: transparent;
+  border: 1px solid #c0c0c0;
+  padding: .4rem .5rem;
+}
+.delete-btns:hover{
+  opacity: 0.5;
+}
 
 /******************************************************/
 /**

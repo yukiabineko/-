@@ -44,21 +44,28 @@
                 </tr>
               </thead>
               <tbody>
-              @foreach ($carts as $cart)
-                <tr>
+              @foreach ($carts as $index =>$cart)
+                <tr id="row-{{$index}}">
                   <td class="img-td">
                     <img src="{{ asset('storage/'.$cart['path']) }}" alt="商品名">
                   </td>
                   <td>{{ $cart['name']}}</td>
-                  <td class="price"><span id="price-{{ $cart['product_id'] }}">{{ floor($cart['price'] * 1.1 ) }}</span>(税込)</td>
+                  <td class="price"><span id="price-{{ $cart['product_id'] }}">{{ floor($cart['price'] * 1.1 ) }}</span>円(税込)</td>
                   <td>
-                  <select name="count" id="select-{{ $cart['product_id']}}" onchange="calcTotal({{ $cart['product_id'] }})">
-                    @for( $i =0; $i<= (int)$cart['max']; $i++ )
-                        <option value="{{ $i}}" {{ (int)$cart['count'] == (int)$i? 'selected' : '' }}>{{ $i }}</option>
-                    @endfor
-                  </select>
+                    <select name="count" id="select-{{ $cart['product_id']}}" onchange="calcTotal({{ $cart['product_id'] }})">
+                      @for( $i =0; $i<= (int)$cart['max']; $i++ )
+                          <option value="{{ $i}}" {{ (int)$cart['count'] == (int)$i? 'selected' : '' }}>{{ $i }}</option>
+                      @endfor
+                    </select>
                   </td>
-                  <td class="total" id="total-{{$cart['product_id']}}"><span class="price">{{  (int)$cart['count'] *  floor($cart['price'] * 1.1 ) }}</span>(税込)</td>
+                  <td class="total"><span id="total-{{$cart['product_id']}}" class="product-total">{{  (int)$cart['count'] *  floor($cart['price'] * 1.1 ) }}</span>(税込)</td>
+                  <td>
+                    <button 
+                      type="button" 
+                      onclick="deleteItem({{ $index }})"
+                      class="delete-btns"
+                      >削除</button>
+                  </td>
                 </tr>
               
               @endforeach
