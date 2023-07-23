@@ -28,6 +28,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
+  position: relative;
   width: 100%;
 }
 /******************************************************/
@@ -37,7 +38,7 @@
 .cart-table{
   border-collapse: collapse;
   border: 1px solid #c0c0c0;
-  width: 70%;
+  width: 75%;
 }
 thead{
   background-color: #c0c0c0;
@@ -77,6 +78,63 @@ select{
 **/
 .accounting{
   width: 20%;
+}
+.wrapper-accojnting{
+  aspect-ratio: 2 / 1;
+  border: 1px solid #c0c0c0;
+  border-top: none;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  position: sticky;
+  top: 1%;
+}
+.total-title{
+  background-color: #c0c0c0;
+  border: 1px solid #c0c0c0;
+  border-bottom: 2px solid darkblue;
+  text-align: center;
+  line-height: 3;
+  width: 100%;
+}
+.total{
+  margin: 1rem 0;
+}
+.total-price-title{
+  font-weight: bold;
+  font-style: italic;
+}
+.total-price{
+  text-align: right;
+  background-color: #f0f0f0;
+}
+#total-num{
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+  margin-right: .3rem;
+  letter-spacing: 0.1rem;
+}
+.btn{
+  border-radius: 4px;
+  color: white;
+  line-height: 2;
+  width: 95%;
+  text-align: center;
+  margin: .3rem auto;
+}
+.btn-submit{
+  background-color: #6699FF;
+}
+.btn-continue{
+  background-color: #45bb45;
+  text-decoration: none;
+}
+.btn:hover{
+  opacity: 0.5;
 }
 
 

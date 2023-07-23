@@ -73,11 +73,18 @@
             </table> 
             <!-- 会計フォーム -->
             <aside class="accounting">
-              <div class="total-title">合計金額</div>
-              <!-- 自作ヘルパー関数使用(tl_p)-->
-              <div class="total"><span id="total-num">{{ tl_p($carts)}}</span>円</div>
-              <button type="submit" class="btn btn-submit">会計する</button>
-              <a href="{{ route('products.index')}}">買い物を続ける</a>
+              <div class="total-title">カート内容</div>
+              <div class="wrapper-accojnting">
+                <!-- 自作ヘルパー関数使用(tl_p)-->
+                <div class="total">
+                  <div class="total-price-title">合計金額</div>
+                  <div class="total-price">
+                    <span id="total-num">{{ tl_p($carts)}}</span>円(税込)
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-submit">会計する</button>
+                <a href="{{ route('products.index')}}" class="btn btn-continue">買い物を続ける</a>
+              </div>
             </aside>
           </form>
         @else

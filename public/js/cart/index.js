@@ -41,6 +41,16 @@ const deleteItem = id =>{
      let cartCount = document.querySelector('.cart-count');
      cartCount.textContent = count;
 
+    //削除対象の価格
+     const minus = Number(row.children[4].children[0].textContent);
+    //買い物かご全体合計から削除分引く
+    let allTotal = document.getElementById('total-num');
+    let totalMoney = Number(allTotal.textContent);
+
+    allTotal.textContent = totalMoney - minus;
+
+
+
      if(count == 0){ 
       cartCount.classList.remove('cart-exists');
       document.querySelector('.cart-table').style.display = "none";
