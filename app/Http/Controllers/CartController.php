@@ -49,4 +49,11 @@ class CartController extends Controller
       }
       
     }
+/****************************************************** */
+   /**
+    * セッションの指定されたデータ削除
+    */
+    public function destroy(int $id){
+       delete_cart($id);                                  #=>ヘルパー関数
+    }
 }

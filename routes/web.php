@@ -32,4 +32,5 @@ Route::group(['middleware' =>['auth']], function(){
   Route::delete('/admin/products/{product}', [AdminProductController::class, 'destroy'])->name('admin.products_destroy');
   //カート関連
   Route::resource('/cart', CartController::class)->only(['store','index']);
+  Route::get('/cart/{id}/delete', [CartController::class, 'destroy'])->name('cart.destroy');
 });

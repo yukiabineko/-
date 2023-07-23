@@ -26,5 +26,31 @@ const calcTotal = id =>{
  * アイテムの削除
  */
 const deleteItem = id =>{
-  alert(id);
+  const nowUrl = location.href;
+  fetch(`${nowUrl}/${id}/delete`)
+  .then(( response) => response.json()) 
+  .then((data)=>{
+     console.log(data);
+     let tbody = document.querySelector('tbody');
+     //削除対象のテーブルロウ非表示
+     let row = document.getElementById('row-' + id );
+     tbody.removeChild(row);
+
+     let count = Number( tbody.children.length );
+     //ヘッダーのカート数の更新
+     let cartCount = document.querySelector('.cart-count');
+     cartCount.textContent = count;
+
+     if(count == 0){ 
+      cartCount.classList.remove('cart-exists');
+      document.querySelector('.cart-table').style.display = "none";
+      const redirect = `${location.protocol}//${location.host}/fish/public`;
+      window.location = redirect;
+     }
+     
+
+  })
+  .catch((err)=>{
+     console.log(err);
+  });
 }
