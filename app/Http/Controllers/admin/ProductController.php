@@ -53,7 +53,7 @@ class ProductController extends Controller
      * 商品一覧ページ
      */
     public function index(){
-        $products = Product::orderBy('created_at', 'asc')->get();
+        $products = Product::orderBy('created_at', 'asc')->paginate(10);
         return view('admin.product.index',[
             'products' => $products
         ]);

@@ -139,6 +139,33 @@ checkbox反応
   margin: 3rem auto 4rem;
   line-height: 3.5;
 }
-
+/***************ページネーション**************************************************************/
+.pagination{
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.pagination li{
+  align-items: center;
+  background-color: white;
+  border: 1px solid #c0c0c0;
+  display: flex;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+}
+.pagination li:not(:last-child){
+  border-right: none !important;
+}
+.pagination .disabled{
+  display: none;
+}
+.pagination .active{
+  background-color: #6699FF;
+  color: white;
+}
+.pagination li a{
+  text-decoration: none;
+}
 
 

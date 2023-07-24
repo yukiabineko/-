@@ -69,6 +69,7 @@
         <!-- 新規ボタン等配置 -->
         <div class="product-btns">
           <a href="{{ route('admin.products_create')}}" class="btn">新規商品登録</a>
+          {{ $products->links() }}
         </div>
 
         <!-- 商品一覧 -->

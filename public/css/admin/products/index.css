@@ -111,6 +111,12 @@ select{
   padding: .6rem 3rem;
   text-decoration: none;
 }
+.product-btns{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
 .product-btns .btn:hover{
    opacity: 0.5;
 }
