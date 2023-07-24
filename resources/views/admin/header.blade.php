@@ -26,8 +26,15 @@
         <li>
           <a href="{{ route('admin.products_create')}}">商品新規登録</a>
         </li>
-        <li>c</li>
-        <li>d</li>
+        <li>
+          <a href="{{ route('home')}}">ユーザーページへ</a>
+        </li>
+        <li>
+          <form action="{{ route('logout')}}" method="post">
+            @csrf
+            <button type="submit">ログアウト</button>
+          </form>
+        </li>
       </ul>
     </div>
   </div>

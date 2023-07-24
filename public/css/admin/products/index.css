@@ -85,13 +85,19 @@ select{
   width: 100%;
   margin: .5rem 0;
 }
-.form-btns button{
+.form-btns button, .all-search-btn{
   display: block;
   width: 100%;
   background-color: #6699FF;
   color: white;
   line-height: 2;
   margin-top: 1.5rem;
+}
+.all-search-btn{
+  background-color: #52cb52;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 1rem !important;
 }
 .form-btns button:hover{
   opacity: 0.5;

@@ -50,16 +50,22 @@
           <!-- カテゴリー -->
           <div class="form-group">
             <div class="form-title">カテゴリー</div>
-            <select class="form-control">
-              <option value="0" {{ Request::get('category') == 0 ? 'selected' : ''}} >日替わり商品</option>
-              <option value="1" {{ Request::get('category') == 1 ? 'selected' : ''}} >干物</option>
-              <option value="2" {{ Request::get('category') == 2 ? 'selected' : ''}} >うなぎ</option>
+            <select name="category" class="form-control">
+              <option value="10" {{ Request::get('category') == 0 ? 'selected' : ''}} >日替わり商品</option>
+              <option value="1" {{ Request::get('category') == 1 ? 'selected' : ''}}>塩鮭</option>
+              <option value="2" {{ Request::get('category') == 2 ? 'selected' : ''}}>干物</option>
+              <option value="3" {{ Request::get('category') == 3 ? 'selected' : ''}}>魚卵</option>
+              <option value="4" {{ Request::get('category') == 4 ? 'selected' : ''}}>丸干し</option>
+              <option value="5" {{ Request::get('category') == 5 ? 'selected' : ''}}>珍味</option>
+              <option value="6" {{ Request::get('category') == 6 ? 'selected' : ''}}>ちりめん</option>
+              <option value="7" {{ Request::get('category') == 7 ? 'selected' : ''}}>うなぎ</option>
             </select>
           </div>
 
           <!-- ボタン　-->
           <div class="form-btns">
              <button type="submit">検索する</button>
+             <a href="{{ route('admin.products')}}" class="all-search-btn">全商品検索</a>
           </div>
         </form>
       </section>

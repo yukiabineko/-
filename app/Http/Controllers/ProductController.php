@@ -21,7 +21,7 @@ class ProductController extends Controller
     * オンライン版の商品一覧
     */
    public function index(){
-     $products = Product::where('category', '!=', 0)->get();
+     $products = Product::where('category', '!=', 10)->get();
      return view('products.index',[
         'products' => $products
      ]);

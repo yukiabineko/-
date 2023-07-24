@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductRequest;
 use App\Models\Image;
 use App\Models\Product;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
@@ -52,8 +53,28 @@ class ProductController extends Controller
     /**
      * 商品一覧ページ
      */
-    public function index(){
-        $products = Product::orderBy('created_at', 'asc')->paginate(10);
+    public function index(Request $request){
+        
+        $product = Product::query();
+        
+        if( !empty( $request['name'] )){
+            $product->where('name', $request['name'] );
+        }
+        if( !empty( $request['min-price'] )){
+            $product->where('price', '>=', $request['min-price'] );
+        }
+        if( !empty( $request['max-price'] )){
+            $product->where('price', '<=', $request['max-price'] );
+        }
+        if( !empty( $request['stock'] )){
+            $product->where('stock', $request['stock'] );
+        }
+        if( !empty( $request['category'] )){
+            $product->where('category', "=", $request['category'] );
+        }
+        
+
+        $products = $product->orderBy('created_at', 'asc')->paginate(10);
         return view('admin.product.index',[
             'products' => $products
         ]);

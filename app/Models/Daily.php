@@ -11,7 +11,7 @@ class Daily extends Product{
    */
   public static function getDaily(){
      $parentInstance  = new Product();
-     return $parentInstance->where('category', 0)->get();
+     return $parentInstance->where('category', 10)->get();
   }
 
 }

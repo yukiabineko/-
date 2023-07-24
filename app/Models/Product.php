@@ -46,7 +46,7 @@ class Product extends Model
      * カテゴリー名取得
      */
     public function getCategory(){
-      return self::STATAS[ (int) $this->category ];
+      return self::STATAS[$this->category !=10? (int) $this->category : 0 ];
     }
     /**
      * 消費税の計算
