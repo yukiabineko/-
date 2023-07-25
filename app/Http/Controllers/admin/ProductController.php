@@ -54,7 +54,8 @@ class ProductController extends Controller
      * 商品一覧ページ
      */
     public function index(Request $request){
-        
+        $this->authorize('index', \Auth::user());
+
         $product = Product::query();
         
         if( !empty( $request['name'] )){
