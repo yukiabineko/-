@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Validator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,5 +28,15 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::defaultView('vendor.pagination.default');
         Paginator::defaultSimpleView('vendor.pagination.default');
+
+        //カタカナのバリデーション追加
+        Validator::extend('katakana', function ($attribute, $value, $parameters, $validator) {
+            return preg_match('/[ァ-ヴー]+/u', $value);
+        });
+        //
+        Validator::extend('tel', function ($attribute, $value, $parameters, $validator) {
+            return preg_match('/^0[0-9]{9,10}$/u', $value);
+        });
+        
     }
 }

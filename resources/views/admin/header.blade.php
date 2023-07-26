@@ -27,7 +27,10 @@
           <a href="{{ route('admin.products_create')}}">商品新規登録</a>
         </li>
         <li>
-          <a href="{{ route('home')}}">ユーザーページへ</a>
+          <a href="{{ route('admin.users.index')}}">お客様一覧</a>
+        </li>
+        <li>
+          <a href="{{ route('home')}}">webサイトへ</a>
         </li>
         <li>
           <form action="{{ route('logout')}}" method="post">

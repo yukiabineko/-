@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\admin\ProductController as AdminProductController;
+use App\Http\Controllers\admin\UserController as AdminUserController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\DailyController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserCotroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,4 +35,7 @@ Route::group(['middleware' =>['auth']], function(){
   //カート関連
   Route::resource('/cart', CartController::class)->only(['store','index']);
   Route::get('/cart/{id}/delete', [CartController::class, 'destroy'])->name('cart.destroy');
+  //お客様関連
+  Route::resource('/admin/users', AdminUserController::class,['names'=>['index' => 'admin.users.index']])->only(['index']);
+  Route::resource('/users', UserCotroller::class);
 });

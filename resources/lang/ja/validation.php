@@ -106,6 +106,7 @@ return [
     'prohibited_if' => 'The :attribute field is prohibited when :other is :value.',
     'prohibited_unless' => 'The :attribute field is prohibited unless :other is in :values.',
     'prohibits' => 'The :attribute field prohibits :other from being present.',
+    'katakana' => 'カタカナで入力が必要な項目があります。',
     'regex' => ':attributeが入力されてません。',
     'required' => ':attributeが入力されてません。',
     'required_array_keys' => 'The :attribute field must contain entries for: :values.',
@@ -129,6 +130,7 @@ return [
     'uploaded' => 'The :attribute failed to upload.',
     'url' => 'The :attribute must be a valid URL.',
     'uuid' => 'The :attribute must be a valid UUID.',
+    'tel' =>'電話番号の形式が不正です。',
 
     /*
     |--------------------------------------------------------------------------

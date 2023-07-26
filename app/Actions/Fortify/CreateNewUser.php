@@ -20,9 +20,12 @@ class CreateNewUser implements CreatesNewUsers
      */
     public function create(array $input): User
     {
-        
         Validator::make($input, [
+            'surname' => ['required', 'string', 'max:255'],
             'name' => ['required', 'string', 'max:255'],
+            'name_kana' => ['required', 'string', 'max:255', 'katakana'],
+            'surame_kana' => ['required', 'string', 'max:255', 'katakana'],
+            'phone_number' => ['required', 'tel'],
             'email' => [
                 'required',
                 'string',
@@ -39,9 +42,17 @@ class CreateNewUser implements CreatesNewUsers
 
         $user = User::create([
             'path' => isset($name)? $name : null,
+            'surname' => $input['surname'],
             'name' => $input['name'],
+            'surame_kana' => $input['surame_kana'],
+            'name_kana' => $input['name_kana'],
+            'phone_number' => $input['phone_number'],
             'email' => $input['email'],
-            'password' => Hash::make($input['password']),
+            'postal_code' => $input['postal_code'],
+            'prefectures' => $input['prefectures'],
+            'city' => $input['city'],
+            'block' => $input['block'],
+            'password' => Hash::make($input['password'])
         ]);
         $file->storeAs('users'.$user->id, $name, 'public');
         return $user;

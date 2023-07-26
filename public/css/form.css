@@ -91,3 +91,29 @@
 .btn:hover{
   opacity: 0.6;
 }
+/**
+名前フォーム
+**/
+.name-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+}
+.name-form{
+  width: 49%;
+}
+/**
+郵便番号
+**/
+.postal{
+  width: 50% !important;
+  margin: 1rem 0;
+}   
+/**
+都道府県
+**/
+.select{
+  padding: 1rem 0;
+}
