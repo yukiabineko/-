@@ -131,6 +131,7 @@ return [
     'url' => 'The :attribute must be a valid URL.',
     'uuid' => 'The :attribute must be a valid UUID.',
     'tel' =>'電話番号の形式が不正です。',
+    'zipcode' => '郵便番号が不正です。',
 
     /*
     |--------------------------------------------------------------------------
@@ -163,6 +164,9 @@ return [
     'attributes' => [
         'name' => '会員様名',
         'email' => 'メールアドレス',
+        'prefectures' => '都道府県',
+        'city' => '市区町村',
+        'block' => '番地等',
         'password' =>'パスワード',
     ],
 

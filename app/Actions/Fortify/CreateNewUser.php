@@ -26,6 +26,10 @@ class CreateNewUser implements CreatesNewUsers
             'name_kana' => ['required', 'string', 'max:255', 'katakana'],
             'surame_kana' => ['required', 'string', 'max:255', 'katakana'],
             'phone_number' => ['required', 'tel'],
+            'postal_code' =>[ 'required', 'zipcode', 'max:7'],
+            'prefectures' =>[ 'required' ],
+            'city' => [ 'required' ],
+            'block' => [ 'required'],
             'email' => [
                 'required',
                 'string',

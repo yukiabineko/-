@@ -31,3 +31,7 @@ window.addEventListener('load',()=>{
 
    //=>load finish
 });
+const closeModal = ()=>{
+  let checkbox = document.getElementById('use_regulations-check');
+  checkbox.checked = !checkbox.checked;
+}

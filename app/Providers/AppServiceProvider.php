@@ -33,10 +33,13 @@ class AppServiceProvider extends ServiceProvider
         Validator::extend('katakana', function ($attribute, $value, $parameters, $validator) {
             return preg_match('/[ァ-ヴー]+/u', $value);
         });
-        //
+        //電話番号のバリデーション
         Validator::extend('tel', function ($attribute, $value, $parameters, $validator) {
             return preg_match('/^0[0-9]{9,10}$/u', $value);
         });
-        
+         //郵便番号のバリデーション
+         Validator::extend('zipcode', function ($attribute, $value, $parameters, $validator) {
+            return preg_match('/^0[0-9]{7}$/', $value);
+        });
     }
 }

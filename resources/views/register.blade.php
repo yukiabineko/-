@@ -121,10 +121,20 @@
 
           <!-- パスワード -->
           <div class="form-button">
-            <input type="submit" value="登録" class="btn submit">
+            <input type="submit" value="登録" class="btn submit" disabled>
             <a href="{{ route('login')}}" class="btn link">ログインへ</a>
          </div>
 
+         <!-- 利用規格 -->
+         <div class="use_regulations">
+           <input type="checkbox" id="use_regulations-check">
+           <label for="use_regulations-check" class="use_regulations-label">利用規約について</label>
+           <!-- モーダル-->
+           <div class="back-layer"></div>
+           <div class="use_regulations-modal">
+            <!-- ヘルパー関数 -->
+            {{ use_regulations()}}
+         </div>
 
       </form>
    </article>

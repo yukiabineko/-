@@ -67,7 +67,7 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   margin: 5rem 0; 
+   margin: 5rem 0 3rem; 
    gap: 10%;
 }
 .btn{
@@ -78,6 +78,9 @@
 .submit{
   background-color: darkblue;
   color: white;
+}
+.submit:disabled{
+  opacity: 0.5;
 }
 .link{
   background-color: white;
@@ -116,4 +119,151 @@
 **/
 .select{
   padding: 1rem 0;
+}
+/**
+利用規約関連
+**/
+#use_regulations-check{
+  display: none;
+}
+.use_regulations{
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+}
+.use_regulations-label{
+  display: block;
+  text-align: center;
+}
+.use_regulations-label:hover{
+  opacity: 0.6;
+}
+.use_regulations-modal{
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: -1000vh;
+  z-index: 3;
+  width: 100%;
+  aspect-ratio: 1;
+
+}
+.back-layer{
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  left: -1000%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+#use_regulations-check:checked ~ .back-layer{
+  left: 0;
+}
+#use_regulations-check:checked ~ .use_regulations-modal{
+  top: -100vh;
+}
+/*****************************************************/
+.Inner {
+  border: 1px solid #c0c0c0;
+  width: 85%;
+  margin: 1rem auto;
+  overflow-y: scroll;
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+.Inner-Headline {
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
+  margin-top: 2rem;
+}
+.modal-button{
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.close-modal-button{
+  background-color: darkblue;
+  color: white;
+  display: block;
+  padding: .5rem;
+  text-align: center !important;
+  width: 30%;
+  margin: 1rem auto;
+}
+@media screen and (max-width: 480px) {
+  .Inner-Headline {
+    font-size: 24px;
+  }
+}
+.Inner-Text {
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+  font-size: 15px;
+}
+.Inner-Text.first {
+  margin-top: 36px;
+}
+.Inner-Box {
+  margin-top: 16px;
+}
+.Inner-Box-Headline {
+  font-weight: bold;
+  font-size: 28px;
+}
+@media screen and (max-width: 480px) {
+  .Inner-Box-Headline {
+    font-size: 20px;
+  }
+}
+.Inner-Box-List {
+  margin: 20px 0 0 40px;
+}
+.Inner-Box-List-Item {
+  margin-top: 10px;
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+  list-style-type: decimal;
+}
+.Inner-Box-List-Item-Ol {
+  margin: 20px 0 0 40px;
+}
+.Inner-Box-List-Item-Ol-Item {
+  margin-top: 10px;
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+  list-style-type: decimal;
+}
+.Inner-Box-List-Item-Link {
+  text-decoration: underline;
+  display: inline-block;
+  color: red;
+}
+.Inner-Box-Contact {
+  margin-top: 36px;
+}
+.Inner-Box-Contact-Text {
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+  font-size: 15px;
+}
+.Inner-Box-Contact-Text:nth-child(2) {
+  margin-top: 16px;
+}
+.Inner-Box-Item {
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+  font-size: 15px;
+}
+@media screen and (max-width: 480px) {
+  .Inner-Box-Item {
+    letter-spacing: inherit;
+    font-size: 14px;
+  }
 }
