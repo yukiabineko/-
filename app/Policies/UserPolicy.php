@@ -50,9 +50,9 @@ class UserPolicy
      * @param  \App\Models\User  $model
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, User $model)
+    public function update(User $user, int $user_id)
     {
-        //
+        return $user->id == $user_id;
     }
 
     /**

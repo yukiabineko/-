@@ -1,0 +1,22 @@
+.main-contents{
+  width: 95%;
+  margin: 3rem auto;
+}
+.user-table{
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #c0c0c0;
+}
+.user-table thead{
+  background-color: #f9f9f9;
+}
+.user-table thead th{
+  border: 1px solid #c0c0c0;
+  line-height: 2.5;
+}
+.user-table tbody tr td{
+  background-color: white;
+  border-bottom: 1px dotted #c0c0c0;
+  text-align: center;
+  line-height: 2;
+}

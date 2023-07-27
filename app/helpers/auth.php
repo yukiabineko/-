@@ -114,7 +114,7 @@ if( !function_exists('use_regulations')){
          </div>
       </div>
       <div class="modal-button">
-         <label for="agreement"><input type="checkbox" id="agreement">利用規約に同意する</label>
+         <label for="agreement"><input type="checkbox" id="agreement" onchange="agreementCheck()">利用規約に同意する</label>
          <button type="button" onclick="closeModal()" class="close-modal-button">閉じる</button>
       </div>
   </div>';

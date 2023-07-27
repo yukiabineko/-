@@ -19,7 +19,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/',[HomeController::class, 'home'])->name('home');
 Route::resource('/products',ProductController::class);
  //日替わり生鮮
@@ -37,5 +36,5 @@ Route::group(['middleware' =>['auth']], function(){
   Route::get('/cart/{id}/delete', [CartController::class, 'destroy'])->name('cart.destroy');
   //お客様関連
   Route::resource('/admin/users', AdminUserController::class,['names'=>['index' => 'admin.users.index']])->only(['index']);
-  Route::resource('/users', UserCotroller::class);
+  Route::resource('/users', UserCotroller::class)->only(['edit']);
 });

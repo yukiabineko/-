@@ -23,56 +23,56 @@
        <!-- カテゴリー2 -->
        <li class="left-category-list">
         <a href="#" class="left-category-link">
-          <img src="{{ asset('image/left/left-item1.png')}}" alt="アイテム2" class="left-category-img">
+          <img src="{{ asset('image/left/left-item3.png')}}" alt="アイテム2" class="left-category-img">
           塩鮭類
         </a>
       </li>
        <!-- カテゴリー3 -->
        <li class="left-category-list">
         <a href="#" class="left-category-link">
-          <img src="{{ asset('image/left/left-item1.png')}}" alt="アイテム3" class="left-category-img">
+          <img src="{{ asset('image/left/left-item5.png')}}" alt="アイテム3" class="left-category-img">
           魚卵類
         </a>
       </li>
        <!-- カテゴリー4 -->
        <li class="left-category-list">
         <a href="#" class="left-category-link">
-          <img src="{{ asset('image/left/left-item1.png')}}" alt="アイテム4" class="left-category-img">
+          <img src="{{ asset('image/left/left-item4.png')}}" alt="アイテム4" class="left-category-img">
           丸干類
         </a>
       </li>
        <!-- カテゴリー5 -->
        <li class="left-category-list">
         <a href="#" class="left-category-link">
-          <img src="{{ asset('image/left/left-item1.png')}}" alt="アイテム5" class="left-category-img">
+          <img src="{{ asset('image/left/left-item2.png')}}" alt="アイテム5" class="left-category-img">
           干物類
         </a>
       </li>
        <!-- カテゴリー6 -->
        <li class="left-category-list">
         <a href="#" class="left-category-link">
-          <img src="{{ asset('image/left/left-item1.png')}}" alt="アイテム6" class="left-category-img">
+          <img src="{{ asset('image/left/left-item6.png')}}" alt="アイテム6" class="left-category-img">
           珍味類
         </a>
       </li>
        <!-- カテゴリー7 -->
        <li class="left-category-list">
         <a href="#" class="left-category-link">
-          <img src="{{ asset('image/left/left-item1.png')}}" alt="アイテム7" class="left-category-img">
+          <img src="{{ asset('image/left/left-item7.png')}}" alt="アイテム7" class="left-category-img">
           ちりめん類
         </a>
       </li>
        <!-- カテゴリー8 -->
        <li class="left-category-list">
         <a href="#" class="left-category-link">
-          <img src="{{ asset('image/left/left-item1.png')}}" alt="アイテム8" class="left-category-img">
+          <img src="{{ asset('image/left/left-item8.png')}}" alt="アイテム8" class="left-category-img">
           うなぎ類
         </a>
       </li>
        <!-- カテゴリー9 -->
        <li class="left-category-list">
         <a href="#" class="left-category-link">
-          <img src="{{ asset('image/left/left-item1.png')}}" alt="アイテム9" class="left-category-img">
+          <img src="{{ asset('image/left/left-item9.png')}}" alt="アイテム9" class="left-category-img">
           冷凍エビ、カニ類
         </a>
       </li>

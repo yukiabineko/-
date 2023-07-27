@@ -8,11 +8,16 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-/******************会員一覧*********************************** */
+/******************会員一覧(管理者のみ)*********************************** */
     public function index(){
-      $users = User::orderBy('id', 'asc')->paginate(10);
+
+      $this->authorize('index', \Auth::user());
+
+      $users = User::orderBy('id', 'asc')
+      ->where('admin', '!=', 1)
+      ->paginate(10);
       return view('admin.users.index',[
         'users' => $users
       ]);
     }
-}
+  }

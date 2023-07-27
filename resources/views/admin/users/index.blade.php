@@ -5,7 +5,7 @@
 @endsection
 
 @section('css')
-   <link rel="stylesheet" href="{{ asset('css/admin/products/index.css')}}">
+   <link rel="stylesheet" href="{{ asset('css/admin/users/index.css')}}">
 @endsection
 
 @section('js')
@@ -20,6 +20,7 @@
 
    <!-- メインコンテンツ -->
    <article class="main-contents">
+      {{ $users->links() }}
      <table class="user-table">
       <thead>
          <tr>
@@ -41,7 +42,21 @@
          </tr>
       </thead>
       <tbody>
-         
+         @foreach ($users as $user)
+            <tr>
+               <td>{{ $user->id }}</td>
+               <td>{{ $user->surname }}</td>
+               <td>{{ $user->name }}</td>
+               <td>{{ $user->surame_kana }}</td>
+               <td>{{ $user->name_kana }}</td>
+               <td>{{ $user->phone_number }}</td>
+               <td>{{ $user->email }}</td>
+               <td>{{ $user->postal_code }}</td>
+               <td>{{ $user->prefectures }}</td>
+               <td>{{ $user->city }}</td>
+               <td>{{ $user->block }}</td>
+            </tr>    
+         @endforeach
       </tbody>
      </table>
    </article>

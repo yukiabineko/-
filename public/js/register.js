@@ -31,7 +31,24 @@ window.addEventListener('load',()=>{
 
    //=>load finish
 });
+/**
+ * モーダルを閉じる
+ */
 const closeModal = ()=>{
   let checkbox = document.getElementById('use_regulations-check');
   checkbox.checked = !checkbox.checked;
+}
+/**
+ * 
+ */
+const agreementCheck = ()=>{
+  let agreementCheckBox = document.getElementById('agreement');
+  let submitButton = document.querySelector('.submit');
+
+  if( agreementCheckBox.checked){
+     submitButton.disabled = false;
+  }
+  else{
+     submitButton.disabled = true;
+  }
 }

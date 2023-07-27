@@ -39,7 +39,7 @@ class AppServiceProvider extends ServiceProvider
         });
          //郵便番号のバリデーション
          Validator::extend('zipcode', function ($attribute, $value, $parameters, $validator) {
-            return preg_match('/^0[0-9]{7}$/', $value);
+            return preg_match('/^[0-9]{7}$/', $value);
         });
     }
 }
