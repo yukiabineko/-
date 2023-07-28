@@ -25,7 +25,7 @@
         <div class="form-group file-group">
            <div class="form-title">プロフィール写真</div>
            <div class="files">
-            <span class="file-text"></span>
+            <span class="file-text">{{ $user->path}}</span>
             <label for="file" class="file-label">ファイル選択</label>
             <input type="file" name="file" id="file" accept="image/*">
            </div>
@@ -38,12 +38,12 @@
                <!-- 氏 -->
                <div class="name-form">
                   <span class="surname">氏</span>
-                  <input type="text" name="surname" class="form-control" value="{{old('surname')}}">
+                  <input type="text" name="surname" class="form-control" value="{{old('surname',$user->surname )}}">
                </div>
                <!-- 名 -->
                <div class="name-form">
                   <span class="surname">名</span>
-                  <input type="text" name="name" class="form-control" value="{{old('name')}}">
+                  <input type="text" name="name" class="form-control" value="{{old('name',$user->name )}}">
                </div>
             </div>
          </div>
@@ -55,12 +55,12 @@
                <!-- 氏 -->
                <div class="name-form">
                   <span class="surname">氏(フリガナ)</span>
-                  <input type="text" name="surame_kana" class="form-control" value="{{old('surame_kana')}}">
+                  <input type="text" name="surame_kana" class="form-control" value="{{old('surame_kana',$user->surame_kana)}}">
                </div>
                <!-- 名 -->
                <div class="name-form">
                   <span class="surname">名(フリガナ)</span>
-                  <input type="text" name="name_kana" class="form-control" value="{{old('name_kana')}}">
+                  <input type="text" name="name_kana" class="form-control" value="{{old('name_kana',$user->name_kana )}}">
                </div>
             </div>
          </div>
@@ -68,19 +68,19 @@
          <!-- 電話番号 -->
          <div class="form-group">
             <div class="form-title">電話番号<span class="form-attention">(*必須です。)</span></div>
-            <input type="tel" name="phone_number" class="form-control" value="{{old('phone_number')}}" placeholder="ハイフン(-)なしで入力してください。">
+            <input type="tel" name="phone_number" class="form-control" value="{{old('phone_number',$user->phone_number )}}" placeholder="ハイフン(-)なしで入力してください。">
          </div>
 
          <!-- メールアドレス -->
          <div class="form-group">
             <div class="form-title">メールアドレス<span class="form-attention">(*必須です。)</span></div>
-            <input type="email" name="email" class="form-control" value="{{old('email')}}">
+            <input type="email" name="email" class="form-control" value="{{old('email',$user->email )}}">
          </div>
 
          <!-- 郵便番号 -->
          <div class="form-group">
             <div class="form-title">郵便番号<span class="form-attention">(*必須です。)</span></div>
-            <input type="number" name="postal_code" class="form-control postal" value="{{old('postal_code')}}" placeholder="ハイフン(-)なしで入力してください。">
+            <input type="number" name="postal_code" class="form-control postal" value="{{old('postal_code',$user->postal_code )}}" placeholder="ハイフン(-)なしで入力してください。">
          </div>
 
           <!-- 都道府県 -->
@@ -89,7 +89,7 @@
             <select name="prefectures" class="form-control select">
                <!-- ヘルパー関数より -->
                @foreach (prefecturesOptions() as $prefecture)
-                  <option value="{{ $prefecture }}"> {{$prefecture}}</option>
+                  <option value="{{ $prefecture }}" {{ $user->prefecture == $prefecture ? "selected" : ""}}> {{$prefecture}}</option>
                @endforeach
             </select>
          </div>
@@ -98,13 +98,13 @@
           <!-- 市区町村 -->
           <div class="form-group">
             <div class="form-title">市区町村<span class="form-attention">(*必須です。)</span></div>
-            <input type="text" name="city" class="form-control" value="{{old('city')}}">
+            <input type="text" name="city" class="form-control" value="{{old('city', $user->city)}}">
          </div>
 
           <!-- 番地等 -->
           <div class="form-group">
             <div class="form-title">番地等<span class="form-attention">(*必須です。)</span></div>
-            <input type="text" name="block" class="form-control" value="{{old('block')}}">
+            <input type="text" name="block" class="form-control" value="{{old('block',$user->block)}}">
          </div>
 
           <!-- パスワード -->
@@ -125,16 +125,6 @@
             <a href="{{ route('login')}}" class="btn link">ログインへ</a>
          </div>
 
-         <!-- 利用規格 -->
-         <div class="use_regulations">
-           <input type="checkbox" id="use_regulations-check">
-           <label for="use_regulations-check" class="use_regulations-label">利用規約について</label>
-           <!-- モーダル-->
-           <div class="back-layer"></div>
-           <div class="use_regulations-modal">
-            <!-- ヘルパー関数 -->
-            {{ use_regulations()}}
-         </div>
 
       </form>
    </article>
