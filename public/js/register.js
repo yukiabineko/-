@@ -23,7 +23,7 @@ window.addEventListener('load',()=>{
          img.setAttribute('src', result);
        }
        reader.readAsDataURL(fileData);
-       formGroup.appendChild(img);
+       formGroup.prepend(img);
        
 
    });

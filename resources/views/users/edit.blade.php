@@ -23,6 +23,7 @@
         @csrf
         <!-- 画像 -->
         <div class="form-group file-group">
+           <img src="{{ asset('storage/users'.$user->id.'/'.$user->path )}}" alt="ユーザー画像" id="file-img">
            <div class="form-title">プロフィール写真</div>
            <div class="files">
             <span class="file-text">{{ $user->path}}</span>
