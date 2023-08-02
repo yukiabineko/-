@@ -19,8 +19,9 @@
       <!-- エラー表示 -->
       @include('share.errors')
       
-      <form action="{{ route('register')}}" class="form new-user" enctype="multipart/form-data" method="POST">
+      <form action="{{ route('users.update',$user)}}" class="form new-user" enctype="multipart/form-data" method="POST">
         @csrf
+        @method('patch')
         <!-- 画像 -->
         <div class="form-group file-group">
            <img src="{{ asset('storage/users'.$user->id.'/'.$user->path )}}" alt="ユーザー画像" id="file-img">
@@ -90,7 +91,7 @@
             <select name="prefectures" class="form-control select">
                <!-- ヘルパー関数より -->
                @foreach (prefecturesOptions() as $prefecture)
-                  <option value="{{ $prefecture }}" {{ $user->prefecture == $prefecture ? "selected" : ""}}> {{$prefecture}}</option>
+                  <option value="{{ $prefecture }}" {{ $user->prefectures == $prefecture ? "selected" : ""}}> {{$prefecture}}</option>
                @endforeach
             </select>
          </div>
@@ -108,21 +109,14 @@
             <input type="text" name="block" class="form-control" value="{{old('block',$user->block)}}">
          </div>
 
-          <!-- パスワード -->
-          <div class="form-group">
-            <div class="form-title">パスワード<span class="form-attention">(*必須です。)</span></div>
-            <input type="password" name="password" class="form-control">
-         </div>
+          
 
-          <!-- パスワード確認 -->
-          <div class="form-group">
-            <div class="form-title">パスワード確認<span class="form-attention">(*必須です。)</span></div>
-            <input type="password" name="password_confirmation" class="form-control">
-         </div>
-
-          <!-- パスワード -->
           <div class="form-button">
-            <input type="submit" value="登録" class="btn submit" disabled>
+            @if (Request::routeIs('users.edit'))
+              <input type="submit" value="編集" class="btn submit">  
+            @else
+              <input type="submit" value="登録" class="btn submit" disabled>
+            @endif
             <a href="{{ route('login')}}" class="btn link">ログインへ</a>
          </div>
 

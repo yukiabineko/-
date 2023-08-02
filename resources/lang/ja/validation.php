@@ -126,7 +126,7 @@ return [
     'starts_with' => 'The :attribute must start with one of the following: :values.',
     'string' => 'The :attribute must be a string.',
     'timezone' => 'The :attribute must be a valid timezone.',
-    'unique' => 'The :attribute has already been taken.',
+    'unique' => 'その:attributeはすでに存在します。',
     'uploaded' => 'The :attribute failed to upload.',
     'url' => 'The :attribute must be a valid URL.',
     'uuid' => 'The :attribute must be a valid UUID.',
@@ -164,6 +164,8 @@ return [
     'attributes' => [
         'name' => '会員様名',
         'email' => 'メールアドレス',
+        'phone_number' => '電話番号',
+        'postal_code' =>'郵便番号',
         'prefectures' => '都道府県',
         'city' => '市区町村',
         'block' => '番地等',
