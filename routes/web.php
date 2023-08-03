@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\HomeController as AdminHomeController;
 use App\Http\Controllers\admin\ProductController as AdminProductController;
 use App\Http\Controllers\admin\UserController as AdminUserController;
 use App\Http\Controllers\CartController;
@@ -24,6 +25,9 @@ Route::resource('/products',ProductController::class);
  //日替わり生鮮
 Route::resource('daily', DailyController::class)->only(['index']);
 Route::group(['middleware' =>['auth']], function(){
+  //管理者用ホーム
+  Route::get('/admin',[AdminHomeController::class, 'index'])->name('admin.home');
+
   Route::get('/admin/products/create', [AdminProductController::class, 'create'])->name('admin.products_create');
   Route::get('/admin/products', [AdminProductController::class, 'index'])->name('admin.products');
   Route::get('/admin/products/{product}/edit', [AdminProductController::class, 'edit'])->name('admin.products_edit');
