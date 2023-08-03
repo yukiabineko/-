@@ -37,6 +37,12 @@
             <input type="submit" value="ログイン" class="btn submit">
             <a href="{{ route('register')}}" class="btn link">新規登録へ</a>
          </div>
+         
+         <!-- パスワードリセット -->
+         <div class="password-reset">
+            <a href="{{ route('password.request')}}">パスワードを忘れた場合はこちら</a>
+         </div>
       </form>
+      
    </article>
 @endsection
