@@ -12,7 +12,6 @@ return [
     | has failed, such as for an invalid token or invalid new password.
     |
     */
-
     'reset' => 'Your password has been reset!',
     'sent' => 'We have emailed your password reset link!',
     'throttled' => '再試行する場合少々お待ちください。',
