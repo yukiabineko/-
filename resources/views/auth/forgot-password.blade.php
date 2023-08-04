@@ -9,6 +9,14 @@
 
 @section('contents')
   <div class="container">
+    
+    @error('email')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+    @enderror
+
+
       <div class="card">
         <div class="card-header">パスワード変更手続き</div>
 
@@ -27,20 +35,13 @@
 
                     <div class="col-md-6">
                         <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                        @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
                     </div>
                 </div>
 
-                <div class="row mb-0">
-                    <div class="col-md-6 offset-md-4">
-                        <button type="submit" class="btn btn-primary">メールアドレスを送信する</button>
-                    </div>
+                <div class="button-form">
+                    <button type="submit" class="btn btn-primary">メールアドレスを送信する</button>
                 </div>
+                
             </form>
         </div>
       </div>
