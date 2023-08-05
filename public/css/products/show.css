@@ -179,7 +179,16 @@
   background-color: red;
   width: 100%;
 }
+/**
+生鮮食品
+**/
+.product-infomation{
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+}
 
+/***********************************************************************************************
 /**
 下方向デザイン
 **/

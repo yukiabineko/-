@@ -49,7 +49,7 @@
               <!-- 在庫 -->
               <div class="stock">
                 <span class="stock-title">在庫</span>
-                @if ( $product->category == 0)
+                @if ( $product->category == 10)
                    <span class="stock-data">生鮮食品のため店舗へご確認ください。</span> 
                 @else
                   @if ((int)$product->stock != 0)
@@ -79,7 +79,18 @@
                   <button type="submit" class="admin-btn del-button">削除する</button>
                 </form>
                 </div>
+            @elseif( $product->category == 10 )
+                <div class="product-infomation">
+                  こちらの商品は日替わりの当日入荷商品の為、鮮度、サイズより販売出来ないことがございます。
+                  ご購入を検討のお客様はお手数ですが直接店舗までお問い合わせください。
+                </div>
             @elseif( Auth::check() && Auth::user()-> admin == 0)
+                @if ( $product->category == 10 )
+                    <div class="product-infomation">
+                      こちらの商品は日替わりの当日入荷商品の為、鮮度、サイズより販売出来ないことがございます。
+                      ご購入を検討のお客様はお手数ですが直接店舗までお問い合わせください。
+                    </div>
+                @else
                 <form action="{{ route('cart.store')}}" method="post" class="cart-form">
                   @csrf
                   <div class="order-contents">
@@ -101,6 +112,8 @@
                     <button type="submit" class="btn cart-button">買い物かごに入れる</button>
                   </div>
                 </form>
+                @endif
+                
             @else
               <div class="btns">
                 <a href="{{ route('login')}}" class="btns-button">ログインしてください</a>
