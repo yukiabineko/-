@@ -16,17 +16,16 @@
         </span>
     @enderror
 
+     @if (session('status'))
+        <div class="alert alert-success" role="alert">
+            {{ session('status') }}
+        </div>
+    @endif
 
       <div class="card">
         <div class="card-header">パスワード変更手続き</div>
 
         <div class="card-body">
-            @if (session('status'))
-                <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
-                </div>
-            @endif
-
             <form method="POST" action="{{ route('password.email') }}">
                 @csrf
 
