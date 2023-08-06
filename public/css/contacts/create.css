@@ -1,11 +1,55 @@
 .main-contents{
   width: 55%;
-  margin: 4rem auto;
+  margin: 6rem auto;
 }
 .info{
   color: darkblue;
   font-size: 14px;
 }
 .contact-form{
+  background-color: white;
+  box-shadow: -1px 3px 5px 2px #c0c0c0;
+  border-radius: 4px;
+  margin: 1rem 0 10rem;
+  padding: 3rem 10px 2rem;
   width: calc(100% - 20px);
+}
+.form-group{
+  width: 95%;
+  margin: 0 auto 2rem;
+}
+.form-label{
+  color: rgb(32, 31, 31);
+  font-style: italic;
+}
+.supplement{
+  background-color: orange;
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 10px;
+  padding: .1rem;
+}
+.form-control{
+  border: 1px solid #c0c0c0;
+  display: block;
+  line-height: 3;
+  margin-top: .8rem;
+  outline: none;
+  width: 100%;
+}
+.form-btn{
+   text-align: center;
+   width: 100%;
+   padding: 2rem 0;
+}
+.btn-submit{
+  background-color: orange;
+  border-radius: 4px;
+  color: white;
+  width: 50%;
+  line-height: 4;
+}
+.btn-submit:hover{
+  opacity: 0.6;
 }

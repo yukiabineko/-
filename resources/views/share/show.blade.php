@@ -37,7 +37,7 @@
                 <h3>{{ $product->name }}</h3>
               </div>
 
-              <!--価格　-->
+              <!--価格 -->
               <div class="price-contents">
                 <span class="price-title">価格</span>
                 <div class="price">

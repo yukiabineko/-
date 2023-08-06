@@ -332,6 +332,15 @@ small{
 .pagination li a{
   text-decoration: none;
 }
+/**************フラッシュ******************************************************************/
+.alert-success{
+  background-color: green;
+  border-radius: 4px;
+  color: white;
+  width: 95%;
+  margin: 0rem auto 2rem;
+ 
+}
 
 
 

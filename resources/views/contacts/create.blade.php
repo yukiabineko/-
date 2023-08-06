@@ -7,6 +7,7 @@
 @endsection
 
 @section('contents')
+   @include('share.flash')
    <div class="page-title">
      <h2>お問い合わせ</h2>
    </div>
@@ -16,8 +17,10 @@
       必要な項目を入力してください。ログイン、会員未登録でもご利用いただけます。
       ログインしている場合はマイページにてお問合せ内容をご確認することができます。
      </p>
-     <form action="#" method="post" class="contact-form">
+     <form action="{{ route('contacts.store')}}" method="post" class="contact-form">
       @csrf
+      @include('share.errors')
+      
       <!-- お名前 -->
       <div class="form-group">
         <div class="form-label">お名前(ニックネーム可)<span class="supplement">必須です</span></div>
@@ -32,18 +35,20 @@
 
       <!-- タイトル -->
       <div class="form-group">
-        <div class="form-label">お名前(ニックネーム可)<span class="supplement">必須です</span></div>
+        <div class="form-label">タイトル<span class="supplement">必須です</span></div>
         <input type="text" name="title" value="{{ old('title')}}" class="form-control">
       </div>
 
       <!-- 内容 -->
       <div class="form-group">
         <div class="form-label">質問内容<span class="supplement">必須です</span></div>
-        <textarea name="context" class="form-control textarea">{{ old('context')}}</textarea>
+        <textarea name="context" class="form-control textarea" rows="4">{{ old('context')}}</textarea>
       </div>
 
+      <input type="hidden" name="user_id", value="{{ Request::get('user_id')}}">
+
       <!-- 送信ボタン -->
-      <div class="form-group">
+      <div class="form-btn">
         <button type="submit" class="btn-submit">問い合わせる</button>
       </div>
 
