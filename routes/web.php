@@ -4,6 +4,7 @@ use App\Http\Controllers\admin\HomeController as AdminHomeController;
 use App\Http\Controllers\admin\ProductController as AdminProductController;
 use App\Http\Controllers\admin\UserController as AdminUserController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DailyController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
@@ -24,6 +25,10 @@ Route::get('/',[HomeController::class, 'home'])->name('home');
 Route::resource('/products',ProductController::class);
  //日替わり生鮮
 Route::resource('daily', DailyController::class)->only(['index']);
+//お問合せ
+Route::resource('contacts',ContactController::class)->only(['create', 'store']);
+
+/******************************認証時のみok******************************************************************************************************* */
 Route::group(['middleware' =>['auth']], function(){
   //管理者用ホーム
   Route::get('/admin',[AdminHomeController::class, 'index'])->name('admin.home');

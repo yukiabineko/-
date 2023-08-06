@@ -1,0 +1,11 @@
+.main-contents{
+  width: 55%;
+  margin: 4rem auto;
+}
+.info{
+  color: darkblue;
+  font-size: 14px;
+}
+.contact-form{
+  width: calc(100% - 20px);
+}

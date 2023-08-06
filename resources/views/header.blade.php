@@ -79,7 +79,7 @@
         </a>
       </li>
       <li class="nav-list">
-        <a href="#" class="nav-list-link">
+        <a href="{{ route('contacts.create')}}" class="nav-list-link">
           <div class="main-title">CONTACT</div>
           <div class="sub-title">お問い合わせ</div>
         </a>
