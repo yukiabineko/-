@@ -16,9 +16,17 @@ class ContactMail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(
+        string $name,
+        string $email,
+        string $title,
+        string $context,
+    )
     {
-        //
+        $this->name = $name;
+        $this->email = $email;
+        $this->title = $title;
+        $this->context = $context;
     }
 
     /**
@@ -28,6 +36,14 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->to('yuki1980426@gmail.com')
+            ->subject('お問合せ内容')
+            ->from('abineko@yukiabineko.sakura.ne.jp')
+            ->view('emails.contact')
+            ->with([
+                'name' => $this->name,
+                'title' => $this->title,
+                'context' => $this->context
+            ]);
     }
 }
