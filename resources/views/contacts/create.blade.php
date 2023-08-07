@@ -42,7 +42,7 @@
       <!-- 内容 -->
       <div class="form-group">
         <div class="form-label">質問内容<span class="supplement">必須です</span></div>
-        <textarea name="context" class="form-control textarea" rows="4">{{ old('context')}}</textarea>
+        <textarea name="context" class="form-control textarea" rows="10">{{ old('context')}}</textarea>
       </div>
 
       <input type="hidden" name="user_id", value="{{ Request::get('user_id')}}">

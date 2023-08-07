@@ -39,7 +39,7 @@ class ContactMail extends Mailable
         return $this->to('yuki1980426@gmail.com')
             ->subject('お問合せ内容')
             ->from('abineko@yukiabineko.sakura.ne.jp')
-            ->view('emails.contact')
+            ->text('emails.contact')
             ->with([
                 'name' => $this->name,
                 'title' => $this->title,

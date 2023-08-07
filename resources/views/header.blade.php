@@ -73,7 +73,7 @@
         </a>
       </li>
       <li class="nav-list">
-        <a href="#" class="nav-list-link" >
+        <a href="{{ route('shops.index')}}" class="nav-list-link" >
           <div class="main-title">SHOP</div>
           <div class="sub-title">お店情報</div>
         </a>

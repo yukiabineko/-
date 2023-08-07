@@ -8,6 +8,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DailyController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\shopController;
 use App\Http\Controllers\UserCotroller;
 use Illuminate\Support\Facades\Route;
 
@@ -27,6 +28,8 @@ Route::resource('/products',ProductController::class);
 Route::resource('daily', DailyController::class)->only(['index']);
 //お問合せ
 Route::resource('contacts',ContactController::class)->only(['create', 'store']);
+//店舗情報
+Route::resource('shops',shopController::class)->only(['index']);
 
 /******************************認証時のみok******************************************************************************************************* */
 Route::group(['middleware' =>['auth']], function(){

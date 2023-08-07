@@ -33,10 +33,12 @@
 .form-control{
   border: 1px solid #c0c0c0;
   display: block;
-  line-height: 3;
   margin-top: .8rem;
   outline: none;
   width: 100%;
+}
+.form-control:not(.textarea){
+  height: 40px;
 }
 .form-btn{
    text-align: center;
