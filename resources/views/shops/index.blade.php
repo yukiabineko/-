@@ -3,7 +3,7 @@
    店舗情報
 @endsection
 @section('css')
-   
+   <link rel="stylesheet" href="{{ asset('css/shops/index.css')}}">
 @endsection
 
 @section('contents')
