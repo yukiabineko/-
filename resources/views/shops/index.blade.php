@@ -48,12 +48,6 @@
           <td>090-0000-0000</td>
          </tr>
 
-         <!-- 電話番号 -->
-         <tr>
-           <th>電話番号</th>
-           <td>090-0000-0000</td>
-         </tr>
-
          <!-- 店舗責任者 -->
          <tr>
           <th>店舗責任者</th>
@@ -61,6 +55,9 @@
         </tr>
        </tbody>
      </table>
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.3831556977693!2d138.5648013972026!3d35.665938525104096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601bf9cdf7dd9361%3A0x4a1243024b4cb07a!2z55Sy5bqc6aeF!5e0!3m2!1sja!2sjp!4v1691486473445!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.3831556977693!2d138.5648013972026!3d35.665938525104096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601bf9cdf7dd9361%3A0x4a1243024b4cb07a!2z55Sy5bqc6aeF!5e0!3m2!1sja!2sjp!4v1691486473445!5m2!1sja!2sjp"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     </div>
+    
    </article>
 @endsection

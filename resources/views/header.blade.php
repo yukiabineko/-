@@ -72,13 +72,14 @@
           <div class="sub-title">オンラインショップ</div>
         </a>
       </li>
-      <li class="nav-list">
+      <li class="nav-list {{ request()->path() == 'shops'? 'active': ''}}">
         <a href="{{ route('shops.index')}}" class="nav-list-link" >
           <div class="main-title">SHOP</div>
           <div class="sub-title">お店情報</div>
         </a>
       </li>
-      <li class="nav-list">
+      
+      <li class="nav-list {{ request()->path() == 'contacts/create'? 'active': ''}}">
         <a href="{{ route('contacts.create')}}" class="nav-list-link">
           <div class="main-title">CONTACT</div>
           <div class="sub-title">お問い合わせ</div>

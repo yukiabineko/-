@@ -88,6 +88,7 @@
                     <option value="5" {{ old('title',$product->category) == 5 ? 'selected' : ''}}>珍味</option>
                     <option value="6" {{ old('title',$product->category) == 6 ? 'selected' : ''}}>ちりめん</option>
                     <option value="7" {{ old('title',$product->category) == 7 ? 'selected' : ''}}>うなぎ</option>
+                    <option value="8" {{ old('title',$product->category) == 8 ? 'selected' : ''}}>冷凍エビ、カニ類</option>
                 </select>
             </div>
 

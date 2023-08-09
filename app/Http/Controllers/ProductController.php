@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use Facade\Ignition\QueryRecorder\Query;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -20,8 +21,15 @@ class ProductController extends Controller
    /**
     * オンライン版の商品一覧
     */
-   public function index(){
-     $products = Product::where('category', '!=', 10)->get();
+   public function index(Request $request){
+    $query = Product::query();
+    if(!empty( $request->category )){
+        $query->where('category', "=", (int)$request->category );
+    }
+    else{
+        $query->where('category', "!=", 10 ); 
+    }
+    $products = $query->get();
      return view('products.index',[
         'products' => $products
      ]);
