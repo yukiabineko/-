@@ -7,6 +7,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DailyController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\shopController;
 use App\Http\Controllers\UserCotroller;
@@ -46,7 +47,11 @@ Route::group(['middleware' =>['auth']], function(){
   //カート関連
   Route::resource('/cart', CartController::class)->only(['store','index']);
   Route::get('/cart/{id}/delete', [CartController::class, 'destroy'])->name('cart.destroy');
+  //注文状況
+  Route::resource('orders',OrderController::class)->only(['store']);
+
+
   //お客様関連
   Route::resource('/admin/users', AdminUserController::class,['names'=>['index' => 'admin.users.index']])->only(['index']);
-  Route::resource('/users', UserCotroller::class)->only(['edit','update']);
+  Route::resource('/users', UserCotroller::class)->only(['edit','update','show']);
 });

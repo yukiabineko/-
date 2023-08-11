@@ -23,9 +23,10 @@ class CartController extends Controller
       if( session()->exists('cart')){
           
           $carts = session()->get('cart');
-          array_push($carts, $request_data);
-          session()->put('cart', $carts);
-        
+          if(!empty($request_data['name'])){
+            array_push($carts, $request_data);
+            session()->put('cart', $carts);
+          }
       }
       else{
           $datas = [];

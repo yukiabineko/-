@@ -2,9 +2,9 @@
   <!-- 検索ボックス -->
   <section class="left-search-box">
     <h3>通販商品検索</h3>
-    <form action="#" method="GET" class="search-form">
+    <form action="{{ route('products.index')}}" method="GET" class="search-form">
       <p class="search-title">商品名を入力してください。</p>
-      <input type="search" name="item-name" class="search-box">
+      <input type="search" name="name" class="search-box">
       <button type="submit">検索</button>
     </form>
   </section>

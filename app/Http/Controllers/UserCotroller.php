@@ -59,7 +59,12 @@ class UserCotroller extends Controller
          $file->storeAs('users'.$user->id, $user->path, 'public');
       }
       return redirect( route('home'))->with('flash', 'お客様情報を編集しました。');
-     
    }
+/******************お客様詳細ページ********************************************************** */
+  public function show(User $user){
+    return view('users.show',[
+      'user' => $user
+    ]);
+  }
 }
 

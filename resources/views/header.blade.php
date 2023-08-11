@@ -26,7 +26,7 @@
             <input type="checkbox"  id="check">
             <ul class="menus-lists">
               @if (Auth::user()->admin == 0)
-                <li class="menu-li"><a href="#" class="menu-li-link">{{ Auth::user()->name}}さん情報</a></li>
+                <li class="menu-li"><a href="{{ route('users.show', Auth::user() )}}" class="menu-li-link">{{ Auth::user()->name}}さん情報</a></li>
                 <li class="menu-li"><a href="{{ route('users.edit',Auth::user() )}}" class="menu-li-link">{{ Auth::user()->name}}さん編集</a></li>
                 <li class="menu-li"><a href="#" class="menu-li-link">お買い物状況</a></li>
               @else

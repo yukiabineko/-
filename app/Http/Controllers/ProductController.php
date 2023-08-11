@@ -26,6 +26,9 @@ class ProductController extends Controller
     if(!empty( $request->category )){
         $query->where('category', "=", (int)$request->category );
     }
+    elseif( !empty($request->name )){
+        $query->where('name', "LIKE", "%". $request->name."%")->where('category', "!=", 10 );
+    }
     else{
         $query->where('category', "!=", 10 ); 
     }

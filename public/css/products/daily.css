@@ -119,4 +119,12 @@
 .link-button:hover{
   opacity: 0.6;
 }
-
+.empty{
+  align-items: center;
+  background-color: #f9f9f9;
+  color: #4F4FD3;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  margin: 1rem auto;
+}
