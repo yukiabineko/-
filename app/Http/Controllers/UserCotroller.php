@@ -66,5 +66,9 @@ class UserCotroller extends Controller
       'user' => $user
     ]);
   }
+/******************お客様注文、問い合わせページ***************************************************/
+  public function status(User $user){
+
+  }
 }
 

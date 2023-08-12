@@ -54,4 +54,5 @@ Route::group(['middleware' =>['auth']], function(){
   //お客様関連
   Route::resource('/admin/users', AdminUserController::class,['names'=>['index' => 'admin.users.index']])->only(['index']);
   Route::resource('/users', UserCotroller::class)->only(['edit','update','show']);
+  Route::get('/users/status/{user}',[UserCotroller::class, 'status'])->name('users.status');
 });

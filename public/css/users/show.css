@@ -1,0 +1,122 @@
+.contents{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 4rem auto;
+}
+/**************左リスト*************************************/
+.contents aside{
+  width: 20%;
+}
+.user-link-lists{
+  background-color: white;
+  border: 1px solid #c0c0c0;
+  width: 100%;
+  padding: 1rem 0;
+  list-style: none;
+}
+.user-link-list{
+  width: 95%;
+  margin: 0 auto;
+}
+.user-link-list:not(:last-child)
+{
+  margin-bottom: 1.5rem;
+}
+.user-link-a{
+  align-items: center;
+  color: darkblue;
+  display: flex;
+  text-decoration: none;
+}
+.user-link-a:hover{
+  opacity: 0.6;
+}
+.user-link-a img, .user-link-cart img{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.user-link-cart{
+  display: flex;
+  align-items: center;
+}
+.user-page-empty-title{
+  color: #c0c0c0;
+}
+.user-cart-count{
+  align-items: center;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+/*******************メイン********************************************************/
+.main-contents{
+  border: 1px solid #c0c0c0;
+  background-color: white;
+  padding: 1rem 0;
+  width: calc(78% - 2px);
+}
+.user-name{
+  display: flex;
+  width: 98%;
+  margin: 1rem auto;
+  gap: 1%;
+}
+.user-name img{
+  width: 5%;
+  aspect-ratio: 1;
+}
+.name-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 88%;
+}
+.name{
+  color: darkblue;
+  font-size: 24px;
+  font-style: italic;
+  letter-spacing: 0.12rem;
+}
+.sub-name{
+  color: darkblue;
+  font-size: 12px;
+  font-style: italic;
+  letter-spacing: 0.12rem;
+}
+.user-table{
+  width: 98%;
+  margin: 2rem auto 0;
+}
+
+.user-table tbody tr,
+.user-table tbody  tr th,
+.user-table tbody tr td
+{
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+.user-table tbody tr{
+   line-height: 3;
+}
+.adress{
+  margin-top: -.6rem;
+}
+.user-table tbody tr th{
+  background-color: #f9f9f9;
+  color: darkblue;
+}
+.user-table tbody tr td{
+  color: #232121;
+  letter-spacing: 0.02em;
+}
+.postal-code{
+  font-size: 12px;
+  font-style: italic;
+}
