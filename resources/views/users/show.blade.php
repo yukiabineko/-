@@ -34,10 +34,10 @@
             </a>
           </li>
 
-          <!-- 注文状況、問い合わせ状況 -->
+          <!-- 注文状況 -->
           <li class="user-link-list">
             <a href="{{ route('users.edit', $user)}}" class="user-link-a">
-              <img src="{{ asset('image/users/memo.svg')}}" alt="注文、問い合わせ">
+              <img src="{{ asset('image/users/memo.svg')}}" alt="注文状況">
               <span class="user-page-link-title">注文状況/問い合わせ状況</span>
             </a>
           </li>

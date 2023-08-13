@@ -49,10 +49,10 @@ Route::group(['middleware' =>['auth']], function(){
   Route::get('/cart/{id}/delete', [CartController::class, 'destroy'])->name('cart.destroy');
   //注文状況
   Route::resource('orders',OrderController::class)->only(['store']);
+  Route::get('/orders',[OrderController::class, 'index'])->name('orders.index');
 
 
   //お客様関連
   Route::resource('/admin/users', AdminUserController::class,['names'=>['index' => 'admin.users.index']])->only(['index']);
   Route::resource('/users', UserCotroller::class)->only(['edit','update','show']);
-  Route::get('/users/status/{user}',[UserCotroller::class, 'status'])->name('users.status');
 });

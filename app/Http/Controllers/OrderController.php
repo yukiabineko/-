@@ -21,4 +21,8 @@ class OrderController extends Controller
         return redirect(route('home'))->with('flash', '注文手続き完了しました。ありがとうございました。');
       }
    }
+/******************お客様注文、問い合わせページ***************************************************/
+  public function index(){
+     return view('orders.index');
+  }
 }
