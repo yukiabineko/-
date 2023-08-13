@@ -12,13 +12,14 @@ class UserCotroller extends Controller
 {
    /*******************会員情報編集*************************************************** */
    public function edit(User $user){
+      $this->authorize('show', $user);
      return view('users.edit',[
         'user' => $user
      ]);
   }
  /*******************会員編集処理**************************************************************** */
    public function update(Request $request, User $user){
-      
+      $this->authorize('show', $user);
       $this->validate($request,[
             'surname' => ['required', 'string', 'max:255'],
             'name' => ['required', 'string', 'max:255'],
@@ -62,6 +63,7 @@ class UserCotroller extends Controller
    }
 /******************お客様詳細ページ********************************************************** */
   public function show(User $user){
+    $this->authorize('show', $user);
     return view('users.show',[
       'user' => $user
     ]);
