@@ -42,7 +42,7 @@
           </div>
           
           <!-- 二段目 -->
-          <div class="form-first">
+          <div class="form-second">
               <!-- 開始日 -->
               <div class="form-group">
                 <div class="search-title">検索開始日</div>
@@ -54,6 +54,11 @@
                 <div class="search-title">検索終了日</div>
                 <input type="text" name="finish-date" class="form-control" id="finish-date" value="{{Request::get('finish-date')}}">
               </div>
+          </div>
+
+           <!-- 検索ボックス最下部 -->
+           <div class="form-last">
+             <button type="submit" class="btn-submit">検索する</button>
           </div>
       </div>
     </form>
