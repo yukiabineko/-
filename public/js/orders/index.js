@@ -19,10 +19,11 @@ window.addEventListener('load',()=>{
 		showOtherMonths: true, //他の月を表示
 		selectOtherMonths: true, //他の月を選択可能
 		onSelect: (date, inst)=>{
-			let startInput = document.getElementById('start-date');
-			alert(startDate);
-			
-			console.log(startInput);
+			finishDate = new Date( date );
+			if( startDate > finishDate){
+				alert('開始日と終了日が不正です。見直してください。');
+				$("#finish-date").val("");
+			}
 		}
 	});
 });

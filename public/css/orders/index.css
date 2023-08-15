@@ -1,3 +1,90 @@
 .main-contents{
-  background-color: yellow;
+  margin: 4rem auto;
+  width: 80%;
+}
+/******************************************************************/
+/**
+サーチ機能
+**/
+.history-search-form{
+  background-color: white;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+.form-box-title{
+  background-color: #c0c0c0;
+  color: white;
+  letter-spacing: 0.12em;
+  line-height: 4;
+}
+.order-search-container{
+  width: 98%;
+  margin: 1rem auto;
+}
+.form-first,
+.form-second
+{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.form-first *{
+  width: 45%;
+}
+.form-second *{
+  width: 41%;
+}
+.form-group{
+  width: 100%;
+}
+.search-title{
+  font-weight: bold;
+}
+.form-control{
+  width: 95%;
+  border: 1px solid #c0c0c0;
+  line-height: 2;
+}
+.range{
+  font-size: 24px;
+  color: darkblue;
+  width: 10%;
+}
+.form-last{
+  width: 100%;
+  margin: 1.5rem auto;
+}
+.btns{
+  border-radius: 4px;
+  color: white;
+  padding: .5rem 0;
+  width: 15%;
+  
+}
+
+.btn-submit{
+  background-color: #6699FF;
+  margin-right: 1rem;
+}
+.btn-submit:hover{
+  opacity: 0.6;
+}
+.btn-search{
+  background-color: red;
+}
+.btn-search:hover{
+  opacity: 0.6;
+}
+/********************************************************************************/
+/**
+履歴リスト
+**/
+/**モバイル版非表示 **/
+.lists-mobile-history{
+  display: none;
+}
+.lists-pc-history{
+  border-collapse: collapse;
 }

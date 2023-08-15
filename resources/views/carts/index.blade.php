@@ -66,7 +66,10 @@
                       class="delete-btns"
                       >削除</button>
                   </td>
-                  <input type="hidden" name="product_id[]" value="{{ $cart['product_id']}}">
+                  <input type="hidden" name="path[]" value="{{ $cart['path'] }}">
+                  <input type="hidden" name="name[]" value="{{ $cart['name'] }}">
+                  <input type="hidden" name="price[]" value="{{ $cart['price'] }}">
+                  <input type="hidden" name="product_id[]" value="{{ $cart['product_id'] }}">
                 </tr>
               @endforeach
               </tbody>

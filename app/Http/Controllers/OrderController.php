@@ -12,6 +12,9 @@ class OrderController extends Controller
       if($request->session()->exists('cart')){
         foreach($request->count as $i=> $count ){
           Order::create([
+            'path' => $request->path[$i],
+            'name' => $request->name[$i],
+            'price' => $request->price[$i],
             'count' => $count,
             'user_id' => \Auth::user()->id,
             'product_id' => $request->product_id[$i]
@@ -23,6 +26,9 @@ class OrderController extends Controller
    }
 /******************お客様注文、問い合わせページ***************************************************/
   public function index(){
-     return view('orders.index');
+     $orders = \Auth::user()->orders()->paginate(20);
+     return view('orders.index',[
+      'orders' => $orders
+     ]);
   }
 }

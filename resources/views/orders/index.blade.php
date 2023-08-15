@@ -23,7 +23,7 @@
     <p class="supplement">絞り込んで表示したい場合は入力してください。</p>
 
     <!-- 詳細フォーム -->
-    <form action="{{ route('orders.index')}}" method="get">
+    <form action="{{ route('orders.index')}}" method="get" class="history-search-form">
       <div class="form-box-title">絞り込み</div>
       <div class="order-search-container">
           <!-- 検索ボックス最上段 -->
@@ -49,6 +49,8 @@
                 <input type="text" name="start-date" class="form-control" id="start-date" value="{{Request::get('start-date')}}">
               </div>
 
+              <span class="range">~</span>
+
               <!-- 終了日 -->
               <div class="form-group">
                 <div class="search-title">検索終了日</div>
@@ -58,10 +60,20 @@
 
            <!-- 検索ボックス最下部 -->
            <div class="form-last">
-             <button type="submit" class="btn-submit">検索する</button>
+             <button type="submit" class="btns btn-submit">検索する</button>
+             <button type="button" class="btns btn-search">リセット</button>
           </div>
       </div>
     </form>
+
+    <!-- データエリア -->
+    @if ( count($orders) > 0 )
+      <!-- pcとモバイルでの表示切り替え -->
+        @include('orders/responsive/lists_pc')
+        @include('orders/responsive/lists_mobile')
+    @else
+        <div class="empty">該当する履歴がありません。</div>
+    @endif
 
 
 
