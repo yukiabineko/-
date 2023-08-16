@@ -1,0 +1,17 @@
+.main-contents{
+  margin: 4rem auto;
+  width: 65%;
+}
+/*******************************************************************/
+/**
+データがない場合
+**/
+.empty{
+  background-color: #d8d9c2;
+  color: #362e2e;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 3rem 0;
+  width: 100%;
+}

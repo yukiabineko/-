@@ -6,6 +6,7 @@ use App\Mail\TestMail;
 use App\Notifications\PasswordResetNotification;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -59,8 +60,16 @@ class User extends Authenticatable
        //$this->notify(new PasswordResetNotification($token, new TestMail()));
     
     }*/
+
+    //関連注文リスト
     public function orders(){
         return $this->hasMany(Order::class);
+    }
+    /**
+     * 関連問い合わせリスト
+     */
+    public function contacts(){
+        return $this->hasMany(Contact::class);
     }
 
 

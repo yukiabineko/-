@@ -45,7 +45,11 @@
         <textarea name="context" class="form-control textarea" rows="10">{{ old('context')}}</textarea>
       </div>
 
-      <input type="hidden" name="user_id", value="{{ Request::get('user_id')}}">
+      @if (Auth::check())
+         <input type="hidden" name="user_id", value="{{ Auth::id() }}">
+      @endif
+
+  
 
       <!-- 送信ボタン -->
       <div class="form-btn">

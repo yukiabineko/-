@@ -39,5 +39,12 @@ class ContactController extends Controller
             return redirect( route('contacts.create'))->with('flash', '問い合わせを送信しました。');
         }
     }
+/*********************各会員様のお問い合わせ一覧************************************************************************* */
+    public function index(){
+        $contacts = \Auth::user()->contacts()->paginate(10);
+        return view('contacts.index',[
+            'contacts' => $contacts
+        ]);
+    }
 }
 

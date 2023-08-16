@@ -50,6 +50,8 @@ Route::group(['middleware' =>['auth']], function(){
   //注文状況
   Route::resource('orders',OrderController::class)->only(['store']);
   Route::get('/orders',[OrderController::class, 'index'])->name('orders.index');
+  //問い合わせ関連(ログイン時のみ)
+  Route::resource('contacts',ContactController::class)->only(['index']);
 
 
   //お客様関連

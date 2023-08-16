@@ -29,6 +29,7 @@
                 <li class="menu-li"><a href="{{ route('users.show', Auth::user() )}}" class="menu-li-link">{{ Auth::user()->name}}さん情報</a></li>
                 <li class="menu-li"><a href="{{ route('users.edit',Auth::user() )}}" class="menu-li-link">{{ Auth::user()->name}}さん編集</a></li>
                 <li class="menu-li"><a href="{{ route('orders.index')}}" class="menu-li-link">注文履歴</a></li>
+                <li class="menu-li"><a href="{{ route('contacts.index')}}" class="menu-li-link">お問い合わせ一覧</a></li>
               @else
                 <li class="menu-li"><a href="{{ route('admin.products')}}" class="menu-li-link">商品管理</a></li>  
               @endif
