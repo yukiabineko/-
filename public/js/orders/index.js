@@ -27,3 +27,19 @@ window.addEventListener('load',()=>{
 		}
 	});
 });
+/**
+ * 検索ボックスのリセットrisextuto
+ */
+const resetInput = ()=>{
+	document.querySelectorAll('.form-control').forEach(input =>{
+     input.value = "";
+	});
+	let url = new URL(window.location.href);
+	let params = url.searchParams;
+	params.delete('name');
+	params.delete('price');
+	params.delete('start_date');
+	params.delete('finish_date');
+	// アドレスバーのURLからGETパラメータを削除
+  history.replaceState('', '', url.pathname);
+}

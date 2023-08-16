@@ -23,7 +23,7 @@
     <p class="supplement">絞り込んで表示したい場合は入力してください。</p>
 
     <!-- 詳細フォーム -->
-    <form action="{{ route('orders.index')}}" method="get" class="history-search-form">
+    <form action="{{ route('orders.index')}}" method="get" class="history-search-form" autocomplete="off">
       <div class="form-box-title">絞り込み</div>
       <div class="order-search-container">
           <!-- 検索ボックス最上段 -->
@@ -46,7 +46,7 @@
               <!-- 開始日 -->
               <div class="form-group">
                 <div class="search-title">検索開始日</div>
-                <input type="text" name="start-date" class="form-control" id="start-date" value="{{Request::get('start-date')}}">
+                <input type="text" name="start_date" class="form-control" id="start-date" value="{{Request::get('start_date')}}">
               </div>
 
               <span class="range">~</span>
@@ -54,14 +54,14 @@
               <!-- 終了日 -->
               <div class="form-group">
                 <div class="search-title">検索終了日</div>
-                <input type="text" name="finish-date" class="form-control" id="finish-date" value="{{Request::get('finish-date')}}">
+                <input type="text" name="finish_date" class="form-control" id="finish-date" value="{{Request::get('finish_date')}}">
               </div>
           </div>
 
            <!-- 検索ボックス最下部 -->
            <div class="form-last">
              <button type="submit" class="btns btn-submit">検索する</button>
-             <button type="button" class="btns btn-search">リセット</button>
+             <button type="button" class="btns btn-search" onclick="resetInput()">リセット</button>
           </div>
       </div>
     </form>

@@ -93,9 +93,11 @@
   width: 100% !important;
 }
 .lists-pc-history thead{
-  background-color: #7c7777;
+  background-color: hsl(0, 2%, 48%);
   color: white;
+  font-size: 14px;
   line-height: 3;
+  text-align: left;
 }
 .th-day{
   width: 20%;
@@ -154,4 +156,17 @@
 }
 .tax{
   font-size: 12px;
+}
+/***************************************************************/
+/**
+空
+**/
+.empty{
+  background-color: #d8d9c2;
+  color: #362e2e;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 3rem 0;
+  width: 100%;
 }

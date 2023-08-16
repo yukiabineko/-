@@ -7,6 +7,7 @@
   <title>@yield('title')</title>
   <link rel="stylesheet" href="{{ asset('css/main.css')}}">
   <link rel="stylesheet" href="{{ asset('css/side.css')}}">
+  <script src="{{ asset('js/main.js')}}"></script>
   @yield('css')
   @yield('js')
   

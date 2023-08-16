@@ -34,9 +34,16 @@ class OrderController extends Controller
     if( !empty( $request->price )){
       $query->where('price', $request->price );
     }
+    if( !empty( $request->start_date )){
+      $query->where('created_at', '>=', $request->start_date );
+    }
+    if( !empty( $request->finish_date )){
+      $query
+      ->where('created_at', '<=', date('Y-m-d', strtotime('+1 day',strtotime( $request->finish_date))) );
+    }
     $orders = $query->where('user_id', \Auth::id())->paginate(20);
     return view('orders.index',[
-    'orders' => $orders
+       'orders' => $orders
     ]);
   }
 }
