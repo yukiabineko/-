@@ -55,6 +55,11 @@
   color: darkblue;
   font-size: 12px;
 }
+.price{
+  align-items: center;
+  display: flex;
+  gap: .2rem;
+}
 .price-number
 {
   color: red;
@@ -63,6 +68,11 @@
   font-weight: bold;
   letter-spacing: 0.12rem;
   padding-right: 5px;
+}
+.tax{
+  font-size: 12px;
+  font-style: italic;
+  font-weight: bold;
 }
 .quantity{
   font-size: 12px;

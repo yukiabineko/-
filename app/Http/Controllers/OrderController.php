@@ -25,10 +25,18 @@ class OrderController extends Controller
       }
    }
 /******************お客様注文、問い合わせページ***************************************************/
-  public function index(){
-     $orders = \Auth::user()->orders()->paginate(20);
-     return view('orders.index',[
-      'orders' => $orders
-     ]);
+  public function index(Request $request){
+    $query = Order::query();
+
+    if( !empty( $request->name )){
+      $query->where('name', $request->name );
+    }
+    if( !empty( $request->price )){
+      $query->where('price', $request->price );
+    }
+    $orders = $query->where('user_id', \Auth::id())->paginate(20);
+    return view('orders.index',[
+    'orders' => $orders
+    ]);
   }
 }

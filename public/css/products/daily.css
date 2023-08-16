@@ -99,6 +99,11 @@
   letter-spacing: 0.1rem;
   margin-right: .2rem;
 }
+.tax{
+  font-size: 10px;
+  font-style: italic;
+  font-weight: bold;
+}
 .product-link{
   width: 75%;
   margin: 0 auto;

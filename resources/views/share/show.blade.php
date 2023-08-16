@@ -42,7 +42,11 @@
                 <span class="price-title">価格</span>
                 <div class="price">
                   <span class="quantity">1パック</span>
-                  <span class="price-number">{{ $product->tax() }}</span>円(税込)
+                  <div class="price-wrapper">
+                    <span class="price-number">{{ $product->price }}</span>円
+                    <div class="tax">{{ $product->tax() }}円(税込)</div>
+                  </div>
+                 
                 </div>
               </div>
 

@@ -10,9 +10,10 @@
           <div class="product-name">{{ $product->name }}</div>
           <div class="product-price">
             <span class="price-quantity">1パック</span>
-            <span>
-              <span class="price-number">{{ $product->tax() }}</span>円(税込)
-            </span>
+            <div class="price-wrappper">
+              <span class="price-number">{{ $product->price }}</span>円
+              <div class="tax">{{ $product->tax()}}円(税込)</div>
+            </div>
           
           </div>
         </div>

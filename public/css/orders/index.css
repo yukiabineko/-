@@ -9,10 +9,11 @@
 .history-search-form{
   background-color: white;
   padding-bottom: 1rem;
+  margin-bottom: 2rem;
   width: 100%;
 }
 .form-box-title{
-  background-color: #c0c0c0;
+  background-color: #7c7777;
   color: white;
   letter-spacing: 0.12em;
   line-height: 4;
@@ -86,5 +87,71 @@
   display: none;
 }
 .lists-pc-history{
+  background-color: white;
   border-collapse: collapse;
+  margin-top: 1rem;
+  width: 100% !important;
+}
+.lists-pc-history thead{
+  background-color: #7c7777;
+  color: white;
+  line-height: 3;
+}
+.th-day{
+  width: 20%;
+}
+.th-name{
+  width: 50%;
+}
+.th-price{
+  width: 10%;
+}
+.th-link{
+  width: 10%;
+}
+.lists-pc-history tbody td{
+  padding: .5rem 0;
+}
+.lists-pc-history tbody tr:not(:last-child) td{
+  border-bottom: 1px solid #c0c0c0;
+}
+
+.order-items{
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+.order-item-img{
+  width: 20%;
+  aspect-ratio:  2 / 1;
+}
+.order-item-name{
+  color: darkblue;
+  letter-spacing: 0.12rem;
+}
+.btn-link{
+  background-color: #6699FF;
+  border-radius: 4px;
+  color: white;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: .5rem 5px;
+  width: calc(100% - 20px);
+}
+.btn-link:hover{
+  opacity: 0.5;
+}
+.excluded-wrapper{
+  font-size: 16px;
+  font-style: italic;
+}
+.excluded{
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: .2rem;
+}
+.tax{
+  font-size: 12px;
 }

@@ -37,7 +37,7 @@
               <!-- 価格検索 -->
               <div class="form-group">
                 <div class="search-title">価格</div>
-                <input type="number" name="price" class="form-control" value="{{Request::get('price')}}">
+                <input type="number" name="price" class="form-control" value="{{Request::get('price')}}" placeholder="税抜価格で検索ください。">
               </div>
           </div>
           
@@ -69,6 +69,7 @@
     <!-- データエリア -->
     @if ( count($orders) > 0 )
       <!-- pcとモバイルでの表示切り替え -->
+        {{ $orders->links() }}
         @include('orders/responsive/lists_pc')
         @include('orders/responsive/lists_mobile')
     @else
