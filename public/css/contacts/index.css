@@ -45,19 +45,23 @@
 }
 .contact-body{
   align-items: center;
-  aspect-ratio:  13 / 2;
-  background-color: #c0c0c0;
+  height: 0;
+  background-color: #FFF;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  display: none;
   width: 100%;
+  transition: .4s all ease-in;
+}
+.body-open{
+  height: calc(65vw / 13 * 3 );
 }
 .body-contents{
-  background-color: white;
+  background-color: #f7efef;
+  color: #201f1f;
   overflow: scroll;
   margin: 0 auto;
-  max-height: 90%;
+  height: 90%;
   width: 99%;
   
  

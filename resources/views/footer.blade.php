@@ -1,27 +1,27 @@
 <footer>
   <ul class="footer-lists">
     <li class="footer-list">
-      <a href="#" class="footer-list-link">
+      <a href="{{ route('home')}}" class="footer-list-link">
         <div class="sub-title">トップページ</div>
       </a>
     </li>
     <li class="footer-list">
-      <a href="#" class="footer-list-link">
+      <a href="{{ route('daily.index')}}" class="footer-list-link">
         <div class="footer-title">明日入荷予定</div>
       </a>
     </li>
     <li class="footer-list">
-      <a href="#" class="footer-list-link">
+      <a href="{{ route('products.index') }}" class="footer-list-link">
         <div class="footer-title">オンラインショップ</div>
       </a>
     </li>
     <li class="footer-list" >
-      <a href="#" class="footer-list-link">
+      <a href="{{ route('shops.index')}}" class="footer-list-link">
         <div class="footer-title">お店情報</div>
       </a>
     </li>
     <li class="footer-list">
-      <a href="#" class="footer-list-link">
+      <a href="{{ route('contacts.create')}}" class="footer-list-link">
         <div class="footer-title">お問い合わせ</div>
       </a>
     </li>

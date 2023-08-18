@@ -6,14 +6,17 @@ window.addEventListener('load',()=>{
         contact.addEventListener('click', event =>{
             //問い合わせ内容コンテンツ
             let textBody= contact.children[0].children[1];
+            let buttonText =  contact.children[0].children[0].children[1];
             if( textBody.dataset.status == 'off' ){
-                textBody.style.display = "flex";
+                textBody.classList.add('body-open');
                 textBody.dataset.status = "on";
+                buttonText.textContent = "閉じる";
 
             }
             else{
-                textBody.style.display = "none";
+                textBody.classList.remove('body-open');
                 textBody.dataset.status = "off";
+                buttonText.textContent = "内容を見る";
             }
             
         });

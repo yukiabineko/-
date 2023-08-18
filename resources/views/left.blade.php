@@ -50,7 +50,7 @@
       </li>
        <!-- カテゴリー6 -->
        <li class="left-category-list">
-        <a href="#" class="left-category-link">
+        <a href="{{ route('products.index',['category' => 5])}}" class="left-category-link">
           <img src="{{ asset('image/left/left-item6.png')}}" alt="アイテム6" class="left-category-img">
           珍味類
         </a>

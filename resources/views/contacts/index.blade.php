@@ -17,6 +17,7 @@
   <!-- メインエリア -->
   <article class="main-contents">
     @if ( count( $contacts ) > 0 )
+        {{ $contacts->links() }}
         <ul class="contact-lists">
           @foreach ($contacts as $contact)
               <li class="contact-list">
