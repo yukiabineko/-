@@ -7,8 +7,19 @@
                   <!-- タイトル -->
                     <div class="contact-title" id="title-{{ $contact->id }}">
                       <span class="title-text">
-                        {{ $contact->title }}
-                        <div class="date">{{ $contact->created_at }}</div>
+                          {{ $contact->title }}
+                          <div class="date">{{ $contact->created_at }}</div>
+                          <!-- 管理者のみステータスと送信ボタンの配置 -->
+                          @if (Auth::user()->admin == 1)
+                            <div class="contact-statuses">
+                              <span class="status">
+                                {{ $contact->status == 0? "未返信" : "返信済"}}
+                              </span>
+                              @if ( $contact->replay == 0)
+                                 <button class="replay">返信する</button> 
+                              @endif
+                            </div>
+                          @endif
                       </span>
                       <span class="open-close">内容を見る</span>
                     </div>

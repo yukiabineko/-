@@ -5,11 +5,11 @@
 @endsection
 
 @section('css')
- 
+  <link rel="stylesheet" href="{{ asset('css/contacts/index.css')}}">
 @endsection
 
 @section('js')
-   
+  <script src="{{ asset('js/contacts/index.js')}}"></script>
 @endsection
 
 @section('contents')
@@ -19,7 +19,7 @@
 
    <!-- メインコンテンツ -->
    <article class="main-contents">
-     
+      @include('share/contact-list')
    </article>
 
 
