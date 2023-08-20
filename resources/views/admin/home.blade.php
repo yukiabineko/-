@@ -45,6 +45,13 @@
             <div class="menu-title">webサイトへ</div>
           </a>
         </li>
+         <!-- お問い合わせ一覧へ -->
+         <li>
+          <a href="{{ route('admin_contacts.index') }}">
+            <img src="{{ asset('image/admin/contact.svg') }}" alt="お問い合わせ一覧へ">
+            <div class="menu-title">お問い合わせ一覧</div>
+          </a>
+        </li>
         <!-- ログアウト -->
         <li>
           <form action="{{ route('logout') }}" method="post" class="logout-menu">
