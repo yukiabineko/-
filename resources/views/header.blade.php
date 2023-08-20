@@ -1,7 +1,7 @@
 <header>
   <!-- アイコン -->
   <div class="icons">
-    <a href="#" class="icon">
+    <a href="{{ route('home')}}" class="icon">
       <img src="{{ asset('image/icon.png')}}" alt="icon">
     </a>
 
@@ -26,17 +26,47 @@
             <input type="checkbox"  id="check">
             <ul class="menus-lists">
               @if (Auth::user()->admin == 0)
-                <li class="menu-li"><a href="{{ route('users.show', Auth::user() )}}" class="menu-li-link">{{ Auth::user()->name}}さん情報</a></li>
-                <li class="menu-li"><a href="{{ route('users.edit',Auth::user() )}}" class="menu-li-link">{{ Auth::user()->name}}さん編集</a></li>
-                <li class="menu-li"><a href="{{ route('orders.index')}}" class="menu-li-link">注文履歴</a></li>
-                <li class="menu-li"><a href="{{ route('contacts.index')}}" class="menu-li-link">お問い合わせ一覧</a></li>
+                <!-- ユーザー情報 -->
+                <li class="menu-li">
+                  <a href="{{ route('users.show', Auth::user() )}}" class="menu-li-link">
+                    <img src="{{ asset('image/users/user.svg')}}" alt="ユーザー" class="menu-link-img">
+                    <span class="menu-link-text">{{ Auth::user()->name}}さん情報</span>
+                  </a>
+                </li>
+
+                <!-- ユーザー編集 -->
+                <li class="menu-li">
+                  <a href="{{ route('users.edit',Auth::user() )}}" class="menu-li-link">
+                    <img src="{{ asset('image/users/edit.svg')}}" alt="編集" class="menu-link-img">
+                    <span class="menu-link-text"> {{ Auth::user()->name}}さん編集</span>
+                  </a>
+                </li>
+
+                <!-- 注文履歴 -->
+                <li class="menu-li">
+                  <a href="{{ route('orders.index')}}" class="menu-li-link">
+                    <img src="{{ asset('image/users/memo.svg')}}" alt="注文履歴" class="menu-link-img">
+                    <span class="menu-link-text">注文履歴</span>
+                  </a>
+                </li>
+              
+                <!-- 注文履歴 -->
+                <li class="menu-li">
+                  <a href="{{ route('contacts.index')}}" class="menu-li-link">
+                    <img src="{{ asset('image/users/contacts.svg')}}" alt="お問い合わせ" class="menu-link-img">
+                    <span class="menu-link-text"> お問い合わせ一覧</span>
+                  </a>
+                </li>
               @else
                 <li class="menu-li"><a href="{{ route('admin.products')}}" class="menu-li-link">商品管理</a></li>  
               @endif
               <li class="menu-li">
-                <form action="{{ route('logout')}}" method="post">
+                <form action="{{ route('logout')}}" method="post" class="logout-form">
                   @csrf
-                  <button type="submit">ログアウト</button>
+                  <button type="submit" class="logout-button">
+                    <img src="{{ asset('image/users/logout.svg')}}" alt="ログアウト" class="logout-img">
+                    <span class="logout-img-text">ログアウト</span>
+                  </button>
                 </form>
               </li>
             </ul>

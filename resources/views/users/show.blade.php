@@ -36,9 +36,17 @@
 
           <!-- 注文状況 -->
           <li class="user-link-list">
-            <a href="{{ route('users.edit', $user)}}" class="user-link-a">
+            <a href="{{ route('orders.index')}}" class="user-link-a">
               <img src="{{ asset('image/users/memo.svg')}}" alt="注文状況">
-              <span class="user-page-link-title">注文状況/問い合わせ状況</span>
+              <span class="user-page-link-title">注文状況</span>
+            </a>
+          </li>
+
+          <!-- お問い合わせ状況 -->
+          <li class="user-link-list">
+            <a href="{{ route('contacts.index')}}" class="user-link-a">
+              <img src="{{ asset('image/users/contacts.svg')}}" alt="お問い合わせ状況">
+              <span class="user-page-link-title">問い合わせ状況</span>
             </a>
           </li>
 
