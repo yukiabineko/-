@@ -12,7 +12,7 @@
                           <!-- 管理者のみステータスと送信ボタンの配置 -->
                           @if (Auth::user()->admin == 1)
                             <div class="contact-statuses">
-                              <span class="status">
+                              <span class="status  {{ $contact->status == 0? "incomplete" : "complete"}}">
                                 {{ $contact->status == 0? "未返信" : "返信済"}}
                               </span>
                               @if ( $contact->replay == 0)

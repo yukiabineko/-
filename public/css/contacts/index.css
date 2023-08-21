@@ -36,6 +36,36 @@
   font-size: 12px;
   margin: 0;
 }
+/**
+管理者用　返信ステータス
+**/
+.contact-statuses{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.status{
+  font-size: 12px;
+}
+.incomplete{
+  color: red;
+}
+complete{
+  color: #6699FF;
+}
+.replay{
+  background-color: #6699FF;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  position: relative;
+}
+.replay:hover{
+  opacity: 0.6;
+}
+
+/***********************************************************/
 .open-close{
   color: darkblue;
   font-size: 14px;
