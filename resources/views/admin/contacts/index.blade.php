@@ -33,7 +33,7 @@
      <div class="modal-header">
          <div class="modal-header-wrapper">
             <h3>返信作成</h3>
-            <button class="close-modal">x</button>
+            <button class="close-modal" onclick="closeModal()">x</button>
          </div>
      </div>
 
@@ -44,26 +44,29 @@
          <!-- お客様名 -->
          <div class="form-group">
             <div class="modal-body-title">お客様名</div>
-            <div class="modal-user-name"></div>
+            <div class="record modal-user-name"></div>
          </div>
 
          <!-- お問合せタイトル -->
          <div class="form-group">
             <div class="modal-body-title">お問合せタイトル</div>
-            <div class="modal-contact-title"></div>
+            <div class="record modal-contact-title"></div>
          </div>
 
          <!-- お問合せ内容 -->
          <div class="form-group">
             <div class="modal-body-title">お問合せ内容</div>
-            <div class="modal-contact-context"></div>
+            <div class="record modal-contact-context"></div>
          </div>
 
          <!-- 返信フォーム -->
          <div class="form-group">
             <div class="modal-body-title">返信メッセージ</div>
-            <textarea name="replay"  cols="30" rows="10"></textarea>
+            <textarea name="replay" class="modal-textarea"></textarea>
          </div>
+
+         <!-- hiddenによる送信先メールアドレス -->
+         <input type="hidden" name="email" class="replay-email">
 
          <!-- submitボタン -->
          <div class="modal-btn">

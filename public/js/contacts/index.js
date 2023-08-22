@@ -69,6 +69,9 @@ window.addEventListener('load',()=>{
      */
     document.querySelectorAll('.replay').forEach(btn =>{
        btn.addEventListener('click', event=>{
+        //押下さらたボタンの位置
+
+
         const contactId = btn.dataset.contact;
         let url 
             = location.protocol + "//" + location.host + "/fish/public/admin/contacts/" + contactId;
@@ -76,10 +79,27 @@ window.addEventListener('load',()=>{
         fetch(url).then((respose)=>{
            return respose.json();
         }).then((json)=>{
-           console.log(json.name);
+           /*各種取得したデータを格納*/
+           document.querySelector('.modal-user-name').textContent = json.name;
+           document.querySelector('.modal-contact-title').textContent = json.title;
+           document.querySelector('.modal-contact-context').textContent = json.context;
+           document.querySelector('.replay-email').textContent = json.email;
+
+
+           document.querySelector('.back-ground-layer').classList.add('back-ground-layer-open');
+           document.querySelector('.modal').classList.add('modal-open');
+
+
         });
         /**fetch finish */
        });
        /** button push finish */
     });
 });
+/**
+ * モーダルを閉じる
+ */
+const closeModal = ()=>{
+    document.querySelector('.back-ground-layer').classList.remove('back-ground-layer-open');
+    document.querySelector('.modal').classList.remove('modal-open');
+}
