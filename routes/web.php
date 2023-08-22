@@ -47,6 +47,7 @@ Route::group(['middleware' =>['auth']], function(){
   Route::delete('/admin/products/{product}', [AdminProductController::class, 'destroy'])->name('admin.products_destroy');
   //管理者用問い合わせ一覧ページ
   Route::get('/admin/contacts', [AdminContactController::class, 'index'])->name('admin_contacts.index');
+  Route::get('/admin/contacts/{id}',[AdminContactController::class, 'show'])->name('admin_contacts.show');
 
   //カート関連
   Route::resource('/cart', CartController::class)->only(['store','index']);

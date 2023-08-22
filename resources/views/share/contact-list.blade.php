@@ -16,8 +16,12 @@
                                 {{ $contact->status == 0? "未返信" : "返信済"}}
                               </span>
                               @if ( $contact->replay == 0)
-                                 <button class="replay">返信する</button> 
+                                 <button 
+                                   class="replay"
+                                   data-contact="{{ $contact->id }}"
+                                 >返信する</button> 
                               @endif
+
                             </div>
                           @endif
                       </span>

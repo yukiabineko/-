@@ -69,7 +69,17 @@ window.addEventListener('load',()=>{
      */
     document.querySelectorAll('.replay').forEach(btn =>{
        btn.addEventListener('click', event=>{
-          console.log(btn);
-       })
+        const contactId = btn.dataset.contact;
+        let url 
+            = location.protocol + "//" + location.host + "/fish/public/admin/contacts/" + contactId;
+
+        fetch(url).then((respose)=>{
+           return respose.json();
+        }).then((json)=>{
+           console.log(json.name);
+        });
+        /**fetch finish */
+       });
+       /** button push finish */
     });
 });
