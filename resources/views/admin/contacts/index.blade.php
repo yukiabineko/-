@@ -31,12 +31,15 @@
   <div class="modal">
      <!-- モーダルヘッダー　 -->
      <div class="modal-header">
-         <h3>返信作成</h3>
-         <button class="close-modal">x</button>
+         <div class="modal-header-wrapper">
+            <h3>返信作成</h3>
+            <button class="close-modal">x</button>
+         </div>
      </div>
+
      <!-- モーダルボディ -->
      <div class="modal-body">
-       <form action="#" method="post">
+       <form action="#" method="post" class="replay-form">
          @csrf
          <!-- お客様名 -->
          <div class="form-group">
