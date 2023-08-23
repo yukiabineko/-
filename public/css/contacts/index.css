@@ -139,9 +139,7 @@ complete{
   transition: .4s all ease-in;
   z-index: 3;
 }
-.modal-open{
-  top: 50%;
-}
+
 /**
 モーダルヘッダー
 **/
