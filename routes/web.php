@@ -48,6 +48,7 @@ Route::group(['middleware' =>['auth']], function(){
   //管理者用問い合わせ一覧ページ
   Route::get('/admin/contacts', [AdminContactController::class, 'index'])->name('admin_contacts.index');
   Route::get('/admin/contacts/{id}',[AdminContactController::class, 'show'])->name('admin_contacts.show');
+  Route::post('/admin/contact/replay',[AdminContactController::class, 'replay'])->name('admin_contact.replay');
 
   //カート関連
   Route::resource('/cart', CartController::class)->only(['store','index']);

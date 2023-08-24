@@ -58,7 +58,7 @@
                   </a>
                 </li>
               @else
-                <li class="menu-li"><a href="{{ route('admin.products')}}" class="menu-li-link">商品管理</a></li>  
+                <li class="menu-li"><a href="{{ route('admin.home')}}" class="menu-li-link">管理画面へ</a></li>  
               @endif
               <li class="menu-li">
                 <form action="{{ route('logout')}}" method="post" class="logout-form">

@@ -51,6 +51,12 @@
           </a>
         </li>
         <li>
+          <a href="{{ route('admin_contacts.index')}}">
+            <img src="{{ asset('image/admin/admin-contacts.svg')}}" alt="お問い合わせ">
+            お問い合わせ一覧へ
+          </a>
+        </li>
+        <li>
           <form action="{{ route('logout')}}" method="post">
             @csrf
             <button type="submit">

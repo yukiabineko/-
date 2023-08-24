@@ -90,7 +90,8 @@ window.addEventListener('load',()=>{
            document.querySelector('.modal-user-name').textContent = json.name;
            document.querySelector('.modal-contact-title').textContent = json.title;
            document.querySelector('.modal-contact-context').textContent = json.context;
-           document.querySelector('.replay-email').textContent = json.email;
+           document.querySelector('.replay-email').value = json.email;
+           document.querySelector('.contact_id').value = json.id;
 
 
            document.querySelector('.back-ground-layer').classList.add('back-ground-layer-open');
@@ -117,6 +118,8 @@ window.addEventListener('load',()=>{
  * モーダルを閉じる
  */
 const closeModal = ()=>{
+    document.querySelector('.modal-input').value = "";           //=>返信タイトルのリセット
+    document.querySelector('.modal-textarea').value = "";        //=>返信本文のリセット
     document.querySelector('.back-ground-layer').classList.remove('back-ground-layer-open');
     document.querySelector('.modal').style.top = - window.innerHeight + "px";
 }

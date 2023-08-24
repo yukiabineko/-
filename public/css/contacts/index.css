@@ -55,8 +55,10 @@ main{
 .incomplete{
   color: red;
 }
-complete{
-  color: #6699FF;
+.complete{
+  color: rgb(56, 145, 56);
+  font-weight: bold;
+  font-size: .8rem;
 }
 .replay{
   background-color: #6699FF;
@@ -193,13 +195,23 @@ complete{
 .modal-contact-context{
   background-color: white !important;
   line-height: 2 !important;
+  margin-top: .2rem;
   width: calc(100% - 20px) !important;
   padding: 8px 10px !important;
+}
+.modal-input{
+  aspect-ratio: 25 / 1;
+  border: 1px solid #c0c0c0;
+  background-color: white !important;
+  display: block;
+  margin-top: .5rem;
+  width: calc(100% - 2px);
 }
 .modal-textarea{
   aspect-ratio: 7 / 1;
   border: 1px solid #c0c0c0;
   background-color: white !important;
+  margin-top: .5rem;
   width: calc(100% - 2px);
 }
 .modal-btn{

@@ -39,7 +39,7 @@
 
      <!-- モーダルボディ -->
      <div class="modal-body">
-       <form action="#" method="post" class="replay-form">
+       <form action="{{ route('admin_contact.replay')}}" method="post" class="replay-form">
          @csrf
          <!-- お客様名 -->
          <div class="form-group">
@@ -59,14 +59,21 @@
             <div class="record modal-contact-context"></div>
          </div>
 
-         <!-- 返信フォーム -->
+         <!-- 返信タイトル -->
+         <div class="form-group">
+            <div class="modal-body-title">返信タイトル</div>
+            <input type="text" name="subject" class="modal-input">
+         </div>
+
+         <!-- 返信内容 -->
          <div class="form-group">
             <div class="modal-body-title">返信メッセージ</div>
             <textarea name="replay" class="modal-textarea"></textarea>
          </div>
 
-         <!-- hiddenによる送信先メールアドレス -->
+         <!-- hiddenによる送信先メールアドレス,問い合わせID -->
          <input type="hidden" name="email" class="replay-email">
+         <input type="hidden" name="contact_id" class="contact_id">
 
          <!-- submitボタン -->
          <div class="modal-btn">
