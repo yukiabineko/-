@@ -25,23 +25,26 @@ main{
 /**
 ヘッダー
 **/
-header{
+.mobile-header{
+  display: none;
+}
+.pc-header{
   width: 100%;
   background-color: #F0F0F0;
 }
-header .icons{
+.pc-header .icons{
   width: 90%;
   margin: 1rem auto 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-header .icons .icon{
+.pc-header .icons .icon{
   display: flex;
   align-items: center;
   width: 10%;
 }
-header .icons a img{
+.pc-header .icons a img{
   width: 100%;
 }
 .auth-wrapper{
@@ -380,6 +383,24 @@ small{
   margin: 0rem auto 2rem;
   line-height: 3;
  
+}
+/*****************************************************************************************/
+/*****************************************************************************************/
+/**
+**スマートフォン
+**
+*/
+@media screen and (max-width: 767px) {
+  .pc-header{
+    display: none;
+  }
+  .mobile-header{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
 }
 
 
