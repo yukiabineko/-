@@ -74,7 +74,17 @@ window.addEventListener('load',()=>{
         console.log('ボタン:' +buttonY);
         console.log('全体:'+ window.innerHeight);
 
+        //ページタイトルヘッダーのy軸位置
+        let titleContent = document.querySelector('.page-title');
+        const titleY = titleContent.getBoundingClientRect().top;
+        const titleHeight = titleContent.clientHeight;
+        const titlePosition = titleY + titleHeight;
+        console.log('タイトル位置:' + titlePosition);
 
+
+        /**
+         * ajax関連
+         */
         const contactId = btn.dataset.contact;
         let url 
             = location.protocol + "//" + location.host + "/fish/public/admin/contacts/" + contactId;
@@ -96,7 +106,7 @@ window.addEventListener('load',()=>{
 
            document.querySelector('.back-ground-layer').classList.add('back-ground-layer-open');
            //modal.classList.add('modal-open');
-           modal.style.top = buttonY + "px";                             //=>モーダルの位置
+           modal.style.top = titlePosition + buttonY + "px";                             //=>モーダルの位置
            document.documentElement.scrollTop = (buttonY -100) + "px";   //=>スクロールの位置
            
        
