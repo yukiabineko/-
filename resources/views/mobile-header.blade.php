@@ -17,15 +17,21 @@
       <div class="mobile-hamburger-title">
         <h3>メニュー</h3>
       </div>
+    <!---------- 認証完了時 ------------------------->
       @if (Auth::check())
        <div class="mobile-user-info">
           <img 
           src="{{ asset('storage/users'.Auth::id().'/'.Auth::user()->path)}}" 
-          alt="user">
+          alt="user" class="mobile-auth-img">
+         <!-- お客様名 -->
+         <div class="mobile-user-name">{{ Auth::user()->name}}様</div>
+        <!-- 買い物かご -->
        </div> 
+     <!---------- 未認証時 ------------------------->
       @else
-        <a href="route('login')" class="mobile-login-link">ログイン</a>  
+        <a href="{{route('login')}}" class="mobile-login-link">ログイン</a>  
       @endif
+      <!---------- 共通項目 ------------------------->
       <!-- 各ページリスト -->
       <div class="mobile-page-header">ページリスト</div>
       <ul class="mobile-page-menus">

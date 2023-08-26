@@ -527,10 +527,6 @@ small{
     text-align: center;
     text-decoration: none;
   }
-
-
-
-
   /*ページリスト*/
   .mobile-page-menus{
     list-style: none;
@@ -559,7 +555,17 @@ small{
     font-size: 12px;
     margin-top: -1rem;
   }
-
+  /**
+  ログイン時のレイアウト
+  **/
+  .mobile-user-info{
+    text-align: center;
+    width: 100%;
+  }
+  .mobile-auth-img{
+    width: 100%;
+    aspect-ratio:  3 / 2;
+  }
   
 }
 

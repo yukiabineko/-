@@ -7,6 +7,7 @@ window.addEventListener('load',()=>{
      */
     document.querySelectorAll('.contact-list').forEach( contact =>{
         contact.addEventListener('mousedown', event =>{
+            let newPosition = 0;
             //問い合わせ内容コンテンツ
             let textBody= contact.children[0].children[1];
             let buttonText =  contact.children[0].children[0].children[1];
@@ -79,7 +80,7 @@ window.addEventListener('load',()=>{
         const titleY = titleContent.getBoundingClientRect().top;
         const titleHeight = titleContent.clientHeight;
         const titlePosition = titleY + titleHeight;
-        console.log('タイトル位置:' + titlePosition);
+        console.log('タイトル位置:' + titleY);
 
 
         /**
@@ -106,8 +107,17 @@ window.addEventListener('load',()=>{
 
            document.querySelector('.back-ground-layer').classList.add('back-ground-layer-open');
            //modal.classList.add('modal-open');
-           modal.style.top = titlePosition + buttonY + "px";                             //=>モーダルの位置
-           document.documentElement.scrollTop = (buttonY -100) + "px";   //=>スクロールの位置
+           
+           if(titlePosition > 10){
+              newPosition = titlePosition + buttonY;
+           }
+           else{
+              newPosition = buttonY + height / 2.2;
+           }
+          
+           console.log('新しい位置:' + newPosition);
+           modal.style.top =  newPosition + "px";                        //=>モーダルの位置
+           //document.documentElement.scrollTop = - window.screenY + "px";   //=>スクロールの位置
            
        
            
