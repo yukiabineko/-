@@ -11,9 +11,10 @@
     <input type="checkbox" id="hamberger-checkbox">
     <span class="hamburger-span"></span>
     <div class="mobile-menu-background"></div>
+
     <!--メニュー -->
     <div class="menus">
-      <div class="hamberger-title">
+      <div class="mobile-hamburger-title">
         <h3>メニュー</h3>
       </div>
       @if (Auth::check())
@@ -23,37 +24,38 @@
           alt="user">
        </div> 
       @else
-          
+        <a href="route('login')" class="mobile-login-link">ログイン</a>  
       @endif
       <!-- 各ページリスト -->
+      <div class="mobile-page-header">ページリスト</div>
       <ul class="mobile-page-menus">
         <li class="mobile-page-list">
-          <a href="{{ route('home')}}" class="nav-list-link">
+          <a href="{{ route('home')}}" class="mobile-page-link">
             <div class="main-title">TOP</div>
             <div class="sub-title">トップページ</div>
           </a>
         </li>
         <li class="mobile-page-list">
-          <a href="{{ route('daily.index')}}" class="nav-list-link">
+          <a href="{{ route('daily.index')}}" class="mobile-page-link">
             <div class="main-title">ARRIVALS</div>
             <div class="sub-title">生鮮入荷予定</div>
           </a>
         </li>
         <li class="mobile-page-list">
-          <a href="{{ route('products.index') }}" class="nav-list-link">
+          <a href="{{ route('products.index') }}" class="mobile-page-link">
             <div class="main-title">ONLINE</div>
             <div class="sub-title">オンラインショップ</div>
           </a>
         </li>
         <li class="mobile-page-list">
-          <a href="{{ route('shops.index')}}" class="nav-list-link" >
+          <a href="{{ route('shops.index')}}" class="mobile-page-link" >
             <div class="main-title">SHOP</div>
             <div class="sub-title">お店情報</div>
           </a>
         </li>
         
-        <li class="mobile-page-list">
-          <a href="{{ route('contacts.create')}}" class="nav-list-link">
+        <li class="mobile-page-list mobile-list-last">
+          <a href="{{ route('contacts.create')}}" class="mobile-page-link">
             <div class="main-title">CONTACT</div>
             <div class="sub-title">お問い合わせ</div>
           </a>

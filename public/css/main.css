@@ -495,10 +495,71 @@ small{
     left: -100%;
     z-index: 4;
   }
-  .mobile-page-menus{
-    width: 100%;
-    background-color: black;
+  /**
+  メニュー内
+  **/
+  .mobile-hamburger-title{
+    padding-top: 1rem;
+    text-align: center;
   }
+  .mobile-hamburger-title h3{
+    color: darkblue;
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  .mobile-page-header{
+    background-color: darkblue;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+  }
+  /*
+  ユーザーメニュー/ログイン
+  */
+  .mobile-login-link{
+    background-color:#6699FF;
+    border-radius: 4px;
+    color: white;
+    display: block;
+    line-height: 2;
+    margin: 3rem 0 .8rem;
+    text-align: center;
+    text-decoration: none;
+  }
+
+
+
+
+  /*ページリスト*/
+  .mobile-page-menus{
+    list-style: none;
+    width: 100%;
+  }
+  .mobile-page-list:not(.mobile-list-last){
+    border-bottom: 1px dotted darkblue;
+  }
+  .mobile-list-last{
+    border-bottom: 1px solid rgb(175, 175, 248);
+  }
+  .mobile-page-link{
+    color: darkblue;
+    display: block;
+    text-decoration: none;
+    line-height: 3;
+    width: 100%;
+  }
+  .main-title{
+    color: darkblue;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0 !important;
+  }
+  .sub-title{
+    font-size: 12px;
+    margin-top: -1rem;
+  }
+
   
 }
 
