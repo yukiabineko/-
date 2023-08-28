@@ -72,6 +72,7 @@
                     <span class="menu-link-text"> お問い合わせ一覧</span>
                   </a>
                 </li>
+                
               @else
                 <li class="menu-li"><a href="{{ route('admin.home')}}" class="menu-li-link">管理画面へ</a></li>  
               @endif
@@ -119,11 +120,18 @@
             <div class="sub-title">お店情報</div>
           </a>
         </li>
+
+        <li class="mobile-page-list mobile-list-last">
+          <a href="tel:090-xxxx-xxxx" class="mobile-page-link">
+            <div class="main-title">PHONE</div>
+            <div class="sub-title">電話お問い合わせ</div>
+          </a>
+        </li>
         
         <li class="mobile-page-list mobile-list-last">
           <a href="{{ route('contacts.create')}}" class="mobile-page-link">
             <div class="main-title">CONTACT</div>
-            <div class="sub-title">お問い合わせ</div>
+            <div class="sub-title">メールお問い合わせ</div>
           </a>
         </li>
       </ul>

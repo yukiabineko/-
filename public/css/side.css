@@ -173,7 +173,49 @@ right
 /**
 スマートフォン
 **/
-.left{
-  width: 100%;
-  margin-left: 0;
+@media screen and (max-width: 767px) {
+  /**
+  スマホ左サイド
+  **/
+  .left{
+    width: 100%;
+    margin-left: 0;
+  }
+  .left-search-box h3,
+  .left-category-box h3,
+  .sns h3
+  {
+    line-height: 3;
+  }
+  .left-search-box{
+    background-color: #E9E9E9;
+    margin-bottom: 4rem;
+  }
+  .search-box{
+    line-height: 2.5;
+  }
+  .search-form button{
+    padding: .8rem 0;
+    margin-top: 2rem;
+  }
+  .left-category-link{
+    padding: 1rem 0;
+  }
+  /**
+  スマホ右サイド
+  **/
+  .right{
+    width: 100%;
+  }
+  .sns-link-list a{
+     gap: 1%;
+  }
+  .sns-link-list img,
+  .right-contact a img
+  {
+     width: 2rem;
+  }
+  .right-contact a{
+     font-size: 1.2rem;
+  }
 }

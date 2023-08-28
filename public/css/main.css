@@ -491,6 +491,7 @@ small{
     background-color: white;
     border: 1px solid #c0c0c0;
     position: fixed;
+    overflow-y: scroll;
     top: 0;
     left: -100%;
     z-index: 4;
@@ -517,6 +518,10 @@ small{
   /*
   ユーザーメニュー/ログイン
   */
+  .mobile-wrapper{
+    height: 100%;
+    overflow-y: scroll;
+  }
   .mobile-login-link{
     background-color:#6699FF;
     border-radius: 4px;

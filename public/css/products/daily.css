@@ -133,3 +133,38 @@
   padding: 2rem;
   margin: 1rem auto;
 }
+/*******************************************************************/
+/*******************************************************************/
+/**
+スマートフォン
+**/
+@media screen and ( max-width: 767px) {
+  .daily-index-contents{
+    flex-direction: column;
+    width: 100%;
+  }
+  .daily-main{
+    order: 1;
+    width: 100%;
+  }
+  .left{
+    order: 2;
+  }
+  .right{
+    order: 3;
+  }
+  .product-lists,
+  .daily-title
+  {
+    width: 97%;
+    margin: 0 auto;
+  }
+  .daily-title{
+    border: none;
+    padding-top: 1rem;
+    text-align: center;
+  }
+  .daily-title h3{
+    border-bottom: 5px double darkblue;
+  }
+}
