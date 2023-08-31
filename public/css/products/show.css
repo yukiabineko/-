@@ -272,12 +272,24 @@
     font-style: italic;
   }
   .price-contents{
-    margin-top: 1rem;
-    background-color: green;
+    margin: 1rem 0 .5rem;
+    width: 100%;
   }
   .price{
     align-items: center;
     display: flex;
     font-size: 14px;
+    width: 90%;
+  }
+  .price-wrapper{
+    align-items: center;
+    display: flex;
+    width: 80%;
+  }
+  .tax{
+    margin-left: 2%;
+  }
+  .stock{
+    margin-bottom: .5rem;
   }
 }

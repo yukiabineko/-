@@ -43,7 +43,8 @@
                 <div class="price">
                   <span class="quantity">1パック</span>
                   <div class="price-wrapper">
-                    <span class="price-number">{{ $product->price }}</span>円
+                    <span class="price-number">{{ $product->price }}</span>
+                    <span>円</span>
                     <div class="tax">{{ $product->tax() }}円(税込)</div>
                   </div>
                  
