@@ -107,10 +107,12 @@
    border-radius: 4px;
    color: white;
    display: flex;
+   font-size: .8rem;
    justify-content: center;
    text-decoration: none;
    line-height: 4;
-   width: 30%;
+   width: 35%;
+   margin-top: 1rem;
 }
 .btns-button:hover{
   opacity: 0.6;
@@ -291,5 +293,14 @@
   }
   .stock{
     margin-bottom: .5rem;
+  }
+  .btns{
+    margin-top: 3rem;
+  }
+  .images{
+    margin-top: -8rem;
+  }
+  .cart-form{
+    margin-top: 2rem;
   }
 }
