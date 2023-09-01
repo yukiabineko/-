@@ -159,6 +159,13 @@
     width: 97%;
     margin: 0 auto;
   }
+  .product-lists{
+    justify-content: space-between;
+    gap: 0;
+  }
+  .product-lists li{
+    width:48%
+  }
   .daily-title{
     border: none;
     padding-top: 1rem;

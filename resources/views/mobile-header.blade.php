@@ -22,7 +22,7 @@
             <img 
               src="{{ asset('storage/users'.Auth::id().'/'.Auth::user()->path)}}" 
               alt="user" class="mobile-auth-img">
-            <div class="mobile-name-texxt">{{ Auth::user()->name}}様</div>
+            <div class="mobile-name-text">{{ Auth::user()->name}}様</div>
           </div>
 
           <!-- 買い物かご -->
