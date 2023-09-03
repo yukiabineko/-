@@ -1,17 +1,17 @@
 <header class="mobile-header">
   <!-- ロゴ -->
   <div class="mobile-icons">
-    <a href="#">
+    <a href="{{ route('admin.home') }}">
       <img src="{{ asset('image/icon3.png')}}" alt="ロゴ">
     </a>
   </div>
 
   <!-- メニュー -->
   <div class="mobile-header-menu">
-    <span class="mobile-menu-contents">
-      <label class="mobile-menu-label" for="check"></label>
-    </span>
-    <input type="checkbox" id="check">
+    <input type="checkbox" id="mobile-check">
+    <label class="mobile-menu-label" for="mobile-check">
+      <span class="mobile-menu-span"></span>
+    </label>
 
     <!-- スライダーメニュー -->
     <div class="header-slider">

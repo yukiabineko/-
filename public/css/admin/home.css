@@ -53,3 +53,17 @@
 .menu-title:last-child{
   margin-top: 1rem;
 }
+/****************************************************************/
+/****************************************************************/
+/**
+スマートフォン
+**/
+@media screen and ( max-width: 767px) {
+  .main-contents{
+    width: 97%;
+    margin: 3rem auto;
+  }
+  .menu-lists li{
+    width: calc(100% / 2 - 1px);
+  }
+}

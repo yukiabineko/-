@@ -232,36 +232,59 @@ checkbox反応
     justify-content: flex-end;
     width: calc(100% - 5rem);
   }
-  .mobile-menu-contents{
+
+  .mobile-menu-label
+  {
     align-items: center;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 4px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    position: relative;
     width: 3rem;
     height: 3rem;
   }
-  .mobile-menu-label,
-  .mobile-menu-label::before,
-  .mobile-menu-label::after{
-    background-color: black;
+  .mobile-menu-span,
+  .mobile-menu-span::before,
+  .mobile-menu-span::after{
+    background-color: darkblue;
     content: "";
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    position:absolute;
     width: 2rem;
-    height: 4px;
-    position: relative;
+    height: 5px;
+    transition: .2s all ease-in;
   }
-  
-  .mobile-menu-label::before{
-    top: -.7rem;
-    position: absolute !important;
+  .mobile-menu-span::before{
+    top: -10px;
   }
-  .mobile-menu-label::after{
-    top: .7rem;
-    position: absolute !important;
+  .mobile-menu-span::after{
+    top: 10px;
   }
+  .header-slider{
+    width: 60vw;
+  }
+ 
+  #mobile-check{
+    display: none;
+  }
+  #mobile-check:checked ~ .header-slider{
+    left: 0vw;
+  }
+  #mobile-check:checked ~ .mobile-menu-label span
+  {
+    transform: rotate(45deg);
+  }
+  #mobile-check:checked ~ .mobile-menu-label span::before
+  {
+    transform: rotate(90deg);
+    top: -1px;
+  }
+  #mobile-check:checked ~ .mobile-menu-label span::after
+  {
+    opacity: 0;
+  }
+
 
   
 }

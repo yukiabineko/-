@@ -223,3 +223,71 @@ select{
 .show-btn:hover{
   opacity: 0.6;
 }
+/********************************************************************/
+/********************************************************************/
+/**
+スマートフォン
+**/
+@media screen and ( max-width: 767px) {
+  .main-contents{
+    flex-direction: column;
+    width: 95%;
+    margin: 3.5rem auto;
+  }
+  /*****************************************/
+  /**
+  検索エリア
+  **/
+  .search-area{
+    background-color: white;
+    border: none;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    position: static;
+    width: 100%;
+  }
+  .search-title{
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+  }
+  .form-btns *{
+    padding: 1rem 0;
+  }
+  /**
+  商品リストエリア
+  **/
+  .products-contents{
+    margin: 0 auto;
+    width: 95%;
+  }
+  .product-btns{
+    display: block;
+  }
+  .product-btns .btn{
+    display: inline-block;
+    padding: 1rem;
+  }
+  .pagination{
+    margin-top: 1rem;
+  }
+  /**
+  商品リスト
+  **/
+  .product-list{
+    padding-bottom: 1.5rem;
+  }
+  .product-wrepper{
+    align-items: baseline;
+    flex-direction: column;
+  }
+  .product-list-btn{
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .product-img{
+    width: 80px;
+    height: 80px;
+  }
+}
+

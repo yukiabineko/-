@@ -1,7 +1,7 @@
 <header class="pc-header">
   <!-- ロゴ -->
   <div class="icons">
-    <a href="#">
+    <a href="{{ route('admin.home') }}">
       <img src="{{ asset('image/icon3.png')}}" alt="ロゴ">
     </a>
   </div>
