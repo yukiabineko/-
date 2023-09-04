@@ -10,8 +10,7 @@
         <!-- 左エリア -->
         <section class="image-forms">
             <h4>商品画像登録</h4>
-
-           
+            
             @if ($edit)
                 @method('patch')
                 @foreach ($product->images()->get() as $i=>$image)

@@ -2,6 +2,9 @@
   width: 95%;
   margin: 3rem auto;
 }
+.mobile-user-table{
+  display: none;
+}
 .user-table{
   width: 100%;
   border-collapse: collapse;
@@ -19,4 +22,44 @@
   border-bottom: 1px dotted #c0c0c0;
   text-align: center;
   line-height: 2;
+}
+/**************************************************************/
+/**************************************************************/
+/**
+スマートフォン
+**/
+@media screen and ( max-width: 767px) {
+  .user-table{
+    display: none;
+  }
+  .main-contents{
+    margin: 4rem auto;
+    width: 96%;
+  }
+  .mobile-user-table{
+    display: table;
+    width: 100%;
+  }
+  .mobile-user-table tbody tr {
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .mobile-user-table tbody tr td{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 3px 3px 1px #c0c0c0;
+    display: block;
+    padding: 1rem 0 2rem;
+    width: 100%;
+  }
+  .mobile-td-wrapper{
+    margin: 0 auto;
+    width: 97%;
+  }
+  .mobile-item-img{
+    width: 2rem;
+    height: 2rem;
+  }
+  
 }

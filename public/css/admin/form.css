@@ -166,4 +166,29 @@
 /**
 スマートフォン
 **/
-
+@media screen and ( max-width: 767px) {
+  .page-contents{
+    width: 95%;
+    margin: 3rem auto;
+  }
+  .form-wrapper{
+    flex-direction: column;
+    width: 100%;
+  }
+  .image-forms,
+  .product-forms{
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    margin: 0 auto 3rem;
+    padding-bottom: 2rem;
+    width: 96%;
+  }
+  .form-control,
+  select{
+    padding: .5rem 0;
+  }
+  .form-btns button{
+    width: 96%;
+  }
+  
+}
