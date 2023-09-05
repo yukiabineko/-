@@ -54,12 +54,40 @@
     width: 100%;
   }
   .mobile-td-wrapper{
+    color: darkblue;
     margin: 0 auto;
     width: 97%;
   }
   .mobile-item-img{
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .mobile-name-img{
     width: 2rem;
     height: 2rem;
+  }
+  .mobile-user-ID{
+    margin-bottom: .5rem;
+  }
+  .mobile-user-name,
+  .mobile-user-tel,
+  .mobile-user-email,
+  .mobile-user-postal_code{
+    align-items: center;
+    color: darkblue;
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  .mobile-item-text{
+    font-size: 1rem;
+    margin-left: .3rem;
+  }
+  .mobile-item-kana{
+    font-size: .5rem;
+  }
+  .mobile-user-link{
+    color: darkblue;
+    margin-left: .3rem;
   }
   
 }

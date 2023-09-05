@@ -100,8 +100,6 @@ main{
   margin: 0 auto;
   height: 90%;
   width: 99%;
-  
- 
 }
 /*******************************************************************/
 /**
@@ -190,6 +188,7 @@ main{
   display: inline-block;
   border-radius: 4px;
   color: #212020;
+  font-size: .8rem;
   line-height: 3;
 }
 .modal-contact-context{
@@ -228,4 +227,32 @@ main{
 }
 .modal-btn-submit:hover{
   opacity: 0.6;
+}
+/***************************************************************/
+/***************************************************************/
+/**
+スマートフォン
+**/
+@media screen and ( max-width: 767px) {
+  .main-contents{
+    margin: 3rem auto;
+    width: 96%;
+  }
+  .body-open{
+    height: calc(100vw / 13 * 3 );
+  }
+  .modal{
+    background-color: rgb(251, 251, 221);
+    width: 80vw;
+  }
+  .modal-body{
+    width: 95%;
+    margin: auto;
+  }
+  .modal-input{
+    padding: .5rem 0;
+  }
+  .modal-textarea{
+    height: 20vh;
+  }
 }
