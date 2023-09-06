@@ -120,3 +120,28 @@
   font-size: 12px;
   font-style: italic;
 }
+/*******************************************************/
+/*******************************************************/
+/**
+スマートフォン
+**/
+@media screen and (max-width: 767px) {
+  .contents{
+    flex-direction: column;
+    margin: 3rem auto;
+    width: 95%;
+  }
+  .contents aside,
+  .main-contents{
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  .user-link-lists{
+    width: 100%;
+  }
+  .user-name img{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+  }
+}

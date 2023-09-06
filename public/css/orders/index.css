@@ -170,3 +170,60 @@
   padding: 3rem 0;
   width: 100%;
 }
+/***********************************************************/
+/***********************************************************/
+/**
+スマートフォン
+**/
+@media screen and ( max-width: 767px) {
+  .main-contents{
+    margin: 3rem auto;
+    width: 95%;
+  }
+  .lists-pc-history{
+    display: none;
+  }
+  .lists-mobile-history{
+    width: 100%;
+  }
+  /*リスト関連*/
+  .lists-mobile-history{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+  }
+  .list-mobile-history{
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 1px 3px 3px 1px #c0c0c0;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    width: calc(100% / 2 - 10px);
+  }
+  .mobile-list-wrapper{
+    color: darkblue;
+    font-size: .8rem;
+    margin: 10px auto;
+    width: 95%;
+  }
+  .order-item-img{
+    width: 100%;
+    aspect-ratio:  2 / 1;
+  }
+  .btn-link{
+    display: block;
+    margin: 1rem auto;
+    width: 90%;
+  }
+  .mobile-list-title{
+    font-size: .7rem !important;
+    font-weight: bold;
+  }
+  .mobile-list-content-name{
+    font-size: 1rem !important;
+    font-weight: bold;
+  }
+}
