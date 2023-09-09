@@ -35,6 +35,9 @@
 /**
 商品リスト(左側)
 **/
+.mobile-cart-lists{
+  display: none;
+}
 .cart-table{
   border-collapse: collapse;
   border: 1px solid #c0c0c0;
@@ -136,5 +139,106 @@ select{
 .btn:hover{
   opacity: 0.5;
 }
-
+/***********************************************************/
+/***********************************************************/
+/**
+スマートフォン
+**/
+@media screen and ( max-width: 767px) {
+  
+  .cart-contents{
+    margin: 0 auto;
+    width: 95%;
+  }
+  .carts,
+  .info-title{
+    width: 100%;
+  }
+  .info-title{
+    margin-bottom: -2rem;
+  }
+  /**
+  カート
+  **/
+  .cart-form{
+    flex-direction: column;
+  }
+  .accounting{
+    order: 1;
+    width: 100%;
+  }
+  .total{
+    margin-top: -.2rem;
+  }
+  .total-price-title{
+    padding: .5rem 0;
+  }
+  .total-price{
+    line-height: 3;
+  }
+  .btn{
+    padding: .6rem 0;
+    margin-bottom: .8rem;
+  }
+  /**
+  カートの商品
+  **/
+  .cart-table{
+    display: none;
+    order: 2;
+  }
+  .mobile-cart-item{
+    color: darkblue;
+    width: 95%;
+    margin: 0 auto .4rem;
+  }
+  .mobile-cart-lists{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 1.5rem;
+    order: 2;
+  }
+  .mobile-cart-list{
+    background-color: #f9f9f9;
+    box-shadow: 1px 3px 3px 1px #c0c0c0;
+    padding-bottom: 2rem;
+    margin-bottom: 20px;
+    width: calc(100% / 2 - 10px);
+  }
+  .mobile-cart-img{
+    width: 100%;
+    aspect-ratio:  2 / 1;
+  }
+  .mobile-cart-title{
+    color: darkblue;
+    font-size: .8rem;
+    font-weight: bold;
+  }
+  .price-content{
+    font-style: italic;
+  }
+  .mobile-cart-base-price{
+    color: red !important;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+  }
+  .mobile-cart-tax-price{
+    font-size: .7rem;
+  }
+  .mobile-cart-content select{
+    padding: .4rem 0;
+    width: 100%;
+  }
+  .delete-btns{
+    background-color: #ff0000;
+    color: white;
+    display: block;
+    margin: 1rem auto 0;
+    width: 95%;
+  }
+}
 

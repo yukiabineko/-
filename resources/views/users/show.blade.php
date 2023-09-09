@@ -53,7 +53,7 @@
           <!-- 買い物かご -->
           <li class="user-link-list">
             @if ( session('cart'))
-              <a href="{{ route('users.edit', $user)}}" class="user-link-a">
+              <a href="{{ route('cart.index')}}" class="user-link-a">
                 <img src="{{ asset('image/users/cart.svg')}}" alt="買い物かご">
                 <span class="user-page-link-title">買い物かご</span>
                 <span class="user-cart-count"> {{ !empty( session('cart'))? count( session('cart') ) :  0}}</span>

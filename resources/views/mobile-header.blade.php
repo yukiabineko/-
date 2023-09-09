@@ -28,10 +28,10 @@
           <!-- 買い物かご -->
           <div class="mobile-cart">
             <!-- アイコンタイトル  -->
-            <div class="mobile-cart-title">
+            <a href="{{ route('cart.index')}}" class="mobile-cart-title">
               <img src="{{ asset('image/cart1.png')}}" alt="カートかご" class="mobile-cart-icon">
               <div class="mobile-cart-title">買い物かご</div>
-            </div>
+            </a>
             <!-- 個数 -->
             <div 
              class="mobile-cart-count {{ !empty( session('cart'))? 'mobile-cart-exists' : ''}}"

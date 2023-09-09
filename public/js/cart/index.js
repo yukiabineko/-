@@ -34,7 +34,17 @@ const deleteItem = id =>{
      let tbody = document.querySelector('tbody');
      //削除対象のテーブルロウ非表示
      let row = document.getElementById('row-' + id );
-     tbody.removeChild(row);
+     if(row && tbody){
+      tbody.removeChild(row);
+     }
+
+     //モバイル時には関連liタブを非表示
+     let ul = document.querySelector('.mobile-cart-lists');
+     let li = document.getElementById('list-' + id );
+     if( ul && li ){
+      ul.removeChild( li );
+     }
+     
 
      let count = Number( tbody.children.length );
      //ヘッダーのカート数の更新

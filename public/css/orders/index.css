@@ -186,6 +186,19 @@
   .lists-mobile-history{
     width: 100%;
   }
+  .form-last{
+    align-items: center;
+    display: flex;
+    width: 100%;
+    margin: 1.5rem auto;
+  }
+  .btns{
+    border-radius: 4px;
+    color: white;
+    padding: .5rem 0;
+    width: 48%;
+    
+  }
   /*リスト関連*/
   .lists-mobile-history{
     align-items: center;
@@ -226,4 +239,18 @@
     font-size: 1rem !important;
     font-weight: bold;
   }
+  .price{
+    color: red;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .tax{
+    color: darkblue;
+  }
+  .en{
+    font-size: 1.5rem;
+    font-style: normal;
+  }
+
 }

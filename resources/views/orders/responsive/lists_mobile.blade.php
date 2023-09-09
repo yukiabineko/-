@@ -30,7 +30,11 @@
         <div class="mobile-list-title">価格</div>
         <div class="mobile-list-content">
           <span class="price">
-            {{ $order->price}}<span class="tax">{{ floor((int)$order->price * 1.1 )}}(税込)</span>円
+            {{ $order->price}}
+            <span class="tax">
+              {{ floor((int)$order->price * 1.1 )}}(税込)
+              <span class="en">円</span>
+            </span>
           </span>
         </div>
       </div>
