@@ -38,6 +38,9 @@
 .mobile-cart-lists{
   display: none;
 }
+.mobile-cart-lists input{
+  pointer-events : none;
+}
 .cart-table{
   border-collapse: collapse;
   border: 1px solid #c0c0c0;

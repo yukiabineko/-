@@ -5,6 +5,7 @@ use App\Http\Controllers\admin\HomeController as AdminHomeController;
 use App\Http\Controllers\admin\ProductController as AdminProductController;
 use App\Http\Controllers\admin\UserController as AdminUserController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\ConfirmController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DailyController;
 use App\Http\Controllers\HomeController;
@@ -58,6 +59,8 @@ Route::group(['middleware' =>['auth']], function(){
   Route::get('/orders',[OrderController::class, 'index'])->name('orders.index');
   //問い合わせ関連(ログイン時のみ)
   Route::resource('contacts',ContactController::class)->only(['index']);
+  //注文確定画面
+  Route::post('confirm', [ConfirmController::class, 'index'])->name('confirm.index');
 
 
   //お客様関連

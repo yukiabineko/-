@@ -1,4 +1,46 @@
 /**
+ * 画面ロード時
+ */
+window.addEventListener('load', ()=>{
+   inputStatus();
+});
+/**
+ * windowサイズ変更時
+ */
+window.addEventListener('resize', ()=>{
+  inputStatus();
+});
+
+
+/**
+ * デバイスサイズによる入力無効、有効
+ */
+const inputStatus = () =>{
+   //パソコン版の入力エレメント
+   let pcInput = document.querySelectorAll('.pc-input');
+   //スマートフォンの入力エレメント
+   let mobileInput = document.querySelectorAll('.mobile-input');
+
+   if (window.matchMedia('(max-width: 768px)').matches) {
+      // ウィンドウサイズ768px以下のときパソコン入力無効モバイル有効
+      pcInput.forEach(input =>{
+          input.setAttribute('disabled',true);
+      });
+      mobileInput.forEach(input =>{
+          input.removeAttribute('disabled');
+      });
+  } else {
+      // それ以外パソコン入力有効モバイル無効
+      pcInput.forEach(input =>{
+        input.removeAttribute('disabled');
+      });
+      mobileInput.forEach(input =>{
+          input.setAttribute('disabled', true);
+      });
+  }
+}
+
+/**
  * 
  * 合計金額の更新
  */

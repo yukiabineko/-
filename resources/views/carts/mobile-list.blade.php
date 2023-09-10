@@ -23,7 +23,7 @@
           <div class="mobile-cart-item mobile-cart-names">
             <div class="mobile-cart-title">注文数</div>
             <div class="mobile-cart-content">
-              <select name="count[]" id="select-{{ $cart['product_id']}}" onchange="calcTotal({{ $cart['product_id'] }})">
+              <select name="count[]" id="select-{{ $cart['product_id']}}" onchange="calcTotal({{ $cart['product_id'] }})" class="mobile-input" disabled>
                 @for( $i =0; $i<= (int)$cart['max']; $i++ )
                     <option value="{{ $i }}" {{ (int)$cart['count'] == (int)$i? 'selected' : '' }}>{{ $i }}</option>
                 @endfor
@@ -38,10 +38,10 @@
             class="delete-btns"
             >削除</button>
 
-          <input type="hidden" name="path[]" value="{{ $cart['path'] }}">
-          <input type="hidden" name="name[]" value="{{ $cart['name'] }}">
-          <input type="hidden" name="price[]" value="{{ $cart['price'] }}">
-          <input type="hidden" name="product_id[]" value="{{ $cart['product_id'] }}">
+          <input type="hidden" name="path[]" value="{{ $cart['path'] }}" class="mobile-input" disabled>
+          <input type="hidden" name="name[]" value="{{ $cart['name'] }}" class="mobile-input" disabled>
+          <input type="hidden" name="price[]" value="{{ $cart['price'] }}" class="mobile-input" disabled>
+          <input type="hidden" name="product_id[]" value="{{ $cart['product_id'] }}" class="mobile-input" disabled>
        </li>
     @endforeach
   </ul>

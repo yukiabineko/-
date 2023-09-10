@@ -30,7 +30,7 @@
       <!-- リスト -->
       <article class="carts">
         @if ( session('cart'))
-          <form action="{{ route('orders.store')}}" method="post" class="cart-form">
+          <form action="{{ route('confirm.index')}}" method="post" class="cart-form">
             @csrf
             <!-- pc /モバイルテーブル　-->
             @include('carts/pc-list')

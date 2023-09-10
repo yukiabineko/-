@@ -18,7 +18,7 @@
       <td>{{ $cart['name']}}</td>
       <td class="price"><span id="price-{{ $cart['product_id'] }}">{{ floor($cart['price'] * 1.1 ) }}</span>円(税込)</td>
       <td>
-        <select name="count[]" id="select-{{ $cart['product_id']}}" onchange="calcTotal({{ $cart['product_id'] }})">
+        <select name="count[]" id="select-{{ $cart['product_id']}}" onchange="calcTotal({{ $cart['product_id'] }})" class="pc-input">
           @for( $i =0; $i<= (int)$cart['max']; $i++ )
               <option value="{{ $i}}" {{ (int)$cart['count'] == (int)$i? 'selected' : '' }}>{{ $i }}</option>
           @endfor
@@ -32,10 +32,10 @@
           class="delete-btns"
           >削除</button>
       </td>
-      <input type="hidden" name="path[]" value="{{ $cart['path'] }}">
-      <input type="hidden" name="name[]" value="{{ $cart['name'] }}">
-      <input type="hidden" name="price[]" value="{{ $cart['price'] }}">
-      <input type="hidden" name="product_id[]" value="{{ $cart['product_id'] }}">
+      <input type="hidden" name="path[]" value="{{ $cart['path'] }}" class="pc-input">
+      <input type="hidden" name="name[]" value="{{ $cart['name'] }}" class="pc-input">
+      <input type="hidden" name="price[]" value="{{ $cart['price'] }}" class="pc-input">
+      <input type="hidden" name="product_id[]" value="{{ $cart['product_id'] }}" class="pc-input">
     </tr>
   @endforeach
   </tbody>
