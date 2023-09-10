@@ -1,0 +1,52 @@
+.confirm-contents{
+  width: 90%;
+  margin: 4rem auto 0;
+}
+.confirm-title{
+  border-bottom: 4px solid darkblue;
+  text-align: left;
+  width: 100%;
+
+}
+.confirm-title h3{
+  color: darkblue;
+  display: inline-block;
+  font-size: 32px;
+  font-style: italic;
+  padding-bottom: .5rem;
+
+}
+.info-title{
+  color: #ff0000;
+  margin-top: 1.5rem;
+}
+.confirm{
+  width: 100%;
+}
+.confirm-table{
+  border-collapse: collapse;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+.confirm-table thead{
+  background-color: darkblue;
+  color: white;
+  line-height: 4;
+}
+.confirm-table thead tr{
+  text-align: left;
+  
+}
+.img-td{
+  padding: .5rem;
+}
+.confirm-img{
+  width: 5rem;
+  height: 3rem;
+}
+.confirm-table tbody:not(:last-child) tr{
+  border-bottom: 1px dotted darkblue;
+}
+.confirm-table tbody tr td{
+  background-color: white;
+}

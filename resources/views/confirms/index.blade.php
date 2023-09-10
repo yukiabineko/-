@@ -6,30 +6,34 @@
 
 <!-- css -->
 @section('css')
-  <link rel="stylesheet" href="{{ asset('css/carts/index.css')}}">
+  <link rel="stylesheet" href="{{ asset('css/confirms/index.css')}}">
 @endsection
 
 <!-- JavaScript -->
 @section('js')
-  <script src="{{ asset('js/cart/index.js')}}"></script>
+ 
 @endsection
 
 <!-- コンテンツ -->
 @section('contents')
   <!-- コンテンツ -->
 
-  <section class="cart-contents">
+  <section class="confirm-contents">
    <!-- タイトル -->
-   <div class="cart-title">
-      <h3>注文最終確定ページ</h3>
+   <div class="confirm-title">
+      <h3>注文最終確認ページ</h3>
    </div>
 
    <p class="info-title">まだ買い物が確定していません</p>
    
    <!-- メイン -->
       <!-- リスト -->
-      <article class="carts">
-       
+      <article class="confirm">
+        @if (Agent::isMobile())
+            <p>スマホ</p>
+        @else
+          @include('confirms/pc-list')
+        @endif
       </article>
   </section>
 @endsection
