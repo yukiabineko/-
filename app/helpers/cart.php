@@ -3,11 +3,17 @@ if( !function_exists('tl_p')){
   function tl_p(array $array):int{
     $total = 0;
     foreach($array as $arr){
-      $total += floor( (int)$arr['price'] * 1.1 ) * (int)$arr['count'];
+      if( gettype($arr) === "array" ){
+        $total += floor( (int)$arr['price'] * 1.1 ) * (int)$arr['count'];
+      }
+      else{
+        $total += floor( (int)$arr->price * 1.1 ) * (int)$arr->count;
+      }
     }
     return $total;
   }
 }
+
 /**
  * 買い物かご削除処理
  */

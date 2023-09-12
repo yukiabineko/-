@@ -1,5 +1,5 @@
 .confirm-contents{
-  width: 90%;
+  width: 70%;
   margin: 4rem auto 0;
 }
 .confirm-title{
@@ -50,3 +50,61 @@
 .confirm-table tbody tr td{
   background-color: white;
 }
+/**
+清算エリア
+**/
+.liquidation{
+  background-color: white;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+.liquidation-wrapper{
+  align-items: center;
+  display: flex;
+  margin: 4rem auto;
+  justify-content: space-between;
+  padding: 1rem 0; 
+  width: 95%;
+}
+.total-price{
+  background-color: #f0f0f0;
+  color: darkblue;
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: .4rem;
+}
+.liquidation-total{
+  color: red;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 0.08rem;
+}
+.liquidation-tax{
+  color: darkblue;
+  font-size: .8rem;
+  margin-left: .4rem;
+}
+.confirm-btns{
+  align-items: center;
+  display: flex;
+  gap: .8rem;
+  justify-content: flex-start;
+  width: 30%;
+}
+.confirm-btns *{
+  border-radius: 6px;
+  color: white;
+  padding: 1rem;  
+}
+.confirm-btns *:hover{
+  opacity: 0.7;
+}
+.confirm-btns .submit{
+  background-color: #6699FF;
+}
+.back-cart-link{
+  background-color: #c0c0c0;
+  text-decoration: none;
+}
+

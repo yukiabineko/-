@@ -9,6 +9,7 @@ class OrderController extends Controller
 {
  /******************注文レコード作成******************************************* */
    public function store(Request $request){
+      dd($request);
       if($request->session()->exists('cart')){
         foreach($request->count as $i=> $count ){
           Order::create([
