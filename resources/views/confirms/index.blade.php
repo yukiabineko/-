@@ -30,7 +30,7 @@
       <!-- リスト -->
       <article class="confirm">
         @if (Agent::isMobile())
-            <p>スマホ</p>
+        @include('confirms/mobile-list')  
         @else
           @include('confirms/pc-list')
         @endif
