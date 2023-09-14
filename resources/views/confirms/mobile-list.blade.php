@@ -22,9 +22,9 @@
               </div>
 
               <!-- 個数 -->
-              <div class="mobile-confirm-item mobile-cart-names">
+              <div class="mobile-confirm-item mobile-confirm-count">
                 <div class="mobile-confirm-title">注文数</div>
-                <div class="mobile-confirm-content">{{ $cart->count }}</div>
+                <div class="mobile-confirm-count">{{ $cart->count }}</div>
               </div>
           </div>
         </li>

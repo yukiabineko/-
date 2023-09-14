@@ -135,7 +135,7 @@
   }
   .mobile-confirm-item{
     color: darkblue;
-    margin-top: .4rem;
+    margin-top: .3rem;
   }
   .mobile-confirm-title{
     font-weight: bold;
@@ -143,5 +143,44 @@
   .mobile-confirm-content-name{
     color: rgb(3, 3, 38);
     font-size: 1.5rem;
+  }
+  .mobile-confirm-base-price{
+     color: red;
+     font-size: 2rem;
+     font-style: italic;
+     font-weight: bold;
+  }
+  .mobile-confirm-tax-price{
+    font-size: .7rem;
+  }
+  .mobile-confirm-count{
+    align-items: center;
+    display: flex;
+    gap: 2px;
+  }
+  .mobile-confirm-count{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+  }
+  .liquidation-wrapper{
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .total-price{
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .confirm-btns{
+    flex-direction: column;
+    width: 100%;
+  }
+  .confirm-btns .submit,
+  .confirm-btns .back-cart-link{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 90% !important;
   }
 }
