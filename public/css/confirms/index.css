@@ -103,7 +103,7 @@
 .confirm-btns .submit{
   background-color: #6699FF;
 }
-.back-cart-link{
+.back-confirm-link{
   background-color: #c0c0c0;
   text-decoration: none;
 }
@@ -173,14 +173,16 @@
     width: 100%;
   }
   .confirm-btns{
+    box-sizing: border-box;
     flex-direction: column;
     width: 100%;
   }
   .confirm-btns .submit,
-  .confirm-btns .back-cart-link{
+  .confirm-btns .back-confirm-link{
     align-items: center;
     display: flex;
     justify-content: center;
-    width: 90% !important;
+    padding: 1rem 0;
+    width: 100% !important;
   }
 }

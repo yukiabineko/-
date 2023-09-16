@@ -40,9 +40,14 @@
       <!-- ボタン -->
       <div class="confirm-btns">
         <button class="submit" onclick="return confirm('注文を確定します。よろしいですか？')">確定する</button>
-        <a href="{{ route('cart.index')}}" class="back-cart-link">戻る</a>
+        <a href="{{ route('cart.index')}}" class="back-confirm-link">戻る</a>
       </div>
     </div>
 </div>
+<input type="hidden" name="path[]" value="{{ $cart->path }}" class="pc-input">
+<input type="hidden" name="name[]" value="{{ $cart->name }}" class="pc-input">
+<input type="hidden" name="price[]" value="{{ $cart->price }}" class="pc-input">
+<input type="hidden" name="count[]" value="{{ $cart->count }}" class="pc-input">
+<input type="hidden" name="product_id[]" value="{{ $cart->product_id }}" class="pc-input">
  
 </form>
