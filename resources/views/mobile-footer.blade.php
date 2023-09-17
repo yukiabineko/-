@@ -13,4 +13,4 @@
   <small>copy right 海鮮 2023</small>
 </footer>
 <!-- スマートフォン戦闘戻る -->
-<a href="#" class="top-move">top</a>
+<a href="#header-icon" class="top-move">top</a>

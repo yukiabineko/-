@@ -87,9 +87,11 @@
             @elseif( $product->category == 10 )
                 <div class="product-infomation">
                   こちらの商品は日替わりの当日入荷商品の為、鮮度、サイズより販売出来ないことがございます。
-                  ご購入を検討のお客様はお手数ですが直接店舗までお問い合わせください。
+                  ご購入を検討のお客様はお手数ですが直接店舗までお問い合わせください。zw
                 </div>
-            @elseif( Auth::check() && Auth::user()-> admin == 0)
+            @elseif( $action == '/orders')
+             
+            @elseif( Auth::check() && Auth::user()-> admin == 0 && $action != '/orders')
                 @if ( $product->category == 10 )
                     <div class="product-infomation">
                       こちらの商品は日替わりの当日入荷商品の為、鮮度、サイズより販売出来ないことがございます。

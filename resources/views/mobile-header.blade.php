@@ -1,6 +1,6 @@
 <header class="mobile-header">
   <!-- アイコン(左側) -->
-  <a href="{{ route('home')}}" class="mobile-top-icon">
+  <a href="{{ route('home')}}" class="mobile-top-icon" id="header-icon">
     <img src="{{ asset('image/icon.png')}}" alt="トップアイコン">
   </a>
   <!-- 右側ハンバーガーメニュ -->

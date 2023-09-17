@@ -13,8 +13,11 @@ class ProductController extends Controller
      *商品詳細
      */
     public function show(Product $product){
+        $before_action = explode( url(''), url()->previous())[1];
+       
         return view('products.show',[
-            'product'=> $product
+            'product'=> $product,
+            'action' => $before_action
         ]);
     }
 /***************************************************** */
