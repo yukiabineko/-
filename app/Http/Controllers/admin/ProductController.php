@@ -16,6 +16,7 @@ class ProductController extends Controller
      * 商品登録ページ
      */
     public function create(){
+        $this->authorize('index',\Auth::user());
         $product = new Product();
         return view('admin.product.create',[
             'product' => $product
