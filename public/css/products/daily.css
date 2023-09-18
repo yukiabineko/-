@@ -65,6 +65,7 @@
   flex-shrink: 0;
   margin-bottom: 2.5rem;
   
+  
 }
 .product-img{
   border-radius: 5px 5px 0 0;
@@ -74,11 +75,17 @@
 .product-info{
   width: 97%;
   margin: 0 auto;
+  
 }
 .product-name{
   color: darkblue;
   font-style: italic;
   margin-bottom: 1rem;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
 }
 .product-price {
   display: flex;
@@ -173,5 +180,8 @@
   }
   .daily-title h3{
     border-bottom: 5px double darkblue;
+  }
+  .product-link{
+    width: 95%;
   }
 }

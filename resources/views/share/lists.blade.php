@@ -21,7 +21,7 @@
           <a 
             href="{{ route('products.show',$product)}}" 
             class="link-button {{request()->path() == 'products'? 'online-link' : ''}}"
-            >{{request()->path() == 'products'? '注文する' : '詳しくはこちら'}}</a>
+            >{{request()->path() == 'products'? '注文する' : '詳細'}}</a>
         </div>
       </li>  
     @endforeach
