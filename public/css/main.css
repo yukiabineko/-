@@ -692,6 +692,12 @@ small{
     right: 0;
     
   }
+  .page-title h2{
+    display: inline-block;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    color: darkblue;
+  }
 
 
   

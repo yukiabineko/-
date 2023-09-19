@@ -120,5 +120,9 @@
   .top-main{
     width: 100%;
   }
+  .shop-service figure figcaption,
+  .online-service figure figcaption{
+    font-size: 14px;
+  }
 
 }

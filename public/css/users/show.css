@@ -128,8 +128,8 @@
 @media screen and (max-width: 767px) {
   .contents{
     flex-direction: column;
-    margin: 3rem auto;
-    width: 95%;
+    margin: 2rem auto;
+    width: 97%;
   }
   .contents aside,
   .main-contents{

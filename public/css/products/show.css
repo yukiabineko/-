@@ -316,5 +316,12 @@
   .order-title{
     width: 35%;
   }
+  /**
+  管理者
+  **/
+  .admin-btns{
+    margin-top: 2rem;
+  }
+
 
 }
