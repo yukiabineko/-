@@ -8,13 +8,15 @@
 @endsection
 
 @section('contents')
+   <!-- エラー表示 -->
+   @include('share.errors')
+   
    <div class="page-title">
      <h2>ログイン</h2>
    </div>
 
    <article class="main-contents">
-      <!-- エラー表示 -->
-      @include('share.errors')
+     
       
       <form action="{{ route('login')}}" class="form new-user" method="POST">
         @csrf

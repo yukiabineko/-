@@ -162,7 +162,10 @@ return [
     */
 
     'attributes' => [
-        'name' => '会員様名',
+        'surname' => '氏',
+        'name' => '名前',
+        'name_kana' => '名前(カナ)',
+        'surame_kana' => '氏(カナ)',
         'email' => 'メールアドレス',
         'phone_number' => '電話番号',
         'postal_code' =>'郵便番号',

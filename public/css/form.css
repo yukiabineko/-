@@ -3,6 +3,9 @@
   margin: 1rem auto 10rem;
   background-color: white;
 }
+.errors{
+  width: 65%;
+}
 .form{
   width: calc(100% - 20px);
   padding: 10px;
@@ -201,6 +204,29 @@ li{
   width: 30%;
   margin: 1rem auto;
 }
+#agreement-box{
+  display: flex;
+  width: 85%;
+  margin: 1rem auto;
+}
+#agreement{
+ display: none;
+}
+.agreenent-span{
+  border: 1px solid darkblue;
+  display: block;
+  width:20px;
+  height: 20px;
+}
+.agreenent-span::before{
+  align-items: center;
+  content: "✔️";
+  display: none;
+  justify-content: center;
+}
+#agreement:checked ~ .agreenent-span::before{
+  display: flex;
+}
 @media screen and (max-width: 480px) {
   .Inner-Headline {
     font-size: 24px;
@@ -281,6 +307,9 @@ li{
     width: 95%;
     margin: 0 auto;
   }
+  .errors{
+    width: 95%;
+  }
   .form-button{
     display: block;
   }
@@ -315,6 +344,7 @@ li{
     height: 90vh;
     overflow-y: scroll;
     position: fixed;
+    width: 85%;
   }
   #use_regulations-check:checked ~ .use_regulations-modal{
     top: 100px;

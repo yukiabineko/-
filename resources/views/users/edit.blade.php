@@ -11,13 +11,14 @@
 @endsection
 
 @section('contents')
+   <!-- エラー表示 -->
+   @include('share.errors')
+   
    <div class="page-title">
      <h2>{{ $user->surname}} {{ $user->name}}さん情報編集</h2>
    </div>
 
    <article class="main-contents">
-      <!-- エラー表示 -->
-      @include('share.errors')
       
       <form action="{{ route('users.update',$user)}}" class="form new-user" enctype="multipart/form-data" method="POST">
         @csrf

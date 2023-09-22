@@ -11,14 +11,14 @@
 @endsection
 
 @section('contents')
+   <!-- エラー表示 -->
+   @include('share.errors')
+   
    <div class="page-title">
      <h2>新規会員登録</h2>
    </div>
 
    <article class="main-contents">
-      <!-- エラー表示 -->
-      @include('share.errors')
-      
       <form action="{{ route('register')}}" class="form new-user" enctype="multipart/form-data" method="POST">
         @csrf
         <!-- 画像 -->
