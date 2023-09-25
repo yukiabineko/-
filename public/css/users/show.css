@@ -4,6 +4,9 @@
   width: 90%;
   margin: 4rem auto;
 }
+.alert-success{
+  width: 90% !important;
+}
 /**************左リスト*************************************/
 .contents aside{
   width: 20%;

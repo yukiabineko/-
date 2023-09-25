@@ -10,6 +10,7 @@
 @endsection
 
 @section('contents')
+   @include('share.flash')
    <div class="page-title">
      <h2>会員様詳細ページ</h2>
    </div>
